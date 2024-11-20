@@ -1,0 +1,40 @@
+{
+    "name": "ActionMap",
+    "maps": [
+        {
+            "name": "MainMenu",
+            "id": "64eeeb98-43de-42fe-8c40-5e7a6f2fff1e",
+            "actions": [
+                {
+                    "name": "Escape Key",
+                    "type": "Button",
+                    "id": "a6d5741c-869a-4705-b209-1ca2ddcd65af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "68919e81-58fb-4f14-a760-7070bad78249",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Escape Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Main Game",
+            "id": "07128526-f56a-4734-a173-7a22512fff0d",
+            "actions": [],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
