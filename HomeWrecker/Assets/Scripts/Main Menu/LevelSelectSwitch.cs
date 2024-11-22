@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class LevelSelectSwitch : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class LevelSelectSwitch : MonoBehaviour
     [Header("Linked Variables")]
     [SerializeField] Transform[] roomCameraMovePosition;
     [SerializeField] Transform roomCameraTransform;
-
     [SerializeField] TMP_Text roomName;
+    [SerializeField] GameObject levelSelectObject;
     #endregion
 
     /// <summary>
@@ -46,6 +47,24 @@ public class LevelSelectSwitch : MonoBehaviour
     }
 
     /// <summary>
+    /// This function goes to the next selected level when the "D" key is pressed
+    /// </summary>
+    public void DKeyNext(InputAction.CallbackContext context)
+    {
+        if(context.performed && levelSelectObject.activeInHierarchy)
+        {    
+            if (currentSelectedLevel != 2)
+            {
+                currentSelectedLevel++;
+            }
+            else
+            {
+                currentSelectedLevel = 0;
+            }
+        }
+    }
+
+    /// <summary>
     /// This function goes to the previous selected level when called
     /// </summary>
     public void ButtonPrevious()
@@ -57,6 +76,24 @@ public class LevelSelectSwitch : MonoBehaviour
         else
         {
             currentSelectedLevel = 2;
+        }
+    }
+
+    /// <summary>
+    /// This function goes to the previous selected level when the "A" key is pressed
+    /// </summary>
+    public void AKeyPrevious(InputAction.CallbackContext context)
+    {
+        if(context.performed && levelSelectObject.activeInHierarchy)
+        {    
+            if (currentSelectedLevel != 0)
+            {
+                currentSelectedLevel--;
+            }
+            else
+            {
+                currentSelectedLevel = 2;
+            }
         }
     }
 

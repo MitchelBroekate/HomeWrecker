@@ -35,6 +35,24 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""cd3a4f42-4f70-4348-b709-93bbd17f189a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""bf4da0b9-ab0d-4e1a-9f6d-d41703f48518"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,14 +66,102 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Escape Key"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e66c4cc8-90cf-4e88-8d6e-c84bca64662e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a52cb9ee-44e8-43bc-b17f-6f8b690fc367"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
             ""name"": ""Main Game"",
             ""id"": ""07128526-f56a-4734-a173-7a22512fff0d"",
-            ""actions"": [],
-            ""bindings"": []
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""a5aeef83-397b-4b84-af45-37226268f051"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""b8ce5eed-4bff-4056-9307-35e473ee7823"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""e3dcf6d1-8b21-45aa-8f07-5404fb1c0d04"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""ccd53bdc-4830-4398-8365-cbadb63d5485"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f05d661d-7218-4d6e-b200-e6d59a9b1a8e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""328c739f-e9b8-43db-916f-b3f6ec85ff70"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -63,8 +169,11 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         // MainMenu
         m_MainMenu = asset.FindActionMap("MainMenu", throwIfNotFound: true);
         m_MainMenu_EscapeKey = m_MainMenu.FindAction("Escape Key", throwIfNotFound: true);
+        m_MainMenu_MenuLeft = m_MainMenu.FindAction("Menu Left", throwIfNotFound: true);
+        m_MainMenu_MenuRight = m_MainMenu.FindAction("Menu Right", throwIfNotFound: true);
         // Main Game
         m_MainGame = asset.FindActionMap("Main Game", throwIfNotFound: true);
+        m_MainGame_Movement = m_MainGame.FindAction("Movement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -127,11 +236,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_MainMenu;
     private List<IMainMenuActions> m_MainMenuActionsCallbackInterfaces = new List<IMainMenuActions>();
     private readonly InputAction m_MainMenu_EscapeKey;
+    private readonly InputAction m_MainMenu_MenuLeft;
+    private readonly InputAction m_MainMenu_MenuRight;
     public struct MainMenuActions
     {
         private @ActionMap m_Wrapper;
         public MainMenuActions(@ActionMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @EscapeKey => m_Wrapper.m_MainMenu_EscapeKey;
+        public InputAction @MenuLeft => m_Wrapper.m_MainMenu_MenuLeft;
+        public InputAction @MenuRight => m_Wrapper.m_MainMenu_MenuRight;
         public InputActionMap Get() { return m_Wrapper.m_MainMenu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -144,6 +257,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @EscapeKey.started += instance.OnEscapeKey;
             @EscapeKey.performed += instance.OnEscapeKey;
             @EscapeKey.canceled += instance.OnEscapeKey;
+            @MenuLeft.started += instance.OnMenuLeft;
+            @MenuLeft.performed += instance.OnMenuLeft;
+            @MenuLeft.canceled += instance.OnMenuLeft;
+            @MenuRight.started += instance.OnMenuRight;
+            @MenuRight.performed += instance.OnMenuRight;
+            @MenuRight.canceled += instance.OnMenuRight;
         }
 
         private void UnregisterCallbacks(IMainMenuActions instance)
@@ -151,6 +270,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @EscapeKey.started -= instance.OnEscapeKey;
             @EscapeKey.performed -= instance.OnEscapeKey;
             @EscapeKey.canceled -= instance.OnEscapeKey;
+            @MenuLeft.started -= instance.OnMenuLeft;
+            @MenuLeft.performed -= instance.OnMenuLeft;
+            @MenuLeft.canceled -= instance.OnMenuLeft;
+            @MenuRight.started -= instance.OnMenuRight;
+            @MenuRight.performed -= instance.OnMenuRight;
+            @MenuRight.canceled -= instance.OnMenuRight;
         }
 
         public void RemoveCallbacks(IMainMenuActions instance)
@@ -172,10 +297,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     // Main Game
     private readonly InputActionMap m_MainGame;
     private List<IMainGameActions> m_MainGameActionsCallbackInterfaces = new List<IMainGameActions>();
+    private readonly InputAction m_MainGame_Movement;
     public struct MainGameActions
     {
         private @ActionMap m_Wrapper;
         public MainGameActions(@ActionMap wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_MainGame_Movement;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -185,10 +312,16 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MainGameActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MainGameActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
         }
 
         private void UnregisterCallbacks(IMainGameActions instance)
         {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
         }
 
         public void RemoveCallbacks(IMainGameActions instance)
@@ -209,8 +342,11 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     public interface IMainMenuActions
     {
         void OnEscapeKey(InputAction.CallbackContext context);
+        void OnMenuLeft(InputAction.CallbackContext context);
+        void OnMenuRight(InputAction.CallbackContext context);
     }
     public interface IMainGameActions
     {
+        void OnMovement(InputAction.CallbackContext context);
     }
 }
