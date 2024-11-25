@@ -103,6 +103,33 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Key1"",
+                    ""type"": ""Button"",
+                    ""id"": ""f975314f-c82f-4c5b-8f41-8e38b0685467"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Key2"",
+                    ""type"": ""Button"",
+                    ""id"": ""26018cf8-1ecf-4f60-ab43-5a76884051f8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Key3"",
+                    ""type"": ""Button"",
+                    ""id"": ""a06c2922-f874-4b5c-bfab-1ff77f075928"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -160,6 +187,39 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc34f2aa-9aba-417b-9fe6-c463494efb64"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Key1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7fe42aff-4f70-402a-ad3e-1c3b0370ac6f"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Key2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a0ca1c3-3533-4d1d-a544-b311f269ffc5"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Key3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -174,6 +234,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         // Main Game
         m_MainGame = asset.FindActionMap("Main Game", throwIfNotFound: true);
         m_MainGame_Movement = m_MainGame.FindAction("Movement", throwIfNotFound: true);
+        m_MainGame_Key1 = m_MainGame.FindAction("Key1", throwIfNotFound: true);
+        m_MainGame_Key2 = m_MainGame.FindAction("Key2", throwIfNotFound: true);
+        m_MainGame_Key3 = m_MainGame.FindAction("Key3", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -298,11 +361,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_MainGame;
     private List<IMainGameActions> m_MainGameActionsCallbackInterfaces = new List<IMainGameActions>();
     private readonly InputAction m_MainGame_Movement;
+    private readonly InputAction m_MainGame_Key1;
+    private readonly InputAction m_MainGame_Key2;
+    private readonly InputAction m_MainGame_Key3;
     public struct MainGameActions
     {
         private @ActionMap m_Wrapper;
         public MainGameActions(@ActionMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_MainGame_Movement;
+        public InputAction @Key1 => m_Wrapper.m_MainGame_Key1;
+        public InputAction @Key2 => m_Wrapper.m_MainGame_Key2;
+        public InputAction @Key3 => m_Wrapper.m_MainGame_Key3;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -315,6 +384,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Key1.started += instance.OnKey1;
+            @Key1.performed += instance.OnKey1;
+            @Key1.canceled += instance.OnKey1;
+            @Key2.started += instance.OnKey2;
+            @Key2.performed += instance.OnKey2;
+            @Key2.canceled += instance.OnKey2;
+            @Key3.started += instance.OnKey3;
+            @Key3.performed += instance.OnKey3;
+            @Key3.canceled += instance.OnKey3;
         }
 
         private void UnregisterCallbacks(IMainGameActions instance)
@@ -322,6 +400,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Key1.started -= instance.OnKey1;
+            @Key1.performed -= instance.OnKey1;
+            @Key1.canceled -= instance.OnKey1;
+            @Key2.started -= instance.OnKey2;
+            @Key2.performed -= instance.OnKey2;
+            @Key2.canceled -= instance.OnKey2;
+            @Key3.started -= instance.OnKey3;
+            @Key3.performed -= instance.OnKey3;
+            @Key3.canceled -= instance.OnKey3;
         }
 
         public void RemoveCallbacks(IMainGameActions instance)
@@ -348,5 +435,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     public interface IMainGameActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnKey1(InputAction.CallbackContext context);
+        void OnKey2(InputAction.CallbackContext context);
+        void OnKey3(InputAction.CallbackContext context);
     }
 }
