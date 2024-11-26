@@ -6,15 +6,22 @@ public class PlayerController : MonoBehaviour
     #region Movement Variables
     [Header("Config Variables")]
     [SerializeField] float moveSpeed;
+    [SerializeField] float sprintSpeed;
+    [SerializeField] float jumpHeight;
+    [SerializeField] float jumpDetection;
 
     //Used inside script
-    Vector2 moveDirection;
-    Rigidbody rb;
+    Vector2 _moveDirection;
+    Rigidbody _rb;
+    bool _isSprinting;
+    bool _isJumping;
+
+    RaycastHit _hit;
     #endregion
 
     #region Camera Variables
     [Header("Config Variables")]
-    [SerializeField] float mouseSens;
+    [SerializeField] float mouseDPI;
 
     [Header("Linked Variables")]
     [SerializeField] Transform cam;
@@ -28,9 +35,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        sprintSpeed = 1f;
     }
 
     /// <summary>
@@ -41,7 +50,10 @@ public class PlayerController : MonoBehaviour
         if(!playerLock)
         {
             Walk();
+            Sprint();
             CameraMovement();
+            Jumping();
+            
         }
     }  
 
@@ -50,8 +62,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Walk()
     {
-        Vector3 playerV = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y, moveDirection.y * moveSpeed);
-        rb.velocity = transform.TransformDirection(playerV);
+        Vector3 playerV = new Vector3(_moveDirection.x * moveSpeed * sprintSpeed, _rb.velocity.y, _moveDirection.y * moveSpeed * sprintSpeed);
+        _rb.velocity = transform.TransformDirection(playerV);
     } 
 
     /// <summary>
@@ -60,7 +72,47 @@ public class PlayerController : MonoBehaviour
     /// <param name="value"></param>
     void OnMovement(InputValue value)
     {
-        moveDirection = value.Get<Vector2>();
+        _moveDirection = value.Get<Vector2>();
+    }
+
+    void Sprint()
+    {
+        if(_isSprinting)
+        {
+            sprintSpeed = 1.5f;
+        }
+        else
+        {
+            sprintSpeed = 1f;
+        }
+    }
+
+    void OnSprint(InputValue value)
+    {
+        _isSprinting = value.isPressed;
+    }
+
+    void Jumping()
+    {
+        if(Physics.Raycast(transform.position, -transform.up, out _hit, jumpDetection))
+        {
+            _isJumping = false;
+        }
+        else
+        {
+            _isJumping = true;
+        }
+
+    }
+
+    void OnJump(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            if(_isJumping) return;
+
+            _rb.AddForce(transform.up * jumpHeight);
+        }
     }
 
     /// <summary>
@@ -68,8 +120,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void CameraMovement()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseDPI * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseDPI * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

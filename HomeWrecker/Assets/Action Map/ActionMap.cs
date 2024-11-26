@@ -105,6 +105,24 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""2e1e55b8-74f7-4dd5-9f64-ff340cddc600"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""2824e147-369e-4ff7-9328-c848be5e44b8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Key1"",
                     ""type"": ""Button"",
                     ""id"": ""f975314f-c82f-4c5b-8f41-8e38b0685467"",
@@ -220,6 +238,28 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Key3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ca80e97-a999-48cc-a070-4ba89962c1bf"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06e78042-6a17-4e4a-ba08-9163941e4c31"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -234,6 +274,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         // Main Game
         m_MainGame = asset.FindActionMap("Main Game", throwIfNotFound: true);
         m_MainGame_Movement = m_MainGame.FindAction("Movement", throwIfNotFound: true);
+        m_MainGame_Sprint = m_MainGame.FindAction("Sprint", throwIfNotFound: true);
+        m_MainGame_Jump = m_MainGame.FindAction("Jump", throwIfNotFound: true);
         m_MainGame_Key1 = m_MainGame.FindAction("Key1", throwIfNotFound: true);
         m_MainGame_Key2 = m_MainGame.FindAction("Key2", throwIfNotFound: true);
         m_MainGame_Key3 = m_MainGame.FindAction("Key3", throwIfNotFound: true);
@@ -361,6 +403,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_MainGame;
     private List<IMainGameActions> m_MainGameActionsCallbackInterfaces = new List<IMainGameActions>();
     private readonly InputAction m_MainGame_Movement;
+    private readonly InputAction m_MainGame_Sprint;
+    private readonly InputAction m_MainGame_Jump;
     private readonly InputAction m_MainGame_Key1;
     private readonly InputAction m_MainGame_Key2;
     private readonly InputAction m_MainGame_Key3;
@@ -369,6 +413,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         private @ActionMap m_Wrapper;
         public MainGameActions(@ActionMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_MainGame_Movement;
+        public InputAction @Sprint => m_Wrapper.m_MainGame_Sprint;
+        public InputAction @Jump => m_Wrapper.m_MainGame_Jump;
         public InputAction @Key1 => m_Wrapper.m_MainGame_Key1;
         public InputAction @Key2 => m_Wrapper.m_MainGame_Key2;
         public InputAction @Key3 => m_Wrapper.m_MainGame_Key3;
@@ -384,6 +430,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
             @Key1.started += instance.OnKey1;
             @Key1.performed += instance.OnKey1;
             @Key1.canceled += instance.OnKey1;
@@ -400,6 +452,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
             @Key1.started -= instance.OnKey1;
             @Key1.performed -= instance.OnKey1;
             @Key1.canceled -= instance.OnKey1;
@@ -435,6 +493,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     public interface IMainGameActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
         void OnKey1(InputAction.CallbackContext context);
         void OnKey2(InputAction.CallbackContext context);
         void OnKey3(InputAction.CallbackContext context);
