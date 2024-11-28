@@ -40,8 +40,6 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         sprintSpeed = 1f;
-
-        Physics.IgnoreLayerCollision(8, 9);
     }
 
     /// <summary>
