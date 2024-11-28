@@ -15,5 +15,5 @@ MonoBehaviour:
   _damage: 10
   _range: 6
   _weaponCooldown: 0.55
-  weaponToInstantiate: {fileID: 149373203855704133, guid: c64c2c12befbc294ab39f57496385328,
+  weaponToInstantiate: {fileID: 149373203855704133, guid: 8b2a26c8c09ba0146885603741440a72,
     type: 3}

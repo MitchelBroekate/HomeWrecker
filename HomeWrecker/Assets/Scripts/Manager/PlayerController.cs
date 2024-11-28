@@ -3,32 +3,32 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    #region Movement Variables
-    [Header("Config Variables")]
+    #region Variables
+    [Header("Config Movement Variables")]
     [SerializeField] float moveSpeed;
     [SerializeField] float sprintSpeed;
     [SerializeField] float jumpHeight;
     [SerializeField] float jumpDetection;
 
-    //Used inside script
-    Vector2 _moveDirection;
-    Rigidbody _rb;
-    bool _isSprinting;
-    bool _isJumping;
-
-    RaycastHit _hit;
-    #endregion
-
-    #region Camera Variables
-    [Header("Config Variables")]
+    [Header("Config Camera Variables")]
     [SerializeField] float mouseDPI;
 
-    [Header("Linked Variables")]
+    [Header("Linked Camera Variables")]
     [SerializeField] Transform cam;
+
+    //Used inside script
+    RaycastHit _hit;
     float xRotation = 0f;
+    Vector2 _moveDirection;
+
+    Rigidbody _rb;
+
+    bool _isSprinting;
+    bool _isJumping;
+   
+    bool playerLock;
     #endregion 
     
-    bool playerLock;
 
     /// <summary>
     /// This function gets the ridgedbody component and locks the Cursor for the FPS Mode
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         sprintSpeed = 1f;
+
+        Physics.IgnoreLayerCollision(8, 9);
     }
 
     /// <summary>
