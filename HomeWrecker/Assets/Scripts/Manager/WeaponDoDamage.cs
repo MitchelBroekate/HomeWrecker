@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
-using Unity.VisualScripting;
-using UnityEngine.UI;
 
 public class WeaponDoDamage : MonoBehaviour
 {
     Transform startSlicePos;
     Transform endSlicePos;
-    bool isAttacking;
-    VelocityEstimator velocityEstimator;
-    public LayerMask layerMask;
-    float cutforce = 2000;
 
+    //bool isAttacking;
+    VelocityEstimator velocityEstimator;
+    LayerMask layerMaskRay;
+    float cutforce = 2000;
+    
     void Start()
     {
         startSlicePos = transform.GetChild(1).transform;
@@ -21,21 +18,21 @@ public class WeaponDoDamage : MonoBehaviour
 
         velocityEstimator = endSlicePos.GetComponent<VelocityEstimator>();
 
-        layerMask = LayerMask.GetMask("Destructible");
+        layerMaskRay = LayerMask.GetMask("Destructible");
     }
 
     void FixedUpdate()
     {
-        bool hitObject = Physics.Raycast(startSlicePos.position, endSlicePos.position, out RaycastHit hit, ~layerMask);
-        if (hitObject)
+        Vector3 direction = (endSlicePos.position - startSlicePos.position).normalized;
+        if (Physics.Raycast(startSlicePos.position, direction, out RaycastHit hit, 0.7f, layerMaskRay))
         {
-            Debug.Log("Object hit");
+            Debug.Log("Raycast hit");
 
             GameObject target = hit.transform.gameObject;
-
             Slice(target);
         }
     }
+
 
     void Slice(GameObject target)
     {
@@ -54,6 +51,9 @@ public class WeaponDoDamage : MonoBehaviour
             SetupSlicedObject(lowerHull);
 
             Destroy(target);
+
+            Destroy(upperHull, 4);
+            Destroy(lowerHull, 4);
         }
     }
 
