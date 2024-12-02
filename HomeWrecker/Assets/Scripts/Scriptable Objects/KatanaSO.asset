@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6eca6e7826d40145b8c4b5824b31ed1, type: 3}
   m_Name: KatanaSO
   m_EditorClassIdentifier: 
-  _damage: 15
-  _range: 7
-  _weaponCooldown: 0.4
+  damage: 2
+  weaponCooldown: 2
   weaponToInstantiate: {fileID: 149373203855704133, guid: fd826f80ce954c246a2d757ef5e710c7,
     type: 3}

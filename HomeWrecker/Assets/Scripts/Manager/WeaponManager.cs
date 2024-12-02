@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 public class WeaponManager : MonoBehaviour
 {
     #region Variables
-    [Header("Config Variables")]
-    public string currentWeapon;
-    [SerializeField] int weaponDamage;
-    [SerializeField] int weaponRange;
-    [SerializeField] float weaponCooldown;
-
     [Header("Linked Variables")]
+    public string currentWeapon;
+
+    int weaponDamage;
+    int weaponRange;
+    float weaponCooldown;
+
     [SerializeField] Transform cam;
     [SerializeField] WeaponSO[] weaponSO;
     [SerializeField] Transform weaponSpawnpoint;
@@ -28,10 +28,14 @@ public class WeaponManager : MonoBehaviour
 
         GameObject currentWeaponObject = Instantiate(weaponSO[0].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
+        
+        WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
 
         weaponDamage = weaponSO[0].Damage;
-        weaponRange = weaponSO[0].Range;
         weaponCooldown = weaponSO[0].WeaponCooldown;
+        
+        weaponDoDamage.SetDamage(weaponDamage);
+        weaponDoDamage.SetCooldown(weaponCooldown);
     }
 
     /// <summary>
@@ -52,9 +56,13 @@ public class WeaponManager : MonoBehaviour
         GameObject currentWeaponObject = Instantiate(weaponSO[0].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
 
+        WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
+
         weaponDamage = weaponSO[0].Damage;
-        weaponRange = weaponSO[0].Range;
         weaponCooldown = weaponSO[0].WeaponCooldown;
+        
+        weaponDoDamage.SetDamage(weaponDamage);
+        weaponDoDamage.SetCooldown(weaponCooldown);
     }
 
     /// <summary>
@@ -62,29 +70,6 @@ public class WeaponManager : MonoBehaviour
     /// </summary>
     /// <param name="context"></param>
     public void WeaponKey2(InputAction.CallbackContext context)
-    {
-        if(!context.performed || currentWeapon.Equals("WeaponType_SPIKED_BAT")) return;
-
-        if(cam.childCount > 1)
-        {
-            Destroy(cam.GetChild(1).gameObject);
-        }
-
-        currentWeapon = "WeaponType_SPIKED_BAT";
-
-        GameObject currentWeaponObject = Instantiate(weaponSO[1].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
-        currentWeaponObject.transform.parent = cam;
-
-        weaponDamage = weaponSO[1].Damage;
-        weaponRange = weaponSO[1].Range;
-        weaponCooldown = weaponSO[1].WeaponCooldown;
-    }
-
-    /// <summary>
-    /// This function checks if the player already has a weapon. If the player is holding a different weapon, the weapons will be switched when the corresponding button is pressed
-    /// </summary>
-    /// <param name="context"></param>
-    public void WeaponKey3(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_KATANA")) return;
 
@@ -95,11 +80,15 @@ public class WeaponManager : MonoBehaviour
 
         currentWeapon = "WeaponType_KATANA";
 
-        GameObject currentWeaponObject = Instantiate(weaponSO[2].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
+        GameObject currentWeaponObject = Instantiate(weaponSO[1].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
 
-        weaponDamage = weaponSO[2].Damage;
-        weaponRange = weaponSO[2].Range;
-        weaponCooldown = weaponSO[2].WeaponCooldown;
+        WeaponDoDamage weaponDoDamage = weaponSO[1].weaponToInstantiate.GetComponent<WeaponDoDamage>();
+
+        weaponDamage = weaponSO[1].Damage;
+        weaponCooldown = weaponSO[1].WeaponCooldown;
+        
+        weaponDoDamage.SetDamage(weaponDamage);
+        weaponDoDamage.SetCooldown(weaponCooldown);
     }
 }
