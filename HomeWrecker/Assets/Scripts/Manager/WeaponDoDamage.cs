@@ -49,7 +49,7 @@ public class WeaponDoDamage : MonoBehaviour
             {
                 if(!attackOnCooldown)
                 {
-                    weaponAnimator.SetTrigger("Attack");
+                    weaponAnimator.SetBool("IsAttacking", true);
 
                     Debug.Log("Weapon Attacking");
                     StartCoroutine(StartAttack());
@@ -160,7 +160,7 @@ public class WeaponDoDamage : MonoBehaviour
         
         yield return new WaitForSeconds(0.5f);
 
-        weaponAnimator.ResetTrigger("Attack");
+        weaponAnimator.SetBool("IsAttacking", false);
 
         StartCoroutine(AttackCooldown());
         
