@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
     [Header("Config Movement Variables")]
     [SerializeField] float moveSpeed;
     [SerializeField] float sprintSpeed;
-    [SerializeField] float jumpHeight;
-    [SerializeField] float jumpDetection;
 
     [Header("Config Camera Variables")]
     [SerializeField] float mouseDPI;
@@ -20,13 +18,9 @@ public class PlayerController : MonoBehaviour
     RaycastHit _hit;
     float xRotation = 0f;
     Vector2 _moveDirection;
-
     Rigidbody _rb;
-
     bool _isSprinting;
-    bool _isJumping;
-   
-    bool playerLock;
+    bool _playerLock;
     #endregion 
     
 
@@ -47,13 +41,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if(!playerLock)
+        if(!_playerLock)
         {
             Walk();
             Sprint();
-            CameraMovement();
-            Jumping();
-            
+            CameraMovement();  
         }
     }  
 
@@ -92,29 +84,6 @@ public class PlayerController : MonoBehaviour
         _isSprinting = value.isPressed;
     }
 
-    void Jumping()
-    {
-        if(Physics.Raycast(transform.position, -transform.up, out _hit, jumpDetection))
-        {
-            _isJumping = false;
-        }
-        else
-        {
-            _isJumping = true;
-        }
-
-    }
-
-    void OnJump(InputValue value)
-    {
-        if(value.isPressed)
-        {
-            if(_isJumping) return;
-
-            _rb.AddForce(transform.up * jumpHeight);
-        }
-    }
-
     /// <summary>
     /// this function sets the movement for the camera and sets the clamp for the camera movement
     /// </summary>
@@ -132,11 +101,11 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// This Function sets the state of the playerLock bool
+    /// This Function sets the state of the _playerLock bool
     /// </summary>
     /// <param name="allowState"></param>
     public void AllowMovement(bool allowState)
     {
-        playerLock = allowState;
+        _playerLock = allowState;
     }
 }
