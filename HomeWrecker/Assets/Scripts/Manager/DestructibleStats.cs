@@ -13,12 +13,19 @@ public class DestructibleStats : MonoBehaviour
     public bool canDestroy = false;
     ScoreManager scoreManager;
     #endregion
-    
+
+    /// <summary>
+    /// This function assigns the ScoreManager script to the variable
+    /// </summary>
     void Start()
     {
         scoreManager = GameObject.Find("Script Manager").GetComponent<ScoreManager>();
     }
 
+    /// <summary>
+    /// This function allows the player to deal damage to the local object and add give the death conditions of the object
+    /// </summary>
+    /// <param name="damageAmount"></param>
     public void DoDamage(int damageAmount)
     {
         if(health <= 1)
@@ -33,6 +40,9 @@ public class DestructibleStats : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This function adds the assigned score of the local object to the ScoreManager
+    /// </summary>
     void AddScore()
     {
         scoreManager.AddScore(scoreValue);

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: KatanaSO
   m_EditorClassIdentifier: 
   damage: 2
-  weaponCooldown: 2
+  weaponCooldown: 0.5
   weaponToInstantiate: {fileID: 149373203855704133, guid: fd826f80ce954c246a2d757ef5e710c7,
     type: 3}

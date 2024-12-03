@@ -34,6 +34,9 @@ public class LevelSelectSwitch : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This function allows the scene to switch to the current selected level when a button is pressed
+    /// </summary>
     public void PlayScene()
     {
         switch (currentSelectedLevel)
@@ -49,6 +52,10 @@ public class LevelSelectSwitch : MonoBehaviour
             case 2:
                 //SceneManager.LoadScene("Future Game");
                 Debug.Log("Level W.I.P");
+                break;
+            
+            default:
+                Debug.LogWarning("No Int Value?!?! Play Scene Switch");
                 break;
         }
     }
@@ -142,7 +149,7 @@ public class LevelSelectSwitch : MonoBehaviour
                 if (roomCameraMovePosition[currentSelectedLevel].name == "Room 1 Cam Pos")
                 {
                     roomCameraTransform.position = Vector3.MoveTowards(roomCameraTransform.position, roomCameraMovePosition[currentSelectedLevel].position, moveSpeed);
-                    roomName.text = "Room 1";
+                    roomName.text = "Tutorial";
                 }
                 else
                 {
@@ -154,7 +161,7 @@ public class LevelSelectSwitch : MonoBehaviour
                 if (roomCameraMovePosition[currentSelectedLevel].name == "Room 2 Cam Pos")
                 {
                     roomCameraTransform.position = Vector3.MoveTowards(roomCameraTransform.position, roomCameraMovePosition[currentSelectedLevel].position, moveSpeed);
-                    roomName.text = "Room 2";
+                    roomName.text = "Markt Media";
                 }
                 else
                 {
@@ -166,7 +173,7 @@ public class LevelSelectSwitch : MonoBehaviour
                 if (roomCameraMovePosition[currentSelectedLevel].name == "Room 3 Cam Pos")
                 {
                     roomCameraTransform.position = Vector3.MoveTowards(roomCameraTransform.position, roomCameraMovePosition[currentSelectedLevel].position, moveSpeed);
-                    roomName.text = "Room 3";
+                    roomName.text = "Coming Soon";
                 }
                 else
                 {
@@ -175,7 +182,7 @@ public class LevelSelectSwitch : MonoBehaviour
                 break;
 
             default:
-                Debug.LogWarning("No Int Value?!?!");
+                Debug.LogWarning("No Int Value?!?! Level Selector Switch");
                 break;
         }
     }

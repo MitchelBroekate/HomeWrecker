@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057473201649844180}
   - component: {fileID: 3672094465338081474}
+  - component: {fileID: 6835807152331286382}
   m_Layer: 9
   m_Name: (Weapon) Bat
   m_TagString: Untagged
@@ -51,8 +52,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8be5447cbbbc44da712b96cb6d0324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  weaponCooldown: 2.5
+  cutforce: 500
+--- !u!95 &6835807152331286382
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149373203855704133}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7da7dbc964004b043840e1fe8223b4bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &236918446854010116
 GameObject:
   m_ObjectHideFlags: 0

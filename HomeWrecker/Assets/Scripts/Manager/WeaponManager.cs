@@ -8,15 +8,13 @@ public class WeaponManager : MonoBehaviour
 {
     #region Variables
     [Header("Linked Variables")]
-    public string currentWeapon;
-
-    int weaponDamage;
-    int weaponRange;
-    float weaponCooldown;
-
     [SerializeField] Transform cam;
     [SerializeField] WeaponSO[] weaponSO;
     [SerializeField] Transform weaponSpawnpoint;
+    public string currentWeapon;
+    int weaponDamage;
+    int weaponRange;
+    float weaponCooldown;
     #endregion
 
     /// <summary>

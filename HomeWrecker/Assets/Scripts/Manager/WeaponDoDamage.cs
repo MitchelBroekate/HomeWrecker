@@ -4,21 +4,28 @@ using System.Collections;
 
 public class WeaponDoDamage : MonoBehaviour
 {
-    [SerializeField] int damage;
-    [SerializeField] float weaponCooldown;
+    //THIS SCRIPT MAKES USE OF 2 EXTERNAL ASSETS (I COULDN'T FIND ENOUGH INFORMATION WITHIN 50 HOURS ABOUT PROCEDURAL DESTRUCTION)//
 
-    Transform startSlicePos;
-    Transform endSlicePos;
+    #region Variables
+    [Header("Config Variables")]
+    [SerializeField]float cutforce;
 
-    //bool isAttacking;
+    [Header("Linked Variables")]
     VelocityEstimator velocityEstimator;
     LayerMask layerMaskRay;
-    float cutforce = 2000;
-
+    Transform startSlicePos;
+    Transform endSlicePos;
+    int damage;
+    float weaponCooldown;
     bool isAttacking = false;
     bool attackOnCooldown = false;
     bool doDamageOnce = true;
+    Animator weaponAnimator;
+    #endregion
     
+    /// <summary>
+    /// This function gets the slice positions of the blade, the velocityEstimator component, and sets the layermask for the damage detection
+    /// </summary>
     void Start()
     {
         startSlicePos = transform.GetChild(1).transform;
@@ -27,20 +34,30 @@ public class WeaponDoDamage : MonoBehaviour
         velocityEstimator = endSlicePos.GetComponent<VelocityEstimator>();
 
         layerMaskRay = LayerMask.GetMask("Destructible");
+
+        weaponAnimator = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// This function checks if the a mousebutton is pressed and enables the attack state 
+    /// </summary>
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
         {
             if(!isAttacking || !attackOnCooldown)
             {
+                weaponAnimator.SetBool("IsAttacking", true);
+
                 Debug.Log("Weapon Attacking");
                 StartCoroutine(StartAttack());
             }
         }
     }
 
+    /// <summary>
+    /// This function checks for a destructible object and does damage to that object or slices it if the object is out of health
+    /// </summary>
     void FixedUpdate()
     {
         if(isAttacking)
@@ -67,7 +84,10 @@ public class WeaponDoDamage : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// This function allows an object to be sliced by splitting the UV and calculating which direction the weapon is going
+    /// </summary>
+    /// <param name="target"></param>
     void Slice(GameObject target)
     {
         Vector3 velocity = velocityEstimator.GetVelocityEstimate();
@@ -86,11 +106,16 @@ public class WeaponDoDamage : MonoBehaviour
 
             Destroy(target);
 
+            //If we want the objects to disappear after a few seconds
             //Destroy(upperHull, 4);
             //Destroy(lowerHull, 4);
         }
     }
 
+    /// <summary>
+    /// Gives the Sliced object(Upper- and Lowerhull) Components and adds some force to the splitting
+    /// </summary>
+    /// <param name="target"></param>
     void SetupSlicedObject(GameObject target)
     {
         Rigidbody rb = target.AddComponent<Rigidbody>();
@@ -101,29 +126,47 @@ public class WeaponDoDamage : MonoBehaviour
         rb.AddExplosionForce(cutforce, target.transform.position, 3);
     }
 
+    /// <summary>
+    /// This function sets the damage of the weapon
+    /// </summary>
+    /// <param name="damageAmount"></param>
     public void SetDamage(int damageAmount)
     {
         damage = damageAmount;
     }
 
+    /// <summary>
+    /// This function sets the cooldown of the weapon
+    /// </summary>
+    /// <param name="cooldownAmount"></param>
     public void SetCooldown(float cooldownAmount)
     {
         weaponCooldown = cooldownAmount;
     }
 
+    /// <summary>
+    /// This function gives a time periode where the player does damage(for the animation)
+    /// </summary>
+    /// <returns></returns>
     IEnumerator StartAttack()
     {
         Debug.Log("Weapon Can Attack");
 
         isAttacking = true;
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
+
+        weaponAnimator.SetBool("IsAttacking", false);
 
         StartCoroutine(AttackCooldown());
         
         isAttacking = false;
     }
 
+    /// <summary>
+    /// This function adds a cooldown for the attackss
+    /// </summary>
+    /// <returns></returns>
     IEnumerator AttackCooldown()
     {
         Debug.Log("Weapon Cooldown");

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BatSO
   m_EditorClassIdentifier: 
   damage: 1
-  weaponCooldown: 2.5
+  weaponCooldown: 1
   weaponToInstantiate: {fileID: 149373203855704133, guid: c64c2c12befbc294ab39f57496385328,
     type: 3}
