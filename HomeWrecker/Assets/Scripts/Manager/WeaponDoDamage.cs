@@ -45,12 +45,16 @@ public class WeaponDoDamage : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            if(!isAttacking || !attackOnCooldown)
+            if(!isAttacking)
             {
-                weaponAnimator.SetBool("IsAttacking", true);
+                if(!attackOnCooldown)
+                {
+                    weaponAnimator.SetTrigger("Attack");
 
-                Debug.Log("Weapon Attacking");
-                StartCoroutine(StartAttack());
+                    Debug.Log("Weapon Attacking");
+                    StartCoroutine(StartAttack());
+                }
+
             }
         }
     }
@@ -154,9 +158,9 @@ public class WeaponDoDamage : MonoBehaviour
 
         isAttacking = true;
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
-        weaponAnimator.SetBool("IsAttacking", false);
+        weaponAnimator.ResetTrigger("Attack");
 
         StartCoroutine(AttackCooldown());
         
@@ -164,7 +168,7 @@ public class WeaponDoDamage : MonoBehaviour
     }
 
     /// <summary>
-    /// This function adds a cooldown for the attackss
+    /// This function adds a cooldown for the attacks
     /// </summary>
     /// <returns></returns>
     IEnumerator AttackCooldown()
