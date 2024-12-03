@@ -12,7 +12,6 @@ public class WeaponDoDamage : MonoBehaviour
 
     [Header("Linked Variables")]
     [SerializeField] int damage;
-    [SerializeField] float weaponCooldown;
     VelocityEstimator velocityEstimator;
     LayerMask layerMaskRay;
     Transform startSlicePos;

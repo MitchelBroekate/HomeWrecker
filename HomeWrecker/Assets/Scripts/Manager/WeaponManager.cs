@@ -9,7 +9,7 @@ public class WeaponManager : MonoBehaviour
     #region Variables
     [Header("Linked Variables")]
     [SerializeField] Transform cam;
-    [SerializeField] WeaponSO[] weaponSO;
+    [SerializeField] GameObject[] weaponPrefab;
     [SerializeField] Transform weaponSpawnpoint;
     public string currentWeapon;
     #endregion
@@ -21,12 +21,10 @@ public class WeaponManager : MonoBehaviour
     {
         currentWeapon = "WeaponType_BAT";
 
-        GameObject currentWeaponObject = Instantiate(weaponSO[0].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
+        GameObject currentWeaponObject = Instantiate(weaponPrefab[0], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
         
-        WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
-
-        weaponDoDamage.SetDamage(weaponSO[0].Damage);
+        WeaponDoDamage weaponDoDamage = weaponPrefab[0].GetComponent<WeaponDoDamage>();
     }
 
     /// <summary>
@@ -44,12 +42,10 @@ public class WeaponManager : MonoBehaviour
 
         currentWeapon = "WeaponType_BAT";
 
-        GameObject currentWeaponObject = Instantiate(weaponSO[0].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
+        GameObject currentWeaponObject = Instantiate(weaponPrefab[0], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
 
-        WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
-        
-        weaponDoDamage.SetDamage(weaponSO[0].Damage);
+        WeaponDoDamage weaponDoDamage = weaponPrefab[0].GetComponent<WeaponDoDamage>();
     }
 
     /// <summary>
@@ -67,11 +63,11 @@ public class WeaponManager : MonoBehaviour
 
         currentWeapon = "WeaponType_KATANA";
 
-        GameObject currentWeaponObject = Instantiate(weaponSO[1].weaponToInstantiate, weaponSpawnpoint.position, weaponSpawnpoint.rotation);
+        GameObject currentWeaponObject = Instantiate(weaponPrefab[1], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
 
-        WeaponDoDamage weaponDoDamage = weaponSO[1].weaponToInstantiate.GetComponent<WeaponDoDamage>();
+        WeaponDoDamage weaponDoDamage = weaponPrefab[1].GetComponent<WeaponDoDamage>();
         
-        weaponDoDamage.SetDamage(weaponSO[1].Damage);
+        //weaponDoDamage.SetDamage(weaponPrefab[1].Damage);
     }
 }

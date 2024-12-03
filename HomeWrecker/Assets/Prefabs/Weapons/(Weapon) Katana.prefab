@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutforce: 2000
+  damage: 2
 --- !u!95 &4591454890552057193
 Animator:
   serializedVersion: 5

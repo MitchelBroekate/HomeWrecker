@@ -3035,6 +3035,23 @@ PrefabInstance:
       propertyPath: weaponSpawnpoint
       value: 
       objectReference: {fileID: 619635341}
+    - target: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
+      propertyPath: weaponPrefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
+      propertyPath: weaponPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 149373203855704133, guid: c64c2c12befbc294ab39f57496385328,
+        type: 3}
+    - target: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
+      propertyPath: weaponPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 149373203855704133, guid: fd826f80ce954c246a2d757ef5e710c7,
+        type: 3}
     - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
       propertyPath: scoreText
@@ -3594,6 +3611,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862681377585087463, guid: a8592b1167833b145b81d1cfa5c261cc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862681377585087463, guid: a8592b1167833b145b81d1cfa5c261cc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272965728}
+    - target: {fileID: 7862681377585087463, guid: a8592b1167833b145b81d1cfa5c261cc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272965728}
+    - target: {fileID: 7862681377585087463, guid: a8592b1167833b145b81d1cfa5c261cc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WeaponKey1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862681377585087463, guid: a8592b1167833b145b81d1cfa5c261cc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WeaponKey2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7210,6 +7252,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7351a1338ea153e43a2c03b4c5932a3f, type: 3}
+--- !u!114 &1272965728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
+    type: 3}
+  m_PrefabInstance: {fileID: 488601175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c570cb4d31bab464d8eca6455ba78cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1288430962
 PrefabInstance:
   m_ObjectHideFlags: 0
