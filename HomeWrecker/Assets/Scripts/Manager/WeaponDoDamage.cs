@@ -11,12 +11,12 @@ public class WeaponDoDamage : MonoBehaviour
     [SerializeField]float cutforce;
 
     [Header("Linked Variables")]
+    [SerializeField] int damage;
+    [SerializeField] float weaponCooldown;
     VelocityEstimator velocityEstimator;
     LayerMask layerMaskRay;
     Transform startSlicePos;
     Transform endSlicePos;
-    int damage;
-    float weaponCooldown;
     bool isAttacking = false;
     bool attackOnCooldown = false;
     bool doDamageOnce = true;
@@ -28,8 +28,8 @@ public class WeaponDoDamage : MonoBehaviour
     /// </summary>
     void Start()
     {
-        startSlicePos = transform.GetChild(1).transform;
-        endSlicePos = transform.GetChild(2).transform;
+        startSlicePos = transform.GetChild(0).transform.GetChild(0).transform;
+        endSlicePos = transform.GetChild(0).transform.GetChild(1).transform;
 
         velocityEstimator = endSlicePos.GetComponent<VelocityEstimator>();
 
@@ -49,10 +49,10 @@ public class WeaponDoDamage : MonoBehaviour
             {
                 if(!attackOnCooldown)
                 {
-                    weaponAnimator.SetBool("IsAttacking", true);
-
                     Debug.Log("Weapon Attacking");
                     StartCoroutine(StartAttack());
+                    
+                    weaponAnimator.SetBool("IsAttacking", true);
                 }
 
             }
@@ -70,13 +70,13 @@ public class WeaponDoDamage : MonoBehaviour
             if (Physics.Raycast(startSlicePos.position, direction, out RaycastHit hit, 0.7f, layerMaskRay))
             {
 
+
                 GameObject target = hit.transform.gameObject;
                 DestructibleStats destructibleStats = target.GetComponent<DestructibleStats>();
 
                 if(doDamageOnce)
                 {
                     destructibleStats.DoDamage(damage);
-
                     doDamageOnce = false;
                 }
 
@@ -158,7 +158,7 @@ public class WeaponDoDamage : MonoBehaviour
 
         isAttacking = true;
         
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.6f);
 
         weaponAnimator.SetBool("IsAttacking", false);
 

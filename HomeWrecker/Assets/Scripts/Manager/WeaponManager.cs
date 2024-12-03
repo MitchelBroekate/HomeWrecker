@@ -12,9 +12,6 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] WeaponSO[] weaponSO;
     [SerializeField] Transform weaponSpawnpoint;
     public string currentWeapon;
-    int weaponDamage;
-    int weaponRange;
-    float weaponCooldown;
     #endregion
 
     /// <summary>
@@ -29,11 +26,8 @@ public class WeaponManager : MonoBehaviour
         
         WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
 
-        weaponDamage = weaponSO[0].Damage;
-        weaponCooldown = weaponSO[0].WeaponCooldown;
-        
-        weaponDoDamage.SetDamage(weaponDamage);
-        weaponDoDamage.SetCooldown(weaponCooldown);
+        weaponDoDamage.SetDamage(weaponSO[0].Damage);
+        weaponDoDamage.SetCooldown(weaponSO[0].WeaponCooldown);
     }
 
     /// <summary>
@@ -55,12 +49,9 @@ public class WeaponManager : MonoBehaviour
         currentWeaponObject.transform.parent = cam;
 
         WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
-
-        weaponDamage = weaponSO[0].Damage;
-        weaponCooldown = weaponSO[0].WeaponCooldown;
         
-        weaponDoDamage.SetDamage(weaponDamage);
-        weaponDoDamage.SetCooldown(weaponCooldown);
+        weaponDoDamage.SetDamage(weaponSO[0].Damage);
+        weaponDoDamage.SetCooldown(weaponSO[0].WeaponCooldown);
     }
 
     /// <summary>
@@ -82,11 +73,8 @@ public class WeaponManager : MonoBehaviour
         currentWeaponObject.transform.parent = cam;
 
         WeaponDoDamage weaponDoDamage = weaponSO[1].weaponToInstantiate.GetComponent<WeaponDoDamage>();
-
-        weaponDamage = weaponSO[1].Damage;
-        weaponCooldown = weaponSO[1].WeaponCooldown;
         
-        weaponDoDamage.SetDamage(weaponDamage);
-        weaponDoDamage.SetCooldown(weaponCooldown);
+        weaponDoDamage.SetDamage(weaponSO[1].Damage);
+        weaponDoDamage.SetCooldown(weaponSO[1].WeaponCooldown);
     }
 }
