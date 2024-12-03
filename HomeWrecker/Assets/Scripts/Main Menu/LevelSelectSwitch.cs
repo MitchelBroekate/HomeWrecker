@@ -42,15 +42,15 @@ public class LevelSelectSwitch : MonoBehaviour
         switch (currentSelectedLevel)
         {
             case 0:
-                SceneManager.LoadScene("Elevator pitch");
+                SceneManager.LoadScene("Elevator pitch", LoadSceneMode.Single);
                 break;
 
             case 1:
-                SceneManager.LoadScene("MarktMedia");
+                SceneManager.LoadScene("MarktMedia", LoadSceneMode.Single);
                 break;
 
             case 2:
-                //SceneManager.LoadScene("Future Game");
+                //SceneManager.LoadScene("Future Game", LoadSceneMode.Single);
                 Debug.Log("Level W.I.P");
                 break;
             
