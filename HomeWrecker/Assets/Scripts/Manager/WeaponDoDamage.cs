@@ -18,7 +18,6 @@ public class WeaponDoDamage : MonoBehaviour
     Transform startSlicePos;
     Transform endSlicePos;
     bool isAttacking = false;
-    bool attackOnCooldown = false;
     bool doDamageOnce = true;
     Animator weaponAnimator;
     #endregion
@@ -47,14 +46,13 @@ public class WeaponDoDamage : MonoBehaviour
         {
             if(!isAttacking)
             {
-                if(!attackOnCooldown)
-                {
                     Debug.Log("Weapon Attacking");
+
                     StartCoroutine(StartAttack());
                     
                     weaponAnimator.SetBool("IsAttacking", true);
-                }
 
+                    doDamageOnce = true;
             }
         }
     }
@@ -140,15 +138,6 @@ public class WeaponDoDamage : MonoBehaviour
     }
 
     /// <summary>
-    /// This function sets the cooldown of the weapon
-    /// </summary>
-    /// <param name="cooldownAmount"></param>
-    public void SetCooldown(float cooldownAmount)
-    {
-        weaponCooldown = cooldownAmount;
-    }
-
-    /// <summary>
     /// This function gives a time periode where the player does damage(for the animation)
     /// </summary>
     /// <returns></returns>
@@ -161,26 +150,7 @@ public class WeaponDoDamage : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
 
         weaponAnimator.SetBool("IsAttacking", false);
-
-        StartCoroutine(AttackCooldown());
         
         isAttacking = false;
-    }
-
-    /// <summary>
-    /// This function adds a cooldown for the attacks
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator AttackCooldown()
-    {
-        Debug.Log("Weapon Cooldown");
-
-        attackOnCooldown = true;
-
-        yield return new WaitForSeconds(weaponCooldown);
-
-        attackOnCooldown = false;
-
-        doDamageOnce = true;
     }
 }

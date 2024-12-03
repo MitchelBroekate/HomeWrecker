@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
-  scoreValue: 2
+  scoreValue: 400
   canDestroy: 0

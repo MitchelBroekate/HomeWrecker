@@ -31,6 +31,8 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int scoreValue)
     {
         _score += scoreValue;
+
+        scoreText.text = _score.ToString();
     }
 
     /// <summary>

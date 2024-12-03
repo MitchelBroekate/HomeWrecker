@@ -9,7 +9,6 @@ public class WeaponSO : ScriptableObject
     #region Variables
     [Header("Config Variables")]
     [SerializeField] int damage;
-    [SerializeField] float weaponCooldown;
 
     [Header("Linked Variables")]
     public GameObject weaponToInstantiate;
@@ -18,10 +17,5 @@ public class WeaponSO : ScriptableObject
     public int Damage
     {
         get { return damage; }
-    }
-
-    public float WeaponCooldown
-    {
-        get { return weaponCooldown;}
     }
 }

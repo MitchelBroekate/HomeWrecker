@@ -27,7 +27,6 @@ public class WeaponManager : MonoBehaviour
         WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
 
         weaponDoDamage.SetDamage(weaponSO[0].Damage);
-        weaponDoDamage.SetCooldown(weaponSO[0].WeaponCooldown);
     }
 
     /// <summary>
@@ -51,7 +50,6 @@ public class WeaponManager : MonoBehaviour
         WeaponDoDamage weaponDoDamage = weaponSO[0].weaponToInstantiate.GetComponent<WeaponDoDamage>();
         
         weaponDoDamage.SetDamage(weaponSO[0].Damage);
-        weaponDoDamage.SetCooldown(weaponSO[0].WeaponCooldown);
     }
 
     /// <summary>
@@ -75,6 +73,5 @@ public class WeaponManager : MonoBehaviour
         WeaponDoDamage weaponDoDamage = weaponSO[1].weaponToInstantiate.GetComponent<WeaponDoDamage>();
         
         weaponDoDamage.SetDamage(weaponSO[1].Damage);
-        weaponDoDamage.SetCooldown(weaponSO[1].WeaponCooldown);
     }
 }

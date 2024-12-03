@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &110488051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6563072354423675137, guid: a8592b1167833b145b81d1cfa5c261cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121902514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &166260952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -567,6 +573,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1808121298}
   m_SourcePrefab: {fileID: 100100000, guid: 786ae395ad587d5418d5ca92e32fe893, type: 3}
+--- !u!4 &751156423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7967159132290869706, guid: a8592b1167833b145b81d1cfa5c261cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121902514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330006448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7327001491980119854, guid: a8592b1167833b145b81d1cfa5c261cc,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 7748998888150323410, guid: a8592b1167833b145b81d1cfa5c261cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1175,12 +1192,12 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 110488051}
     - target: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
       propertyPath: weaponSpawnpoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 751156423}
     - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
       propertyPath: scoreText
