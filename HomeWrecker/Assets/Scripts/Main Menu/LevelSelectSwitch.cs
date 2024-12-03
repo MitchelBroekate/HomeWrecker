@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using System;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectSwitch : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class LevelSelectSwitch : MonoBehaviour
     [SerializeField] Transform roomCameraTransform;
     [SerializeField] TMP_Text roomName;
     [SerializeField] GameObject levelSelectObject;
+    [SerializeField] ScoreManager scoreManager;
     #endregion
 
     /// <summary>
@@ -31,6 +34,25 @@ public class LevelSelectSwitch : MonoBehaviour
         }
     }
 
+    public void PlayScene()
+    {
+        switch (currentSelectedLevel)
+        {
+            case 0:
+                SceneManager.LoadScene("Elevator pitch");
+                break;
+
+            case 1:
+                SceneManager.LoadScene("MarktMedia");
+                break;
+
+            case 2:
+                //SceneManager.LoadScene("Future Game");
+                Debug.Log("Level W.I.P");
+                break;
+        }
+    }
+
     /// <summary>
     /// This function goes to the next selected level when called
     /// </summary>
@@ -44,6 +66,8 @@ public class LevelSelectSwitch : MonoBehaviour
         {
             currentSelectedLevel = 0;
         }
+
+        scoreManager.SetHighscoreText(currentSelectedLevel);
     }
 
     /// <summary>
@@ -61,6 +85,8 @@ public class LevelSelectSwitch : MonoBehaviour
             {
                 currentSelectedLevel = 0;
             }
+
+            scoreManager.SetHighscoreText(currentSelectedLevel);
         }
     }
 
@@ -77,6 +103,8 @@ public class LevelSelectSwitch : MonoBehaviour
         {
             currentSelectedLevel = 2;
         }
+
+        scoreManager.SetHighscoreText(currentSelectedLevel);
     }
 
     /// <summary>
@@ -94,6 +122,8 @@ public class LevelSelectSwitch : MonoBehaviour
             {
                 currentSelectedLevel = 2;
             }
+
+            scoreManager.SetHighscoreText(currentSelectedLevel);
         }
     }
 

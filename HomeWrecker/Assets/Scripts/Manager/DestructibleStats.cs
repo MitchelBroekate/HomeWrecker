@@ -35,6 +35,6 @@ public class DestructibleStats : MonoBehaviour
 
     void AddScore()
     {
-        scoreManager.updateScore(scoreValue);
+        scoreManager.AddScore(scoreValue);
     }
 }

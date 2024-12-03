@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: aae8aaac2bf7865498243d33dfe9b528
+  - enabled: 1
+    path: Assets/Scenes/Elevator pitch.unity
+    guid: 999db86ace840774c8c600b1b5ffebe2
   m_configObjects: {}
