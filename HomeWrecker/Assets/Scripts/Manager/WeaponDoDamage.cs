@@ -12,6 +12,7 @@ public class WeaponDoDamage : MonoBehaviour
 
     [Header("Linked Variables")]
     [SerializeField] int damage;
+    [SerializeField] Material sliceMaterial;
     VelocityEstimator velocityEstimator;
     LayerMask layerMaskRay;
     Transform startSlicePos;
@@ -99,10 +100,10 @@ public class WeaponDoDamage : MonoBehaviour
 
         if(hull != null)
         {
-            GameObject upperHull = hull.CreateUpperHull(target);
+            GameObject upperHull = hull.CreateUpperHull(target, sliceMaterial);
             SetupSlicedObject(upperHull);
 
-            GameObject lowerHull = hull.CreateLowerHull(target);
+            GameObject lowerHull = hull.CreateLowerHull(target, sliceMaterial);
             SetupSlicedObject(lowerHull);
 
             Destroy(target);

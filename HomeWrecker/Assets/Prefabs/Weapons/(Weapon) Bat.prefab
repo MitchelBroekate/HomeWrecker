@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutforce: 200
   damage: 1
+  sliceMaterial: {fileID: 2100000, guid: f598f6d04f8c5d7409b1c8418cf70e9e, type: 2}
 --- !u!95 &6835807152331286382
 Animator:
   serializedVersion: 5
