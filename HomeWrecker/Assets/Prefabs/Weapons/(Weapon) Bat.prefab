@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8be5447cbbbc44da712b96cb6d0324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutforce: 2000
+  cutforce: 200
   damage: 1
 --- !u!95 &6835807152331286382
 Animator:
