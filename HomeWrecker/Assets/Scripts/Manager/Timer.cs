@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEditor.EditorTools;
 
-public class CountdownTimerWithMilliseconds : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     #region Variables
     [Header("Config Variables")]
