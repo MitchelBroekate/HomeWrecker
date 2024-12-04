@@ -146,7 +146,7 @@ public class WeaponDoDamage : MonoBehaviour
 
         isAttacking = true;
         
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.8f);
 
         weaponAnimator.SetBool("IsAttacking", false);
         
