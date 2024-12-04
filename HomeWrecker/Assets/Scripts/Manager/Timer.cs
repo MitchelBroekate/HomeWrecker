@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEditor.EditorTools;
 
 public class Timer : MonoBehaviour
 {
