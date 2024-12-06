@@ -6,12 +6,14 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     #region Variables
+    [Header("Config Variables")]
+    public int currentScene;
+    
     [Header("Linked Variables")]
     [SerializeField] int _score = 0;
     public TMP_Text scoreText;
     public TMP_Text highscoreText;
     public TMP_Text timeScoreText;
-    [SerializeField] int currentScene;
 
     int _scoreToCreate;
     #endregion

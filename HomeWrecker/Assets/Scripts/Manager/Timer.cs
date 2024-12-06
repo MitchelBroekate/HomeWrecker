@@ -48,12 +48,8 @@ public class Timer : MonoBehaviour
                 scoreManager.UpdateHighscore();
             }
 
-            if(scoreManager.GetScore >= 20000)
-            {
-                StopCountdown();
-                scoreManager.UpdateHighscore();
-                scoreManager.UpdateHighscoreTimerText(currentTime);
-            }
+            GameFinishScore();
+
         }
     }
 
@@ -85,5 +81,42 @@ public class Timer : MonoBehaviour
         int milliseconds = Mathf.FloorToInt(currentTime % 1 * 100);
 
         timerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
+    }
+
+    void GameFinishScore()
+    {
+        switch (scoreManager.currentScene)
+        {
+            case 0:
+                if(scoreManager.GetScore >= 12900)
+                {
+                    StopCountdown();
+                    scoreManager.UpdateHighscore();
+                    scoreManager.UpdateHighscoreTimerText(currentTime);
+                }
+            break;
+
+            case 1:
+                if(scoreManager.GetScore >= 20000)
+                {
+                    StopCountdown();
+                    scoreManager.UpdateHighscore();
+                    scoreManager.UpdateHighscoreTimerText(currentTime);
+                }
+            break;
+
+            case 2:
+                if(scoreManager.GetScore >= 20000)
+                {
+                    StopCountdown();
+                    scoreManager.UpdateHighscore();
+                    scoreManager.UpdateHighscoreTimerText(currentTime);
+                }
+            break;
+
+            default:
+                Debug.LogWarning("No Int Value?!?! SceneCheck Switch");
+            break;
+        }
     }
 }
