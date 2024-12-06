@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class Timer : MonoBehaviour
 
     [Header("Linked Variables")]
     [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] ScoreManager scoreManager;
+    float currentTime;
 
     //Used only inside the script
-    float _currentTime;
     bool _isCountingDown = false;
     #endregion
 
@@ -21,27 +23,36 @@ public class Timer : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _currentTime = countdownTime;
+        currentTime = countdownTime;
 
         StartCountdown();
     }
 
     /// <summary>
-    /// This function does the countdown until it reaches 0
+    /// This function counts down until it reaches 0 and uploads the score or if the max score is reached saves the score and time
     /// </summary>
     void Update()
     {
-        if (_isCountingDown && _currentTime > 0)
+        if (_isCountingDown && currentTime > 0)
         {
-            _currentTime -= Time.deltaTime;
+            currentTime -= Time.deltaTime;
 
-            _currentTime = Mathf.Max(_currentTime, 0);
+            currentTime = Mathf.Max(currentTime, 0);
 
             UpdateTimerText();
 
-            if (_currentTime <= 0)
+            if (currentTime <= 0)
             {
                 StopCountdown();
+
+                scoreManager.UpdateHighscore();
+            }
+
+            if(scoreManager.GetScore >= 20000)
+            {
+                StopCountdown();
+                scoreManager.UpdateHighscore();
+                scoreManager.UpdateHighscoreTimerText(currentTime);
             }
         }
     }
@@ -51,7 +62,7 @@ public class Timer : MonoBehaviour
     /// </summary>
     void StartCountdown()
     {
-        _currentTime = countdownTime;
+        currentTime = countdownTime;
         _isCountingDown = true;
         UpdateTimerText();
     }
@@ -69,10 +80,10 @@ public class Timer : MonoBehaviour
     /// </summary>
     void UpdateTimerText()
     {
-        int minutes = Mathf.FloorToInt(_currentTime / 60f);
-        int seconds = Mathf.FloorToInt(_currentTime % 60f);
-        int milliseconds = Mathf.FloorToInt(_currentTime % 1 * 1000);
+        int minutes = Mathf.FloorToInt(currentTime / 60f);
+        int seconds = Mathf.FloorToInt(currentTime % 60f);
+        int milliseconds = Mathf.FloorToInt(currentTime % 1 * 100);
 
-        timerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:000}";
+        timerText.text = $"{minutes:00}:{seconds:00}:{milliseconds:00}";
     }
 }
