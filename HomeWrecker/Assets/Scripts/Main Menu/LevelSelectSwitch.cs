@@ -42,7 +42,7 @@ public class LevelSelectSwitch : MonoBehaviour
         switch (currentSelectedLevel)
         {
             case 0:
-                SceneManager.LoadScene("Elevator pitch", LoadSceneMode.Single);
+                SceneManager.LoadScene("Tutorial Level", LoadSceneMode.Single);
                 break;
 
             case 1:
@@ -75,6 +75,7 @@ public class LevelSelectSwitch : MonoBehaviour
         }
 
         scoreManager.SetHighscoreText(currentSelectedLevel);
+        scoreManager.SetHighscoreTimeText(currentSelectedLevel);
     }
 
     /// <summary>
@@ -94,6 +95,7 @@ public class LevelSelectSwitch : MonoBehaviour
             }
 
             scoreManager.SetHighscoreText(currentSelectedLevel);
+            scoreManager.SetHighscoreTimeText(currentSelectedLevel);
         }
     }
 
@@ -112,6 +114,7 @@ public class LevelSelectSwitch : MonoBehaviour
         }
 
         scoreManager.SetHighscoreText(currentSelectedLevel);
+        scoreManager.SetHighscoreTimeText(currentSelectedLevel);
     }
 
     /// <summary>
@@ -131,6 +134,7 @@ public class LevelSelectSwitch : MonoBehaviour
             }
 
             scoreManager.SetHighscoreText(currentSelectedLevel);
+            scoreManager.SetHighscoreTimeText(currentSelectedLevel);
         }
     }
 

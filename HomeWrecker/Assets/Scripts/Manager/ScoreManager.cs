@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -11,21 +12,26 @@ public class ScoreManager : MonoBehaviour
     
     [Header("Linked Variables")]
     [SerializeField] int _score = 0;
-    public TMP_Text scoreText;
-    public TMP_Text highscoreText;
-    public TMP_Text timeScoreText;
+    public TMP_Text score;
+    public TMP_Text highscore;
+    public TMP_Text timeScore;
 
     int _scoreToCreate;
     #endregion
 
     /// <summary>
-    /// This function checks for playerprefs and sets the highscore text for the first level
+    /// This function checks for playerprefs and sets the highscore  for the first level
     /// </summary>
     void Start()
     {
         LoadScore();
 
-        highscoreText.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
+        highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
+
+        if(SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            timeScore.text = PlayerPrefs.GetString("TimeScoreTutorial");
+        }
     }
 
     /// <summary>
@@ -36,7 +42,7 @@ public class ScoreManager : MonoBehaviour
     {
         _score += scoreValue;
 
-        scoreText.text = _score.ToString();
+        score.text = _score.ToString();
     }
 
     /// <summary>
@@ -93,7 +99,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     /// <summary>
-    /// This function sets the highscore text for the selected level to the current highscore
+    /// This function sets the highscore  for the selected level to the current highscore
     /// </summary>
     /// <param name="highscoreValue"></param>
     public void SetHighscoreText(int highscoreValue)
@@ -101,15 +107,15 @@ public class ScoreManager : MonoBehaviour
         switch(highscoreValue)
         {
             case 0:
-                highscoreText.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
+                highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
                 break;
 
             case 1:
-                highscoreText.text = PlayerPrefs.GetInt("HighscoreMarktMedia").ToString();
+                highscore.text = PlayerPrefs.GetInt("HighscoreMarktMedia").ToString();
                 break;
 
             case 2:
-                //highscoreText.text = PlayerPrefs.GetInt("HighscoreFutureGame").ToString();
+                //highscore.text = PlayerPrefs.GetInt("HighscoreFutureGame").ToString();
                 Debug.Log("Level W.I.P");
                 break;
 
@@ -160,10 +166,8 @@ public class ScoreManager : MonoBehaviour
     /// TTis function formats the timer score for the UI
     /// </summary>
     /// <param name="highscoreTime"></param>
-    public void UpdateHighscoreTimerText(float highscoreTime)
+    public void UpdateHighscoreTimer(float highscoreTime)
     {
-
-        
         switch(currentScene)
         {
             case 0:
@@ -198,7 +202,30 @@ public class ScoreManager : MonoBehaviour
                 break;
             
             default:
-                Debug.LogWarning("No Int Value?!?! Update HighscoreTimerText Switch");
+                Debug.LogWarning("No Int Value?!?! Update HighscoreTimer Switch");
+                break;
+        }
+    }
+
+    public void SetHighscoreTimeText(int timeScoreValue)
+    {
+        switch(timeScoreValue)
+        {
+            case 0:
+                timeScore.text = PlayerPrefs.GetString("TimeScoreTutorial");
+                break;
+
+            case 1:
+                timeScore.text = PlayerPrefs.GetString("TimeScoreMarktMedia");
+                break;
+
+            case 2:
+                //timeScore.text = PlayerPrefs.GetString("TimeScoreFutureGame");
+                Debug.Log("Level W.I.P");
+                break;
+
+            default:
+                Debug.LogWarning("No Int Value?!?! Highscore Switch");
                 break;
         }
     }

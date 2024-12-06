@@ -3453,9 +3453,19 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 191211997}
+    - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
       propertyPath: _score
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
+      propertyPath: highscore
+      value: 
+      objectReference: {fileID: 1422451957}
     - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
       propertyPath: scoreText
@@ -8373,7 +8383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959409cea1669814bb75336f494dee36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 180
+  countdownTime: 600
   timerText: {fileID: 1720727373}
   scoreManager: {fileID: 1272965732}
 --- !u!114 &1272965732 stripped
@@ -16196,6 +16206,7 @@ SceneRoots:
   - {fileID: 396341727}
   - {fileID: 488601175}
   - {fileID: 619635339}
+  - {fileID: 942903604}
   - {fileID: 2144343497}
   - {fileID: 1040292630}
   - {fileID: 320543212}
@@ -16221,7 +16232,6 @@ SceneRoots:
   - {fileID: 1713966514}
   - {fileID: 1882904719}
   - {fileID: 1078355144}
-  - {fileID: 942903604}
   - {fileID: 8574927796098681123}
   - {fileID: 153616186372439011}
   - {fileID: 9055429373246351288}

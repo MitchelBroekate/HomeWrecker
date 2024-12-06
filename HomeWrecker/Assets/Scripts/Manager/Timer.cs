@@ -92,7 +92,7 @@ public class Timer : MonoBehaviour
                 {
                     StopCountdown();
                     scoreManager.UpdateHighscore();
-                    scoreManager.UpdateHighscoreTimerText(currentTime);
+                    scoreManager.UpdateHighscoreTimer(currentTime);
                 }
             break;
 
@@ -101,7 +101,7 @@ public class Timer : MonoBehaviour
                 {
                     StopCountdown();
                     scoreManager.UpdateHighscore();
-                    scoreManager.UpdateHighscoreTimerText(currentTime);
+                    scoreManager.UpdateHighscoreTimer(currentTime);
                 }
             break;
 
@@ -110,7 +110,7 @@ public class Timer : MonoBehaviour
                 {
                     StopCountdown();
                     scoreManager.UpdateHighscore();
-                    scoreManager.UpdateHighscoreTimerText(currentTime);
+                    scoreManager.UpdateHighscoreTimer(currentTime);
                 }
             break;
 
