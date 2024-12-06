@@ -1372,6 +1372,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1075f4289dcd3c4889c330a22de579f, type: 3}
+--- !u!1001 &3976573296124900359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.490539
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6462154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240063984474917900, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012483699462002358, guid: acbd80b461be2ec49ba502c510870c83,
+        type: 3}
+      propertyPath: m_Name
+      value: CurvedDesktopWit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acbd80b461be2ec49ba502c510870c83, type: 3}
 --- !u!1001 &4697047883246445964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1738,3 +1806,4 @@ SceneRoots:
   - {fileID: 223132268528693679}
   - {fileID: 8884822216381769952}
   - {fileID: 6124442636729931485}
+  - {fileID: 3976573296124900359}
