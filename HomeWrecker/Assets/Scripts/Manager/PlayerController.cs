@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform cam;
 
     //Used inside script
-    RaycastHit _hit;
     float xRotation = 0f;
     Vector2 _moveDirection;
     Rigidbody _rb;
@@ -104,7 +103,7 @@ public class PlayerController : MonoBehaviour
     /// This Function sets the state of the _playerLock bool
     /// </summary>
     /// <param name="allowState"></param>
-    public void AllowMovement(bool allowState)
+    public void LockPlayer(bool allowState)
     {
         _playerLock = allowState;
     }

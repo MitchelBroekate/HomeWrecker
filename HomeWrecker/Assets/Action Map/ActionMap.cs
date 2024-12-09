@@ -148,6 +148,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PauseGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""75d7c819-bdd3-4e3a-8ca7-406077503767"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -260,6 +269,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2cae1b29-01e3-4b9d-afa5-c14d24192642"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -279,6 +299,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_MainGame_Key1 = m_MainGame.FindAction("Key1", throwIfNotFound: true);
         m_MainGame_Key2 = m_MainGame.FindAction("Key2", throwIfNotFound: true);
         m_MainGame_Key3 = m_MainGame.FindAction("Key3", throwIfNotFound: true);
+        m_MainGame_PauseGame = m_MainGame.FindAction("PauseGame", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -408,6 +429,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MainGame_Key1;
     private readonly InputAction m_MainGame_Key2;
     private readonly InputAction m_MainGame_Key3;
+    private readonly InputAction m_MainGame_PauseGame;
     public struct MainGameActions
     {
         private @ActionMap m_Wrapper;
@@ -418,6 +440,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @Key1 => m_Wrapper.m_MainGame_Key1;
         public InputAction @Key2 => m_Wrapper.m_MainGame_Key2;
         public InputAction @Key3 => m_Wrapper.m_MainGame_Key3;
+        public InputAction @PauseGame => m_Wrapper.m_MainGame_PauseGame;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -445,6 +468,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Key3.started += instance.OnKey3;
             @Key3.performed += instance.OnKey3;
             @Key3.canceled += instance.OnKey3;
+            @PauseGame.started += instance.OnPauseGame;
+            @PauseGame.performed += instance.OnPauseGame;
+            @PauseGame.canceled += instance.OnPauseGame;
         }
 
         private void UnregisterCallbacks(IMainGameActions instance)
@@ -467,6 +493,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Key3.started -= instance.OnKey3;
             @Key3.performed -= instance.OnKey3;
             @Key3.canceled -= instance.OnKey3;
+            @PauseGame.started -= instance.OnPauseGame;
+            @PauseGame.performed -= instance.OnPauseGame;
+            @PauseGame.canceled -= instance.OnPauseGame;
         }
 
         public void RemoveCallbacks(IMainGameActions instance)
@@ -498,5 +527,6 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnKey1(InputAction.CallbackContext context);
         void OnKey2(InputAction.CallbackContext context);
         void OnKey3(InputAction.CallbackContext context);
+        void OnPauseGame(InputAction.CallbackContext context);
     }
 }
