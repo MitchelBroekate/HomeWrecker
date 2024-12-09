@@ -62,7 +62,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b49dd60a0277b7a44af66c551ec98af2, type: 2}
+      objectReference: {fileID: 2100000, guid: f5456ca9b65a5f04eb9aafd2c915805e, type: 2}
     - target: {fileID: -7511558181221131132, guid: cc43d4b70c791af478dd9f0903fce133,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc43d4b70c791af478dd9f0903fce133,
         type: 3}
       propertyPath: m_Name
-      value: CurvedDesktopWit
+      value: CurvedMonitorZwart
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc43d4b70c791af478dd9f0903fce133,
         type: 3}
