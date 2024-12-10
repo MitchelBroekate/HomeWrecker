@@ -19,6 +19,7 @@ public class PauseStart : MonoBehaviour
 
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject hudCanvas;
 
     Rigidbody _rb;
     #endregion
@@ -51,8 +52,13 @@ public class PauseStart : MonoBehaviour
                 StopAllCoroutines();
 
                 isPaused = true;
+                
+                if(hudCanvas.activeInHierarchy)
+                {
+                    hudCanvas.SetActive(false);
+                }
 
-                if(pauseUI.activeInHierarchy == false)
+                if(!pauseUI.activeInHierarchy)
                 {
                     pauseUI.SetActive(true);
                 }
@@ -130,6 +136,7 @@ public class PauseStart : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
 
+        hudCanvas.SetActive(true);
         pauseUI.SetActive(false);
     }
 }
