@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Linked Camera Variables")]
     [SerializeField] Transform cam;
-
+ 
     //Used inside script
     float xRotation = 0f;
     Vector2 _moveDirection;

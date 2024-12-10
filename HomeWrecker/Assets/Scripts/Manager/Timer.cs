@@ -66,9 +66,14 @@ public class Timer : MonoBehaviour
     /// <summary>
     /// This function stops the countdown
     /// </summary>
-    void StopCountdown()
+    public void StopCountdown()
     {
         _isCountingDown = false;
+    }
+
+    public void ResumeCountdown()
+    {
+        _isCountingDown = true;
     }
 
     /// <summary>

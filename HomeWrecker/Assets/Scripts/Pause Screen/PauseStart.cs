@@ -21,6 +21,8 @@ public class PauseStart : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject hudCanvas;
 
+    [SerializeField] Timer timer;
+
     Rigidbody _rb;
     #endregion
 
@@ -67,6 +69,8 @@ public class PauseStart : MonoBehaviour
                 animator.SetBool("Pause", true);
 
                 playerController.LockPlayer(true);
+                timer.StopCountdown();
+                
                 _rb.velocity = Vector3.zero;
             }
             else
@@ -79,6 +83,7 @@ public class PauseStart : MonoBehaviour
                 animator.SetBool("Unpause", true);
 
                 playerController.LockPlayer(false);
+                timer.ResumeCountdown();
 
                 StartCoroutine(UnpauseAnimationTime());
             }
