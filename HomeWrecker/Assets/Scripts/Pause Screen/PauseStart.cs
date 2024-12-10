@@ -102,6 +102,7 @@ public class PauseStart : MonoBehaviour
             if(fadeCanvasBackground.alpha < 0.8f)
             {
                 fadeCanvasBackground.alpha += 2.4f * Time.deltaTime;
+                fadeCanvasMenu.alpha = 1f;
             }
             else if(fadeCanvasBackground.alpha >= 0.8f)
             {

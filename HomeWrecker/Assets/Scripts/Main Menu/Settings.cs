@@ -131,7 +131,7 @@ public class Settings : MonoBehaviour
     /// <summary>
     /// This function sets the volume of the audio mixer as the value of the volume slider, and updates or creates a playerpref
     /// </summary>
-    void SetSFXVolume()
+    public void SetSFXVolume()
     {
         float volumeSfx = sfxSlider.value;
 

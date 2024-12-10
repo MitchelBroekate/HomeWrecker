@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  scoreValue: 400
+  scoreValue: 500
   canDestroy: 0
 --- !u!64 &-7288358735443820575
 MeshCollider:
