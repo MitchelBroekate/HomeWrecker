@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4698654898770794031}
   - component: {fileID: 129012951325462675}
   - component: {fileID: 1851612574220501604}
+  - component: {fileID: 527446542659426116}
+  - component: {fileID: 6842664242626450167}
+  - component: {fileID: 7075890779800741145}
   m_Layer: 0
   m_Name: Script Manager
   m_TagString: Untagged
@@ -45,12 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c570cb4d31bab464d8eca6455ba78cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: 
   cam: {fileID: 0}
-  weaponSO:
-  - {fileID: 11400000, guid: 19ba68ebe68aad8488901b78c3755149, type: 2}
-  - {fileID: 11400000, guid: 44a7977fbd5a51a40ac815df734d3987, type: 2}
+  weaponPrefab: []
   weaponSpawnpoint: {fileID: 0}
+  currentWeapon: 
 --- !u!114 &1851612574220501604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,4 +64,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573f8f8063247e44a8ea7e423454a0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScene: 0
   _score: 0
+  score: {fileID: 0}
+  highscore: {fileID: 0}
+  timeScore: {fileID: 0}
+--- !u!114 &527446542659426116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e6a424013270f4bb46ae595e1d5cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeCanvasBackground: {fileID: 0}
+  fadeCanvasMenu: {fileID: 0}
+  pauseUI: {fileID: 0}
+  animator: {fileID: 0}
+  buttonBack: {fileID: 0}
+  buttonResume: {fileID: 0}
+  playerController: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &6842664242626450167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b26389e72023b44a3ed03b3f1daa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7075890779800741145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e403b85ab7e73184781fad9ac921c28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d0ce2c929f42ed64f88dbe44fdebae59, type: 2}
+  masterSlider: {fileID: 0}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
