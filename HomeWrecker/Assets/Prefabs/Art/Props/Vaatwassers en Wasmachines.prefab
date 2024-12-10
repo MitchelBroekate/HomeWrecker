@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2766025119787976318}
   - component: {fileID: 1282750344153663963}
   - component: {fileID: 3902872574737710353}
-  - component: {fileID: 1134004491970784396}
   - component: {fileID: 2941918105032963199}
+  - component: {fileID: 5035165648919487943}
   m_Layer: 7
   m_Name: Vaatwassers en Wasmachines
   m_TagString: Untagged
@@ -85,28 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1134004491970784396
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3254191156769414340}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2785352944014741483, guid: b5fb42915cd8d044d85ef14499928b2c, type: 3}
 --- !u!64 &2941918105032963199
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -129,3 +107,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2785352944014741483, guid: b5fb42915cd8d044d85ef14499928b2c, type: 3}
+--- !u!114 &5035165648919487943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254191156769414340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 200
+  canDestroy: 0
