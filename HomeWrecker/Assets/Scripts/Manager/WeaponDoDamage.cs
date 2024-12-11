@@ -38,7 +38,7 @@ public class WeaponDoDamage : MonoBehaviour
     }
 
     /// <summary>
-    /// This function checks if the a mousebutton is pressed and enables the attack state 
+    /// This function checks if the a mousebutton is pressed and enables the attack state. Checks for a destructible object and does damage to that object or slices it if the object is out of health
     /// </summary>
     void Update()
     {
@@ -46,22 +46,16 @@ public class WeaponDoDamage : MonoBehaviour
         {
             if(!isAttacking)
             {
-                    Debug.Log("Weapon Attacking");
+                Debug.Log("Weapon Attacking");
 
-                    StartCoroutine(StartAttack());
-                    
-                    weaponAnimator.SetBool("IsAttacking", true);
+                StartCoroutine(StartAttack());
+                
+                weaponAnimator.SetBool("IsAttacking", true);
 
-                    doDamageOnce = true;
+                doDamageOnce = true;
             }
         }
-    }
 
-    /// <summary>
-    /// This function checks for a destructible object and does damage to that object or slices it if the object is out of health
-    /// </summary>
-    void FixedUpdate()
-    {
         if(isAttacking)
         {
             Vector3 direction = (endSlicePos.position - startSlicePos.position).normalized;
@@ -84,6 +78,35 @@ public class WeaponDoDamage : MonoBehaviour
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    void FixedUpdate()
+    {
+        // if(isAttacking)
+        // {
+        //     Vector3 direction = (endSlicePos.position - startSlicePos.position).normalized;
+        //     if (Physics.Raycast(startSlicePos.position, direction, out RaycastHit hit, 0.7f, layerMaskRay))
+        //     {
+
+
+        //         GameObject target = hit.transform.gameObject;
+        //         DestructibleStats destructibleStats = target.GetComponent<DestructibleStats>();
+
+        //         if(doDamageOnce)
+        //         {
+        //             destructibleStats.DoDamage(damage);
+        //             doDamageOnce = false;
+        //         }
+
+        //         if(destructibleStats.canDestroy)
+        //         {
+        //             Slice(target);
+        //         }
+        //     }
+        // }
     }
 
     /// <summary>
