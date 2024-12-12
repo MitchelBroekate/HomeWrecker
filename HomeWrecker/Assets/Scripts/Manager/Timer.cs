@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] ScoreManager scoreManager;
     float currentTime;
+    [SerializeField] PlayerController playerController;
+    [SerializeField] GameObject[] uiScreens;
 
     //Used only inside the script
     bool _isCountingDown = false;
@@ -45,11 +47,27 @@ public class Timer : MonoBehaviour
             {
                 StopCountdown();
 
+                
+
+                playerController.LockPlayer(true);
+
+                foreach (var uiScreenV in uiScreens)
+                {
+                    if (uiScreenV.gameObject.activeSelf)
+                    {
+                        uiScreenV.gameObject.SetActive(false);
+                    }
+                }
+
+                uiScreens[uiScreens.Length].SetActive(true);
+
+
+                //show highscore, score, best time, and current time
+
+
                 scoreManager.UpdateHighscore();
+                GameFinishScore();
             }
-
-            GameFinishScore();
-
         }
     }
 
