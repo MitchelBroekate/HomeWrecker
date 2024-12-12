@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseSceneLoad : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     public void QuitGame()
     {
@@ -13,5 +13,10 @@ public class PauseSceneLoad : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name,LoadSceneMode.Single);
     }
 }
