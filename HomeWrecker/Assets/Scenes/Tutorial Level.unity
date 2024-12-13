@@ -9059,6 +9059,8 @@ MonoBehaviour:
   countdownTime: 600
   timerText: {fileID: 1720727373}
   scoreManager: {fileID: 1272965732}
+  playerController: {fileID: 0}
+  uiScreens: []
 --- !u!114 &1272965732 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
@@ -16851,6 +16853,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 523712346121c7f4ba483d54caef411d, type: 3}
+--- !u!1001 &3654037126651556682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3764046452533573660, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_Name
+      value: Pinapparaat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.984
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86281127
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.657
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.25009912
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9682203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -151.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573199687626351270, guid: 09fca0d9a1ed4d041b73bd4ffe385062,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09fca0d9a1ed4d041b73bd4ffe385062, type: 3}
 --- !u!1001 &3823236642227616209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17309,3 +17379,4 @@ SceneRoots:
   - {fileID: 1440935370}
   - {fileID: 2091849877}
   - {fileID: 1407004851}
+  - {fileID: 3654037126651556682}
