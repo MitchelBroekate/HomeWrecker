@@ -88,7 +88,7 @@ public class ScoreManager : MonoBehaviour
 
             case 2:
                 //PlayerPrefs.SetInt("HighscoreFutureGame", 0);
-                PlayerPrefs.SetString("TimeScoreFutureGame", "-----");
+                //PlayerPrefs.SetString("TimeScoreFutureGame", "-----");
                 Debug.Log("Level W.I.P");
                 break;
 
@@ -151,7 +151,7 @@ public class ScoreManager : MonoBehaviour
             case 2:
                 if(_score > PlayerPrefs.GetInt("HighscoreFutureGame"))
                 {    
-                    PlayerPrefs.SetInt("HighscoreFutureGame", _score);
+                    //PlayerPrefs.SetInt("HighscoreFutureGame", _score);
                 }
                 Debug.Log("How did you manage to do this?!?");
                 break;
