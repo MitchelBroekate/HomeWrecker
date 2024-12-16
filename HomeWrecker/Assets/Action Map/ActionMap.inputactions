@@ -135,6 +135,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DevAddScore",
+                    "type": "Button",
+                    "id": "de163887-c5b4-4b9c-818b-175c8a63e24a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DevDecreaseTime",
+                    "type": "Button",
+                    "id": "16288b05-a2ed-4c2f-9e56-fb422bb8f205",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -256,6 +274,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f943d15-decf-43fc-a7b1-3dee2299efaf",
+                    "path": "<Keyboard>/m",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DevAddScore",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d12299b1-c07f-4329-a718-ec05fe24ff1f",
+                    "path": "<Keyboard>/t",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DevDecreaseTime",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

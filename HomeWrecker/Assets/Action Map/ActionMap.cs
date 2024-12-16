@@ -157,6 +157,24 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DevAddScore"",
+                    ""type"": ""Button"",
+                    ""id"": ""de163887-c5b4-4b9c-818b-175c8a63e24a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DevDecreaseTime"",
+                    ""type"": ""Button"",
+                    ""id"": ""16288b05-a2ed-4c2f-9e56-fb422bb8f205"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -280,6 +298,28 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""PauseGame"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f943d15-decf-43fc-a7b1-3dee2299efaf"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DevAddScore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d12299b1-c07f-4329-a718-ec05fe24ff1f"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DevDecreaseTime"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -300,6 +340,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_MainGame_Key2 = m_MainGame.FindAction("Key2", throwIfNotFound: true);
         m_MainGame_Key3 = m_MainGame.FindAction("Key3", throwIfNotFound: true);
         m_MainGame_PauseGame = m_MainGame.FindAction("PauseGame", throwIfNotFound: true);
+        m_MainGame_DevAddScore = m_MainGame.FindAction("DevAddScore", throwIfNotFound: true);
+        m_MainGame_DevDecreaseTime = m_MainGame.FindAction("DevDecreaseTime", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -430,6 +472,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MainGame_Key2;
     private readonly InputAction m_MainGame_Key3;
     private readonly InputAction m_MainGame_PauseGame;
+    private readonly InputAction m_MainGame_DevAddScore;
+    private readonly InputAction m_MainGame_DevDecreaseTime;
     public struct MainGameActions
     {
         private @ActionMap m_Wrapper;
@@ -441,6 +485,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @Key2 => m_Wrapper.m_MainGame_Key2;
         public InputAction @Key3 => m_Wrapper.m_MainGame_Key3;
         public InputAction @PauseGame => m_Wrapper.m_MainGame_PauseGame;
+        public InputAction @DevAddScore => m_Wrapper.m_MainGame_DevAddScore;
+        public InputAction @DevDecreaseTime => m_Wrapper.m_MainGame_DevDecreaseTime;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -471,6 +517,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @PauseGame.started += instance.OnPauseGame;
             @PauseGame.performed += instance.OnPauseGame;
             @PauseGame.canceled += instance.OnPauseGame;
+            @DevAddScore.started += instance.OnDevAddScore;
+            @DevAddScore.performed += instance.OnDevAddScore;
+            @DevAddScore.canceled += instance.OnDevAddScore;
+            @DevDecreaseTime.started += instance.OnDevDecreaseTime;
+            @DevDecreaseTime.performed += instance.OnDevDecreaseTime;
+            @DevDecreaseTime.canceled += instance.OnDevDecreaseTime;
         }
 
         private void UnregisterCallbacks(IMainGameActions instance)
@@ -496,6 +548,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @PauseGame.started -= instance.OnPauseGame;
             @PauseGame.performed -= instance.OnPauseGame;
             @PauseGame.canceled -= instance.OnPauseGame;
+            @DevAddScore.started -= instance.OnDevAddScore;
+            @DevAddScore.performed -= instance.OnDevAddScore;
+            @DevAddScore.canceled -= instance.OnDevAddScore;
+            @DevDecreaseTime.started -= instance.OnDevDecreaseTime;
+            @DevDecreaseTime.performed -= instance.OnDevDecreaseTime;
+            @DevDecreaseTime.canceled -= instance.OnDevDecreaseTime;
         }
 
         public void RemoveCallbacks(IMainGameActions instance)
@@ -528,5 +586,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnKey2(InputAction.CallbackContext context);
         void OnKey3(InputAction.CallbackContext context);
         void OnPauseGame(InputAction.CallbackContext context);
+        void OnDevAddScore(InputAction.CallbackContext context);
+        void OnDevDecreaseTime(InputAction.CallbackContext context);
     }
 }

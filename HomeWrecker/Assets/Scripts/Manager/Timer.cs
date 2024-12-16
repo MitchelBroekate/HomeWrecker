@@ -1,6 +1,5 @@
 using UnityEngine;
-using TMPro;
-using Unity.VisualScripting;
+using TMPro; 
 
 public class Timer : MonoBehaviour
 {
@@ -10,10 +9,11 @@ public class Timer : MonoBehaviour
     [SerializeField] float countdownTime = 60f;
 
     [Header("Linked Variables")]
-    [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] ScoreManager scoreManager;
+    [SerializeField] TMP_Text timerText;
     float currentTime;
+    [SerializeField] ScoreManager scoreManager;
     [SerializeField] PlayerController playerController;
+    [SerializeField] EndScreenScore endScreenScore;
     [SerializeField] GameObject[] uiScreens;
 
     //Used only inside the script
@@ -37,37 +37,43 @@ public class Timer : MonoBehaviour
     {
         if (_isCountingDown && currentTime > 0)
         {
+            GameFinishScore();
+            
             currentTime -= Time.deltaTime;
 
             currentTime = Mathf.Max(currentTime, 0);
 
             UpdateTimerText();
+        }
 
-            if (currentTime <= 0)
+        if (currentTime <= 0)
+        {
+            StopCountdown();
+            
+            currentTime = 0;
+            UpdateTimerText();
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
+
+            endScreenScore.GetCurrentTimeScore(timerText.text);
+            endScreenScore.GetCurrentScore();
+
+            playerController.LockPlayer(true);
+
+            foreach (var uiScreenV in uiScreens)
             {
-                StopCountdown();
-
-                
-
-                playerController.LockPlayer(true);
-
-                foreach (var uiScreenV in uiScreens)
+                if (uiScreenV.gameObject.activeSelf)
                 {
-                    if (uiScreenV.gameObject.activeSelf)
-                    {
-                        uiScreenV.gameObject.SetActive(false);
-                    }
+                    uiScreenV.gameObject.SetActive(false);
                 }
-
-                uiScreens[uiScreens.Length].SetActive(true);
-
-
-                //show highscore, score, best time, and current time
-
-
-                scoreManager.UpdateHighscore();
-                GameFinishScore();
             }
+
+            uiScreens[uiScreens.Length -1].SetActive(true);
+
+
+            //show highscore, score, best time, and current time
+
         }
     }
 
@@ -116,6 +122,24 @@ public class Timer : MonoBehaviour
                     StopCountdown();
                     scoreManager.UpdateHighscore();
                     scoreManager.UpdateHighscoreTimer(currentTime);
+
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = true;
+
+                    endScreenScore.GetCurrentTimeScore(timerText.text);
+                    endScreenScore.GetCurrentScore();
+
+                    playerController.LockPlayer(true);
+
+                    foreach (var uiScreenV in uiScreens)
+                    {
+                        if (uiScreenV.gameObject.activeSelf)
+                        {
+                            uiScreenV.gameObject.SetActive(false);
+                        }
+                    }
+
+                    uiScreens[uiScreens.Length -1].SetActive(true);
                 }
             break;
 
@@ -125,6 +149,24 @@ public class Timer : MonoBehaviour
                     StopCountdown();
                     scoreManager.UpdateHighscore();
                     scoreManager.UpdateHighscoreTimer(currentTime);
+
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = true;
+
+                    endScreenScore.GetCurrentTimeScore(timerText.text);
+                    endScreenScore.GetCurrentScore();
+
+                    playerController.LockPlayer(true);
+
+                    foreach (var uiScreenV in uiScreens)
+                    {
+                        if (uiScreenV.gameObject.activeSelf)
+                        {
+                            uiScreenV.gameObject.SetActive(false);
+                        }
+                    }
+
+                    uiScreens[uiScreens.Length -1].SetActive(true);
                 }
             break;
 
@@ -134,6 +176,24 @@ public class Timer : MonoBehaviour
                     StopCountdown();
                     scoreManager.UpdateHighscore();
                     scoreManager.UpdateHighscoreTimer(currentTime);
+
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = true;
+
+                    endScreenScore.GetCurrentTimeScore(timerText.text);
+                    endScreenScore.GetCurrentScore();
+
+                    playerController.LockPlayer(true);
+
+                    foreach (var uiScreenV in uiScreens)
+                    {
+                        if (uiScreenV.gameObject.activeSelf)
+                        {
+                            uiScreenV.gameObject.SetActive(false);
+                        }
+                    }
+
+                    uiScreens[uiScreens.Length -1].SetActive(true);
                 }
             break;
 
@@ -141,5 +201,10 @@ public class Timer : MonoBehaviour
                 Debug.LogWarning("No Int Value?!?! SceneCheck Switch");
             break;
         }
+    }
+
+    public void DevDecreaseTime(int time)
+    {
+        currentTime -= time;
     }
 }

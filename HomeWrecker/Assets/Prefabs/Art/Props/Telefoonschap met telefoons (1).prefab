@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9056344451629041357}
   - component: {fileID: 2371548095586487420}
   - component: {fileID: 306940023434190264}
+  - component: {fileID: 6070084951643334393}
   m_Layer: 0
   m_Name: Telefoon (14)
   m_TagString: Untagged
@@ -135,6 +136,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &6070084951643334393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148822776160311253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &373641643755832851
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +164,7 @@ GameObject:
   - component: {fileID: 915112886047836459}
   - component: {fileID: 4236850035696836082}
   - component: {fileID: 8465520570026116942}
+  - component: {fileID: 9032767965295805461}
   m_Layer: 0
   m_Name: Telefoon (12)
   m_TagString: Untagged
@@ -270,6 +287,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &9032767965295805461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373641643755832851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &755864843303455716
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +315,7 @@ GameObject:
   - component: {fileID: 6596067528351713496}
   - component: {fileID: 1246756533550595286}
   - component: {fileID: 4264912608077020829}
+  - component: {fileID: 7320632318727027985}
   m_Layer: 0
   m_Name: Telefoon (18)
   m_TagString: Untagged
@@ -299,7 +332,7 @@ Transform:
   m_GameObject: {fileID: 755864843303455716}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0051388154, y: -0.9880234, z: 0.1542168, w: -0.0008020981}
-  m_LocalPosition: {x: -0.5709, y: 0.0012, z: -0.9796}
+  m_LocalPosition: {x: -0.571, y: -0.004, z: -0.996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,6 +438,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &7320632318727027985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755864843303455716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &1817843194858159340
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +466,7 @@ GameObject:
   - component: {fileID: 264781268226972859}
   - component: {fileID: 8231751192944400582}
   - component: {fileID: 4619163580648448305}
+  - component: {fileID: 164412246024659350}
   m_Layer: 0
   m_Name: Telefoon (7)
   m_TagString: Untagged
@@ -540,6 +589,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &164412246024659350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817843194858159340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &3373128537494781148
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +617,7 @@ GameObject:
   - component: {fileID: 5907827490687296320}
   - component: {fileID: 6570050875048371984}
   - component: {fileID: 2613616192095188991}
+  - component: {fileID: 5630182158518621130}
   m_Layer: 0
   m_Name: Telefoon (6)
   m_TagString: Untagged
@@ -675,6 +740,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &5630182158518621130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373128537494781148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &4312786642943687433
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +768,7 @@ GameObject:
   - component: {fileID: 8608955840258362741}
   - component: {fileID: 3620369190251084495}
   - component: {fileID: 7662183228675331926}
+  - component: {fileID: 5792623532961394094}
   m_Layer: 0
   m_Name: Telefoon (3)
   m_TagString: Untagged
@@ -810,6 +891,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &5792623532961394094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312786642943687433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &4368225789606318920
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +969,7 @@ GameObject:
   - component: {fileID: 1234939379972657989}
   - component: {fileID: 5457094034776971413}
   - component: {fileID: 1366574946665928396}
+  - component: {fileID: 811769484775770035}
   m_Layer: 0
   m_Name: Telefoon (15)
   m_TagString: Untagged
@@ -995,6 +1092,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &811769484775770035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706905976099361113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &4925287840777201341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1120,7 @@ GameObject:
   - component: {fileID: 2805269008781981537}
   - component: {fileID: 312384535901283820}
   - component: {fileID: 6559740686833627865}
+  - component: {fileID: 2051756558602219150}
   m_Layer: 0
   m_Name: Telefoon (10)
   m_TagString: Untagged
@@ -1024,7 +1137,7 @@ Transform:
   m_GameObject: {fileID: 4925287840777201341}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0051388154, y: -0.9880234, z: 0.1542168, w: -0.0008020981}
-  m_LocalPosition: {x: -1.3248, y: 0.0012, z: -0.9796}
+  m_LocalPosition: {x: -1.3248, y: 0.0001, z: -0.983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1130,6 +1243,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &2051756558602219150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925287840777201341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &5670977534687503240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1271,7 @@ GameObject:
   - component: {fileID: 8257442998587901304}
   - component: {fileID: 2275225709923164439}
   - component: {fileID: 5747515971104357975}
+  - component: {fileID: 2772019448798142515}
   m_Layer: 0
   m_Name: Telefoon (1)
   m_TagString: Untagged
@@ -1265,6 +1394,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &2772019448798142515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670977534687503240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &5856574341592933671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1422,7 @@ GameObject:
   - component: {fileID: 6727342572820481979}
   - component: {fileID: 9043065761761157675}
   - component: {fileID: 6139965625156170038}
+  - component: {fileID: 8677000489455472132}
   m_Layer: 0
   m_Name: Telefoon (16)
   m_TagString: Untagged
@@ -1400,6 +1545,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &8677000489455472132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856574341592933671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &6040601260878195965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1695,7 @@ GameObject:
   - component: {fileID: 980835929254385357}
   - component: {fileID: 430560741934062895}
   - component: {fileID: 5028794122393020502}
+  - component: {fileID: 3790629456261018598}
   m_Layer: 0
   m_Name: Telefoon (4)
   m_TagString: Untagged
@@ -1657,6 +1818,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &3790629456261018598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122455380491931218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &8131134597554345473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1846,7 @@ GameObject:
   - component: {fileID: 6806694761106666165}
   - component: {fileID: 4081612788143002780}
   - component: {fileID: 8398012209473109090}
+  - component: {fileID: 2782937409140314022}
   m_Layer: 0
   m_Name: Telefoon (2)
   m_TagString: Untagged
@@ -1792,6 +1969,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &2782937409140314022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8131134597554345473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &8215677439937700461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1997,7 @@ GameObject:
   - component: {fileID: 5484851674432640264}
   - component: {fileID: 1443409531228379440}
   - component: {fileID: 772734721740927400}
+  - component: {fileID: 1680519980904395101}
   m_Layer: 0
   m_Name: Telefoon (9)
   m_TagString: Untagged
@@ -1927,6 +2120,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &1680519980904395101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8215677439937700461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &8542433701077326728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +2148,7 @@ GameObject:
   - component: {fileID: 6577688663159636811}
   - component: {fileID: 2381073894071983769}
   - component: {fileID: 5074701546832167286}
+  - component: {fileID: 1069951423578786292}
   m_Layer: 0
   m_Name: Telefoon (5)
   m_TagString: Untagged
@@ -2062,6 +2271,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &1069951423578786292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542433701077326728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &8627237806403921947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2299,7 @@ GameObject:
   - component: {fileID: 3204945731773060703}
   - component: {fileID: 2633618704064866034}
   - component: {fileID: 9156131272318460786}
+  - component: {fileID: 1699601089906392026}
   m_Layer: 0
   m_Name: Telefoon (11)
   m_TagString: Untagged
@@ -2197,6 +2422,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &1699601089906392026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627237806403921947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &8870575665138094299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,6 +2450,7 @@ GameObject:
   - component: {fileID: 1752858102900398470}
   - component: {fileID: 8693063442573832439}
   - component: {fileID: 3127020866864382762}
+  - component: {fileID: 1094769199462575774}
   m_Layer: 0
   m_Name: Telefoon (17)
   m_TagString: Untagged
@@ -2332,6 +2573,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &1094769199462575774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870575665138094299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &8921160952897971304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,6 +2601,7 @@ GameObject:
   - component: {fileID: 6021415262070221039}
   - component: {fileID: 4939829770445270680}
   - component: {fileID: 3414061068253160352}
+  - component: {fileID: 2684153703503233086}
   m_Layer: 0
   m_Name: Telefoon (8)
   m_TagString: Untagged
@@ -2467,6 +2724,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &2684153703503233086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921160952897971304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
 --- !u!1 &9125223657351757216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,6 +2752,7 @@ GameObject:
   - component: {fileID: 2998581779986367509}
   - component: {fileID: 6158830375145764396}
   - component: {fileID: 2846068452201334715}
+  - component: {fileID: 2813898905919362500}
   m_Layer: 0
   m_Name: Telefoon (13)
   m_TagString: Untagged
@@ -2496,7 +2769,7 @@ Transform:
   m_GameObject: {fileID: 9125223657351757216}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0051388154, y: -0.9880234, z: 0.1542168, w: -0.0008020981}
-  m_LocalPosition: {x: 0.19, y: 0.0012, z: -0.9796}
+  m_LocalPosition: {x: 0.19, y: -0.005, z: -0.998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2602,3 +2875,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8073935420830707705, guid: 9e2651b38a23f8542bfa169e435ab250, type: 3}
+--- !u!114 &2813898905919362500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9125223657351757216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  scoreValue: 400
+  canDestroy: 0
