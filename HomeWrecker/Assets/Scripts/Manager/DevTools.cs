@@ -25,4 +25,12 @@ public class DevTools : MonoBehaviour
             timer.DevDecreaseTime(timeMin);
         }
     }
+
+    public void RemovePlayerPrefs(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            PlayerPrefs.DeleteAll();
+        }
+    }
 }

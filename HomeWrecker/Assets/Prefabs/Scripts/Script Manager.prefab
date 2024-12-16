@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 129012951325462675}
   - component: {fileID: 1851612574220501604}
   - component: {fileID: 527446542659426116}
-  - component: {fileID: 6842664242626450167}
   - component: {fileID: 7075890779800741145}
+  - component: {fileID: 5043935067932832223}
+  - component: {fileID: 8178544687160904212}
+  - component: {fileID: 1253277748410456514}
   m_Layer: 0
   m_Name: Script Manager
   m_TagString: Untagged
@@ -49,7 +51,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  weaponPrefab: []
+  weaponPrefab:
+  - {fileID: 149373203855704133, guid: c64c2c12befbc294ab39f57496385328, type: 3}
+  - {fileID: 149373203855704133, guid: fd826f80ce954c246a2d757ef5e710c7, type: 3}
   weaponSpawnpoint: {fileID: 0}
   currentWeapon: 
 --- !u!114 &1851612574220501604
@@ -66,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: 0
   _score: 0
+  timeScoreFloat: 0
   score: {fileID: 0}
   highscore: {fileID: 0}
   timeScore: {fileID: 0}
@@ -89,18 +94,9 @@ MonoBehaviour:
   buttonResume: {fileID: 0}
   playerController: {fileID: 0}
   player: {fileID: 0}
---- !u!114 &6842664242626450167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5518540742023186723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22b26389e72023b44a3ed03b3f1daa91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  hudCanvas: {fileID: 0}
+  endScreen: {fileID: 0}
+  timer: {fileID: 5043935067932832223}
 --- !u!114 &7075890779800741145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +114,61 @@ MonoBehaviour:
   musicSlider: {fileID: 0}
   sfxSlider: {fileID: 0}
   resolutionDropdown: {fileID: 0}
+--- !u!114 &5043935067932832223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959409cea1669814bb75336f494dee36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTime: 600
+  timerText: {fileID: 0}
+  scoreManager: {fileID: 1851612574220501604}
+  playerController: {fileID: 0}
+  endScreenScore: {fileID: 8178544687160904212}
+  uiScreens:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &8178544687160904212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d248ced4743c57449b5dc6aad01a34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScene: 0
+  scoreManager: {fileID: 1851612574220501604}
+  textFields:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1253277748410456514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13655b9f0e235bc46bf988473580bb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreAdd: 1000
+  scoreManager: {fileID: 1851612574220501604}
+  timeMin: 30
+  timer: {fileID: 5043935067932832223}

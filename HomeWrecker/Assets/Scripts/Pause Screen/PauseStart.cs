@@ -51,7 +51,7 @@ public class PauseStart : MonoBehaviour
     {
         if(context.performed)
         {
-            if(!endScreen.activeSelf) return;
+            if(endScreen.activeInHierarchy) return;
 
             if (!isPaused)
             {

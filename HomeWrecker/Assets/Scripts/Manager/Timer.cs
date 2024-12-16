@@ -118,7 +118,7 @@ public class Timer : MonoBehaviour
         switch (scoreManager.currentScene)
         {
             case 0:
-                if(scoreManager.GetScore >= 12900)
+                if(scoreManager.GetScore >= 40000)
                 {
                     StopCountdown();
                     scoreManager.UpdateHighscore();

@@ -175,6 +175,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DevClearPlayerPrefs"",
+                    ""type"": ""Button"",
+                    ""id"": ""8db3db49-ec01-422b-82dc-d3263357403f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -320,6 +329,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""DevDecreaseTime"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd706cdb-9734-4bf8-a0db-3a083cb8a346"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DevClearPlayerPrefs"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -342,6 +362,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_MainGame_PauseGame = m_MainGame.FindAction("PauseGame", throwIfNotFound: true);
         m_MainGame_DevAddScore = m_MainGame.FindAction("DevAddScore", throwIfNotFound: true);
         m_MainGame_DevDecreaseTime = m_MainGame.FindAction("DevDecreaseTime", throwIfNotFound: true);
+        m_MainGame_DevClearPlayerPrefs = m_MainGame.FindAction("DevClearPlayerPrefs", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -474,6 +495,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MainGame_PauseGame;
     private readonly InputAction m_MainGame_DevAddScore;
     private readonly InputAction m_MainGame_DevDecreaseTime;
+    private readonly InputAction m_MainGame_DevClearPlayerPrefs;
     public struct MainGameActions
     {
         private @ActionMap m_Wrapper;
@@ -487,6 +509,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @PauseGame => m_Wrapper.m_MainGame_PauseGame;
         public InputAction @DevAddScore => m_Wrapper.m_MainGame_DevAddScore;
         public InputAction @DevDecreaseTime => m_Wrapper.m_MainGame_DevDecreaseTime;
+        public InputAction @DevClearPlayerPrefs => m_Wrapper.m_MainGame_DevClearPlayerPrefs;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -523,6 +546,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @DevDecreaseTime.started += instance.OnDevDecreaseTime;
             @DevDecreaseTime.performed += instance.OnDevDecreaseTime;
             @DevDecreaseTime.canceled += instance.OnDevDecreaseTime;
+            @DevClearPlayerPrefs.started += instance.OnDevClearPlayerPrefs;
+            @DevClearPlayerPrefs.performed += instance.OnDevClearPlayerPrefs;
+            @DevClearPlayerPrefs.canceled += instance.OnDevClearPlayerPrefs;
         }
 
         private void UnregisterCallbacks(IMainGameActions instance)
@@ -554,6 +580,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @DevDecreaseTime.started -= instance.OnDevDecreaseTime;
             @DevDecreaseTime.performed -= instance.OnDevDecreaseTime;
             @DevDecreaseTime.canceled -= instance.OnDevDecreaseTime;
+            @DevClearPlayerPrefs.started -= instance.OnDevClearPlayerPrefs;
+            @DevClearPlayerPrefs.performed -= instance.OnDevClearPlayerPrefs;
+            @DevClearPlayerPrefs.canceled -= instance.OnDevClearPlayerPrefs;
         }
 
         public void RemoveCallbacks(IMainGameActions instance)
@@ -588,5 +617,6 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnPauseGame(InputAction.CallbackContext context);
         void OnDevAddScore(InputAction.CallbackContext context);
         void OnDevDecreaseTime(InputAction.CallbackContext context);
+        void OnDevClearPlayerPrefs(InputAction.CallbackContext context);
     }
 }

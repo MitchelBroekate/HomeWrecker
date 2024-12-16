@@ -66,6 +66,7 @@ public class ScoreManager : MonoBehaviour
                 // {
                 //     timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
                 // }
+                Debug.Log("Level W.I.P");
                 break;
 
             default:
