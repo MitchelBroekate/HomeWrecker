@@ -20,6 +20,7 @@ public class PauseStart : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject player;
     [SerializeField] GameObject hudCanvas;
+    [SerializeField] GameObject endScreen;
 
     [SerializeField] Timer timer;
 
@@ -49,6 +50,8 @@ public class PauseStart : MonoBehaviour
     {
         if(context.performed)
         {
+            if(!endScreen.activeSelf) return;
+
             if (!isPaused)
             {
                 StopAllCoroutines();

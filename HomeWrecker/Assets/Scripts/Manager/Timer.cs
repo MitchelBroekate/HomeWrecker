@@ -56,8 +56,11 @@ public class Timer : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            endScreenScore.GetCurrentTimeScore(timerText.text);
+            endScreenScore.GetCurrentTimeScore(currentTime);
             endScreenScore.GetCurrentScore();
+
+            scoreManager.UpdateHighscore();
+            scoreManager.UpdateHighscoreTimer(currentTime);
 
             playerController.LockPlayer(true);
 
@@ -71,9 +74,7 @@ public class Timer : MonoBehaviour
 
             uiScreens[uiScreens.Length -1].SetActive(true);
 
-
-            //show highscore, score, best time, and current time
-
+            endScreenScore.ShowScores();
         }
     }
 
@@ -126,7 +127,7 @@ public class Timer : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetCurrentTimeScore(timerText.text);
+                    endScreenScore.GetCurrentTimeScore(currentTime);
                     endScreenScore.GetCurrentScore();
 
                     playerController.LockPlayer(true);
@@ -140,6 +141,8 @@ public class Timer : MonoBehaviour
                     }
 
                     uiScreens[uiScreens.Length -1].SetActive(true);
+
+                    endScreenScore.ShowScores();
                 }
             break;
 
@@ -153,7 +156,7 @@ public class Timer : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetCurrentTimeScore(timerText.text);
+                    endScreenScore.GetCurrentTimeScore(currentTime);
                     endScreenScore.GetCurrentScore();
 
                     playerController.LockPlayer(true);
@@ -167,6 +170,8 @@ public class Timer : MonoBehaviour
                     }
 
                     uiScreens[uiScreens.Length -1].SetActive(true);
+
+                    endScreenScore.ShowScores();
                 }
             break;
 
@@ -180,7 +185,7 @@ public class Timer : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetCurrentTimeScore(timerText.text);
+                    endScreenScore.GetCurrentTimeScore(currentTime);
                     endScreenScore.GetCurrentScore();
 
                     playerController.LockPlayer(true);
@@ -194,6 +199,8 @@ public class Timer : MonoBehaviour
                     }
 
                     uiScreens[uiScreens.Length -1].SetActive(true);
+
+                    endScreenScore.ShowScores();
                 }
             break;
 

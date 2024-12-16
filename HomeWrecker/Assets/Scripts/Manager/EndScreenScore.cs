@@ -57,9 +57,31 @@ public class EndScreenScore : MonoBehaviour
         currentScore = scoreManager.GetScore;
     }
 
-    public void GetCurrentTimeScore(string time)
+    public void GetCurrentTimeScore(float time)
     {
-        currentTimeScore = time;
+        switch(currentScene)
+        {
+            case 0:
+                time = 600 - time;
+                break;
+
+            case 1:
+                time = 600 - time;
+                break;
+                
+            case 2:
+                time = 600 - time;
+                break;
+            default:
+                Debug.LogWarning("Scene int out of bounds (EndScreenScore/GetScore/Switch)");
+                break;
+        }
+
+        int minutesTut = Mathf.FloorToInt(time / 60f);
+        int secondsTut = Mathf.FloorToInt(time % 60f);
+        int millisecondsTut = Mathf.FloorToInt(time % 1 * 100);
+
+        currentTimeScore = $"{minutesTut:00}:{secondsTut:00}:{millisecondsTut:00}";
     }   
 
     //current score + time score linking at the end of the level

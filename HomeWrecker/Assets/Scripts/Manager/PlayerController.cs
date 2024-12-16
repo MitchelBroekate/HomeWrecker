@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sprintSpeed = 1f;
     }

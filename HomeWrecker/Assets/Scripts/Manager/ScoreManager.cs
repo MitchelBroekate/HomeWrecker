@@ -10,9 +10,11 @@ public class ScoreManager : MonoBehaviour
     
     [Header("Linked Variables")]
     [SerializeField] int _score = 0;
+    [SerializeField] float timeScoreFloat;
     public TMP_Text score;
     public TMP_Text highscore;
     public TMP_Text timeScore;
+
 
     int _scoreToCreate;
     #endregion
@@ -30,6 +32,51 @@ public class ScoreManager : MonoBehaviour
         {
             timeScore.text = PlayerPrefs.GetString("TimeScoreTutorial");
         }
+
+        switch(currentScene)
+        {
+            case 0:
+                if(!PlayerPrefs.HasKey("TimeScoreFloatTutorial"))
+                {
+                    PlayerPrefs.SetFloat("TimeScoreFloatTutorial", 600);
+                }
+                else
+                {
+                    timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatTutorial");
+                }
+                break;
+
+            case 1:
+                if(!PlayerPrefs.HasKey("TimeScoreFloatMarktMedia"))
+                {
+                    PlayerPrefs.SetFloat("TimeScoreFloatMarktMedia", 600);
+                }
+                else
+                {
+                    timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatMarktMedia");
+                }
+                break;
+
+            case 2:
+                if(!PlayerPrefs.HasKey("TimeScoreFloatFutureGame"))
+                {
+                    PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", 600);
+                }
+                else
+                {
+                    timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
+                }
+                break;
+
+            default:
+                Debug.LogWarning("Scene int out of bounds (ScoreManager/Start/Switch)");
+                break;
+        }
+
+
+
+
+
     }
 
     /// <summary>
@@ -161,47 +208,54 @@ public class ScoreManager : MonoBehaviour
     }
 
     /// <summary>
-    /// TTis function formats the timer score for the UI
+    /// Tis function formats the timer score for the UI
     /// </summary>
     /// <param name="highscoreTime"></param>
     public void UpdateHighscoreTimer(float highscoreTime)
     {
-        switch(currentScene)
+
+        if(highscoreTime < timeScoreFloat)
         {
-            case 0:
-                highscoreTime = 600 - highscoreTime;
+            switch(currentScene)
+            {
+                case 0:
+                    highscoreTime = 600 - highscoreTime;
 
-                int minutesTut = Mathf.FloorToInt(highscoreTime / 60f);
-                int secondsTut = Mathf.FloorToInt(highscoreTime % 60f);
-                int millisecondsTut = Mathf.FloorToInt(highscoreTime % 1 * 100);
+                    int minutesTut = Mathf.FloorToInt(highscoreTime / 60f);
+                    int secondsTut = Mathf.FloorToInt(highscoreTime % 60f);
+                    int millisecondsTut = Mathf.FloorToInt(highscoreTime % 1 * 100);
 
-                PlayerPrefs.SetString("TimeScoreTutorial", $"{minutesTut:00}:{secondsTut:00}:{millisecondsTut:00}");
-                break;
+                    PlayerPrefs.SetString("TimeScoreTutorial", $"{minutesTut:00}:{secondsTut:00}:{millisecondsTut:00}");
+                    PlayerPrefs.SetFloat("TimeScoreFloatTutorial", highscoreTime);
+                    break;
 
-            case 1:
-                highscoreTime = 180 - highscoreTime;
+                case 1:
+                    highscoreTime = 180 - highscoreTime;
 
-                int minutesMM = Mathf.FloorToInt(highscoreTime / 60f);
-                int secondsMM = Mathf.FloorToInt(highscoreTime % 60f);
-                int millisecondsMM = Mathf.FloorToInt(highscoreTime % 1 * 100);
+                    int minutesMM = Mathf.FloorToInt(highscoreTime / 60f);
+                    int secondsMM = Mathf.FloorToInt(highscoreTime % 60f);
+                    int millisecondsMM = Mathf.FloorToInt(highscoreTime % 1 * 100);
 
-                PlayerPrefs.SetString("TimeScoreMarktMedia", $"{minutesMM:00}:{secondsMM:00}:{millisecondsMM:00}");
-                break;
-        
-            case 2:
-                // highscoreTime = 180 - highscoreTime;
-
-                // int minutesFG = Mathf.FloorToInt(highscoreTime / 60f);
-                // int secondsFG = Mathf.FloorToInt(highscoreTime % 60f);
-                // int millisecondsFG = Mathf.FloorToInt(highscoreTime % 1 * 100);
-
-                // PlayerPrefs.SetString("TimeScoreFutureGame", $"{minutesFG:00}:{secondsFG:00}:{millisecondsFG:00}");
-                Debug.Log("How did you manage to do this?!?");
-                break;
+                    PlayerPrefs.SetString("TimeScoreMarktMedia", $"{minutesMM:00}:{secondsMM:00}:{millisecondsMM:00}");
+                    PlayerPrefs.SetFloat("TimeScoreFloatMarktMedia", highscoreTime);
+                    break;
             
-            default:
-                Debug.LogWarning("No Int Value?!?! Update HighscoreTimer Switch");
-                break;
+                case 2:
+                    // highscoreTime = 180 - highscoreTime;
+
+                    // int minutesFG = Mathf.FloorToInt(highscoreTime / 60f);
+                    // int secondsFG = Mathf.FloorToInt(highscoreTime % 60f);
+                    // int millisecondsFG = Mathf.FloorToInt(highscoreTime % 1 * 100);
+
+                    // PlayerPrefs.SetString("TimeScoreFutureGame", $"{minutesFG:00}:{secondsFG:00}:{millisecondsFG:00}");
+                    //PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", highscoreTime);
+                    Debug.Log("How did you manage to do this?!?");
+                    break;
+                
+                default:
+                    Debug.LogWarning("No Int Value?!?! Update HighscoreTimer Switch");
+                    break;
+            }
         }
     }
 
