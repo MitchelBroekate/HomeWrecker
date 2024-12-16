@@ -19665,6 +19665,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6800462543101268726, guid: bd9484773c57fdb449a8ccec142b36c1,
         type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -310897762894823542, guid: 3074d79663ea7f54a8c7d339c5c8850c,
+        type: 3}
+    - target: {fileID: -6800462543101268726, guid: bd9484773c57fdb449a8ccec142b36c1,
+        type: 3}
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
@@ -19948,6 +19954,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kassa rij 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7111724276494682372, guid: d16ff6dca85c40948ac9cb17ef43f271,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2611741175225078315, guid: 7900ff2b42868a3418c860fef527064e,
+        type: 3}
     - target: {fileID: 7111724276494682372, guid: d16ff6dca85c40948ac9cb17ef43f271,
         type: 3}
       propertyPath: m_Convex
