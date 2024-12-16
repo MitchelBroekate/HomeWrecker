@@ -58,25 +58,20 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 2:
-                if(!PlayerPrefs.HasKey("TimeScoreFloatFutureGame"))
-                {
-                    PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", 600);
-                }
-                else
-                {
-                    timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
-                }
+                // if(!PlayerPrefs.HasKey("TimeScoreFloatFutureGame"))
+                // {
+                //     PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", 600);
+                // }
+                // else
+                // {
+                //     timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
+                // }
                 break;
 
             default:
                 Debug.LogWarning("Scene int out of bounds (ScoreManager/Start/Switch)");
                 break;
         }
-
-
-
-
-
     }
 
     /// <summary>
@@ -107,11 +102,11 @@ public class ScoreManager : MonoBehaviour
             CreateStartScore();
         }
 
-        if(PlayerPrefs.HasKey("HighscoreFutureGame"))
-        {
-            _scoreToCreate = 2;
-            CreateStartScore();
-        }
+        // if(PlayerPrefs.HasKey("HighscoreFutureGame"))
+        // {
+        //     _scoreToCreate = 2;
+        //     CreateStartScore();
+        // }
     }
 
     /// <summary>

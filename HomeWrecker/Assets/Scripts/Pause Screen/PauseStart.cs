@@ -10,6 +10,7 @@ public class PauseStart : MonoBehaviour
     #region Variables
     [Header("Linked Variables")]
     bool isPaused = false;
+    bool lockstate;
     [SerializeField] CanvasGroup fadeCanvasBackground;
     [SerializeField] CanvasGroup fadeCanvasMenu;
     [SerializeField] GameObject pauseUI;
@@ -113,15 +114,18 @@ public class PauseStart : MonoBehaviour
 
     void UIShow()
     {
+
             if(fadeCanvasBackground.alpha < 0.8f)
             {
                 fadeCanvasBackground.alpha += 2.4f * Time.deltaTime;
                 fadeCanvasMenu.alpha = 1f;
             }
-            else if(fadeCanvasBackground.alpha >= 0.8f)
+            else if(fadeCanvasBackground.alpha >= 0.8f && !lockstate)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                
+                lockstate = true;
             }
     }
 
@@ -133,10 +137,12 @@ public class PauseStart : MonoBehaviour
             fadeCanvasMenu.alpha -= 2.4f * Time.deltaTime;
         }
 
-        if(Cursor.lockState == CursorLockMode.None)
+        if(Cursor.lockState == CursorLockMode.None && lockstate)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            lockstate = false;
         }
     }
 

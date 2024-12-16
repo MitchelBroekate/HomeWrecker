@@ -56,7 +56,7 @@ public class Timer : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            endScreenScore.GetCurrentTimeScore(currentTime);
+            endScreenScore.GetTimeScore(currentTime);
             endScreenScore.GetCurrentScore();
 
             scoreManager.UpdateHighscore();
@@ -127,7 +127,7 @@ public class Timer : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetCurrentTimeScore(currentTime);
+                    endScreenScore.GetTimeScore(currentTime);
                     endScreenScore.GetCurrentScore();
 
                     playerController.LockPlayer(true);
@@ -156,7 +156,7 @@ public class Timer : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetCurrentTimeScore(currentTime);
+                    endScreenScore.GetTimeScore(currentTime);
                     endScreenScore.GetCurrentScore();
 
                     playerController.LockPlayer(true);
@@ -185,7 +185,7 @@ public class Timer : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetCurrentTimeScore(currentTime);
+                    endScreenScore.GetTimeScore(currentTime);
                     endScreenScore.GetCurrentScore();
 
                     playerController.LockPlayer(true);
