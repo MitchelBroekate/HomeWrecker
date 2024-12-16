@@ -53,7 +53,7 @@ public class Timer : MonoBehaviour
             currentTime = 0;
             UpdateTimerText();
 
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
             endScreenScore.GetCurrentTimeScore(timerText.text);
@@ -123,7 +123,7 @@ public class Timer : MonoBehaviour
                     scoreManager.UpdateHighscore();
                     scoreManager.UpdateHighscoreTimer(currentTime);
 
-                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
                     endScreenScore.GetCurrentTimeScore(timerText.text);
@@ -150,7 +150,7 @@ public class Timer : MonoBehaviour
                     scoreManager.UpdateHighscore();
                     scoreManager.UpdateHighscoreTimer(currentTime);
 
-                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
                     endScreenScore.GetCurrentTimeScore(timerText.text);
@@ -177,7 +177,7 @@ public class Timer : MonoBehaviour
                     scoreManager.UpdateHighscore();
                     scoreManager.UpdateHighscoreTimer(currentTime);
 
-                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
                     endScreenScore.GetCurrentTimeScore(timerText.text);

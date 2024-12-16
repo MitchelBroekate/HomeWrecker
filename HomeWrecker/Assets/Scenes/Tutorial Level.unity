@@ -19043,15 +19043,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1688558728373458634, guid: d4e90ede459bea24492f6a52cbfc0476,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2108239550}
-    - targetCorrespondingSourceObject: {fileID: 4678169175046337045, guid: d4e90ede459bea24492f6a52cbfc0476,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2108239549}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4e90ede459bea24492f6a52cbfc0476, type: 3}
 --- !u!4 &2108239546 stripped
 Transform:
@@ -19059,48 +19051,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2108239545}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2108239547 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4678169175046337045, guid: d4e90ede459bea24492f6a52cbfc0476,
-    type: 3}
-  m_PrefabInstance: {fileID: 2108239545}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2108239548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1688558728373458634, guid: d4e90ede459bea24492f6a52cbfc0476,
-    type: 3}
-  m_PrefabInstance: {fileID: 2108239545}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2108239549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108239547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  scoreValue: 200
-  canDestroy: 0
---- !u!114 &2108239550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108239548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  scoreValue: 200
-  canDestroy: 0
 --- !u!1001 &2111635113
 PrefabInstance:
   m_ObjectHideFlags: 0

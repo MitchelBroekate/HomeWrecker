@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5205667182498899559}
   - component: {fileID: 9167174863233459863}
   - component: {fileID: 8377607274183602729}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Houder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 8821338862784889227}
   - component: {fileID: 444170718992680747}
   - component: {fileID: 170715088152022655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Houder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 7676792509544452075}
   - component: {fileID: 4185922549443051554}
   - component: {fileID: 1590412749935783333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Houder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 6196620570241339964}
   - component: {fileID: 7754233288990281209}
   - component: {fileID: 6435990995397768380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Houder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 9147517355992746499}
   - component: {fileID: 6001757776798663403}
   - component: {fileID: 5190344897906383462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Houder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 6091345574078333906}
   - component: {fileID: 5770063060172215914}
   - component: {fileID: 4408224391215633847}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Houder (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7528518016147702423}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KinderTablettafel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
