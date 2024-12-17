@@ -81,7 +81,7 @@ public class Timer : MonoBehaviour
     /// <summary>
     /// This funtion sets the countdown states to start the countdown
     /// </summary>
-    void StartCountdown()
+    public void StartCountdown()
     {
         currentTime = countdownTime;
         _isCountingDown = true;
@@ -121,14 +121,14 @@ public class Timer : MonoBehaviour
                 if(scoreManager.GetScore >= 40000)
                 {
                     StopCountdown();
-                    scoreManager.UpdateHighscore();
-                    scoreManager.UpdateHighscoreTimer(currentTime);
+                    endScreenScore.GetTimeScore(currentTime);
+                    endScreenScore.GetCurrentScore();
 
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetTimeScore(currentTime);
-                    endScreenScore.GetCurrentScore();
+                    scoreManager.UpdateHighscore();
+                    scoreManager.UpdateHighscoreTimer(currentTime);
 
                     playerController.LockPlayer(true);
 
@@ -150,14 +150,15 @@ public class Timer : MonoBehaviour
                 if(scoreManager.GetScore >= 20000)
                 {
                     StopCountdown();
-                    scoreManager.UpdateHighscore();
-                    scoreManager.UpdateHighscoreTimer(currentTime);
+
+                    endScreenScore.GetTimeScore(currentTime);
+                    endScreenScore.GetCurrentScore();
 
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetTimeScore(currentTime);
-                    endScreenScore.GetCurrentScore();
+                    scoreManager.UpdateHighscore();
+                    scoreManager.UpdateHighscoreTimer(currentTime);
 
                     playerController.LockPlayer(true);
 
@@ -179,14 +180,16 @@ public class Timer : MonoBehaviour
                 if(scoreManager.GetScore >= 20000)
                 {
                     StopCountdown();
-                    scoreManager.UpdateHighscore();
-                    scoreManager.UpdateHighscoreTimer(currentTime);
+
+                    endScreenScore.GetTimeScore(currentTime);
+                    endScreenScore.GetCurrentScore();
 
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
 
-                    endScreenScore.GetTimeScore(currentTime);
-                    endScreenScore.GetCurrentScore();
+                    scoreManager.UpdateHighscore();
+                    scoreManager.UpdateHighscoreTimer(currentTime);
+
 
                     playerController.LockPlayer(true);
 

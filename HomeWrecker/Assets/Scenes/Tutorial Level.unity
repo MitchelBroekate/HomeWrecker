@@ -2124,6 +2124,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1272965735}
+    - target: {fileID: 3927201397467246275, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272965746}
+    - target: {fileID: 3927201397467246275, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 4518552256752402889, guid: afdd8484ee23e3946938ba49b20fcfdd,
         type: 3}
       propertyPath: m_Name
@@ -2228,6 +2238,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072451814825531084, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272965746}
+    - target: {fileID: 5072451814825531084, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658948461619431995, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_Name
+      value: Back Button
       objectReference: {fileID: 0}
     - target: {fileID: 7566546499956417078, guid: afdd8484ee23e3946938ba49b20fcfdd,
         type: 3}
@@ -12224,6 +12249,11 @@ PrefabInstance:
       propertyPath: fadeCanvasBackground
       value: 
       objectReference: {fileID: 76131542}
+    - target: {fileID: 1253277748410456514, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
+      propertyPath: scoreAdd
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
       propertyPath: score
@@ -12372,7 +12402,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5518540742023186723, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1272965746}
   m_SourcePrefab: {fileID: 100100000, guid: f55ab807144e136469af8cb03d30d76b, type: 3}
 --- !u!1001 &490129840
 PrefabInstance:
@@ -20318,6 +20352,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: ---------
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460565799248204600, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272965746}
+    - target: {fileID: 1460565799248204600, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460565799248204600, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479877961532630909, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1272965746}
+    - target: {fileID: 1479877961532630909, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479877961532630909, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2845117568598123101, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
         type: 3}
@@ -30816,6 +30880,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1257337628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1257665464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518540742023186723, guid: f55ab807144e136469af8cb03d30d76b,
+    type: 3}
+  m_PrefabInstance: {fileID: 488601175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1257946330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31419,7 +31489,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 488601175}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1257665464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c570cb4d31bab464d8eca6455ba78cb8, type: 3}
@@ -31431,7 +31501,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 488601175}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1257665464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83e6a424013270f4bb46ae595e1d5cb2, type: 3}
@@ -31449,10 +31519,22 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 488601175}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1257665464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13655b9f0e235bc46bf988473580bb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1272965746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257665464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a80476bba4d594cae6abf98b56c74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1278056116
@@ -40579,26 +40661,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1101740521}
     m_Modifications:
-    - target: {fileID: -6800462543101268726, guid: bd9484773c57fdb449a8ccec142b36c1,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -310897762894823542, guid: 3074d79663ea7f54a8c7d339c5c8850c,
-        type: 3}
-    - target: {fileID: -6800462543101268726, guid: bd9484773c57fdb449a8ccec142b36c1,
-        type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2775220549418480407, guid: bd9484773c57fdb449a8ccec142b36c1,
         type: 3}
       propertyPath: m_Name
       value: Kassa rij 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272138927115738591, guid: bd9484773c57fdb449a8ccec142b36c1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.149
       objectReference: {fileID: 0}
     - target: {fileID: 4440989036715835065, guid: bd9484773c57fdb449a8ccec142b36c1,
         type: 3}
@@ -50926,22 +50992,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kassa rij 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7111724276494682372, guid: d16ff6dca85c40948ac9cb17ef43f271,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2611741175225078315, guid: 7900ff2b42868a3418c860fef527064e,
-        type: 3}
-    - target: {fileID: 7111724276494682372, guid: d16ff6dca85c40948ac9cb17ef43f271,
-        type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8639366644488488237, guid: d16ff6dca85c40948ac9cb17ef43f271,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.109
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -108,25 +108,25 @@ public class PauseStart : MonoBehaviour
         buttonResume.interactable = true;
 
         playerController.LockPlayer(false);
+        timer.ResumeCountdown();
 
         StartCoroutine(UnpauseAnimationTime());
     }
 
     void UIShow()
     {
-
-            if(fadeCanvasBackground.alpha < 0.8f)
-            {
-                fadeCanvasBackground.alpha += 2.4f * Time.deltaTime;
-                fadeCanvasMenu.alpha = 1f;
-            }
-            else if(fadeCanvasBackground.alpha >= 0.8f && !lockstate)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                
-                lockstate = true;
-            }
+        if(fadeCanvasBackground.alpha < 0.8f)
+        {
+            fadeCanvasBackground.alpha += 2.4f * Time.deltaTime;
+            fadeCanvasMenu.alpha = 1f;
+        }
+        else if(fadeCanvasBackground.alpha >= 0.8f && !lockstate)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
+            lockstate = true;
+        }
     }
 
     void UIHide()

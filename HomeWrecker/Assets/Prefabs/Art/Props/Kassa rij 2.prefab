@@ -328,7 +328,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -310897762894823542, guid: 3074d79663ea7f54a8c7d339c5c8850c, type: 3}
 --- !u!1001 &4791325121174511691
@@ -477,7 +477,7 @@ PrefabInstance:
     - target: {fileID: 153838289367250679, guid: 523712346121c7f4ba483d54caef411d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.21727371
+      value: -0.109
       objectReference: {fileID: 0}
     - target: {fileID: 153838289367250679, guid: 523712346121c7f4ba483d54caef411d,
         type: 3}

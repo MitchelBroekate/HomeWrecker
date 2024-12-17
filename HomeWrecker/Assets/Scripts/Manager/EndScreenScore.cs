@@ -63,6 +63,7 @@ public class EndScreenScore : MonoBehaviour
                 if(currentScore > PlayerPrefs.GetInt("HighscoreTutorial"))
                 {
                     textFields[4].text = currentScore.ToString();
+                    //Canvas.ForceUpdateCanvases();
                 }
                 break;
 
