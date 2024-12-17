@@ -26,10 +26,10 @@ public class ScoreManager : MonoBehaviour
     {
         LoadScore();
 
-        highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
 
         if(SceneManager.GetActiveScene().name == "Main Menu")
         {
+            highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
             timeScore.text = PlayerPrefs.GetString("TimeScoreTutorial");
         }
 
@@ -57,7 +57,7 @@ public class ScoreManager : MonoBehaviour
                 }
                 break;
 
-            case 2:
+            case 2: 
                 // if(!PlayerPrefs.HasKey("TimeScoreFloatFutureGame"))
                 // {
                 //     PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", 600);
@@ -119,17 +119,17 @@ public class ScoreManager : MonoBehaviour
         {
             case 0:
                 PlayerPrefs.SetInt("HighscoreTutorial", 0);
-                PlayerPrefs.SetString("TimeScoreTutorial", "-----");
+                PlayerPrefs.SetString("TimeScoreTutorial", "00:00:00");
                 break;
 
             case 1:
                 PlayerPrefs.SetInt("HighscoreMarktMedia", 0);
-                PlayerPrefs.SetString("TimeScoreMarktMedia", "-----");
+                PlayerPrefs.SetString("TimeScoreMarktMedia", "00:00:00");
                 break;
 
             case 2:
                 //PlayerPrefs.SetInt("HighscoreFutureGame", 0);
-                //PlayerPrefs.SetString("TimeScoreFutureGame", "-----");
+                //PlayerPrefs.SetString("TimeScoreFutureGame", "00:00:00");
                 Debug.Log("Level W.I.P");
                 break;
 

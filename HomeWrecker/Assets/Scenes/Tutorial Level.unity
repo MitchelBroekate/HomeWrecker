@@ -20358,6 +20358,16 @@ PrefabInstance:
       propertyPath: m_VertexColorAlwaysGammaSpace
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 29185872668293233, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_text
+      value: 'New Highscore:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 29185872668293233, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 77.7
+      objectReference: {fileID: 0}
     - target: {fileID: 832558382608479929, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
         type: 3}
       propertyPath: m_text
@@ -20497,6 +20507,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518404377605413238, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_text
+      value: New Best Time
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518404377605413238, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 89.55
       objectReference: {fileID: 0}
     - target: {fileID: 8574428583292012703, guid: 4fc1d452e6815014783bb0e8c25a8cd1,
         type: 3}

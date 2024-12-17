@@ -108,4 +108,9 @@ public class PlayerController : MonoBehaviour
     {
         _playerLock = allowState;
     }
+
+    public bool PlayerLock
+    {
+        get { return _playerLock; }
+    }
 }

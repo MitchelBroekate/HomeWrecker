@@ -11,6 +11,7 @@ public class WeaponDoDamage : MonoBehaviour
     [SerializeField]float cutforce;
 
     [Header("Linked Variables")]
+    PlayerController playerController;
     [SerializeField] int damage;
     [SerializeField] Material sliceMaterial;
     VelocityEstimator velocityEstimator;
@@ -30,6 +31,8 @@ public class WeaponDoDamage : MonoBehaviour
         startSlicePos = transform.GetChild(0).transform.GetChild(0).transform;
         endSlicePos = transform.GetChild(0).transform.GetChild(1).transform;
 
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+
         velocityEstimator = endSlicePos.GetComponent<VelocityEstimator>();
 
         layerMaskRay = LayerMask.GetMask("Destructible");
@@ -42,42 +45,46 @@ public class WeaponDoDamage : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(!playerController.PlayerLock)
         {
-            if(!isAttacking)
+            if(Input.GetButtonDown("Fire1"))
             {
-                Debug.Log("Weapon Attacking");
+                if(!isAttacking)
+                {
+                    Debug.Log("Weapon Attacking");
 
-                StartCoroutine(StartAttack());
-                
-                weaponAnimator.SetBool("IsAttacking", true);
+                    StartCoroutine(StartAttack());
+                    
+                    weaponAnimator.SetBool("IsAttacking", true);
 
-                doDamageOnce = true;
+                    doDamageOnce = true;
+                }
+            }
+
+            if(isAttacking)
+            {
+                Vector3 direction = (endSlicePos.position - startSlicePos.position).normalized;
+                if (Physics.Raycast(startSlicePos.position, direction, out RaycastHit hit, 0.7f, layerMaskRay))
+                {
+
+
+                    GameObject target = hit.transform.gameObject;
+                    DestructibleStats destructibleStats = target.GetComponent<DestructibleStats>();
+
+                    if(doDamageOnce)
+                    {
+                        destructibleStats.DoDamage(damage);
+                        doDamageOnce = false;
+                    }
+
+                    if(destructibleStats.canDestroy)
+                    {
+                        Slice(target);
+                    }
+                }
             }
         }
 
-        if(isAttacking)
-        {
-            Vector3 direction = (endSlicePos.position - startSlicePos.position).normalized;
-            if (Physics.Raycast(startSlicePos.position, direction, out RaycastHit hit, 0.7f, layerMaskRay))
-            {
-
-
-                GameObject target = hit.transform.gameObject;
-                DestructibleStats destructibleStats = target.GetComponent<DestructibleStats>();
-
-                if(doDamageOnce)
-                {
-                    destructibleStats.DoDamage(damage);
-                    doDamageOnce = false;
-                }
-
-                if(destructibleStats.canDestroy)
-                {
-                    Slice(target);
-                }
-            }
-        }
     }
 
     /// <summary>

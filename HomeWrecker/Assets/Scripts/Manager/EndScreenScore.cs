@@ -6,8 +6,8 @@ public class EndScreenScore : MonoBehaviour
     [SerializeField] int currentScene;
     [SerializeField] ScoreManager scoreManager;
     
-    int lastHighscore;
-    string lastTimeScore;
+    int lastHighscore = 0;
+    string lastTimeScore = "00:00:00";
     int currentScore;
     string currentTimeScore;
 
