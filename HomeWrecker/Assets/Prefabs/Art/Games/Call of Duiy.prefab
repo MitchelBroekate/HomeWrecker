@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fda5d0f472e70f44093c0fe5faf025e1,
         type: 3}
       propertyPath: m_Name
-      value: gamebox.call
+      value: Call of Duiy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fda5d0f472e70f44093c0fe5faf025e1,
         type: 3}
