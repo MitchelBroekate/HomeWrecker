@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: ---------
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cb9153d87fe913489781c89dc2a73f2, type: 2}
   m_sharedMaterial: {fileID: 5984690113996858162, guid: 9cb9153d87fe913489781c89dc2a73f2,
@@ -362,7 +362,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseSceneLoad, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: ReloadScene
         m_Mode: 1
         m_Arguments:
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Time
+  m_text: New Best Time
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cb9153d87fe913489781c89dc2a73f2, type: 2}
   m_sharedMaterial: {fileID: 5984690113996858162, guid: 9cb9153d87fe913489781c89dc2a73f2,
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 105.1
+  m_fontSize: 89.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1215,7 +1215,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseSceneLoad, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'New Score:'
+  m_text: 'New Highscore:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cb9153d87fe913489781c89dc2a73f2, type: 2}
   m_sharedMaterial: {fileID: 5984690113996858162, guid: 9cb9153d87fe913489781c89dc2a73f2,
@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 105.1
+  m_fontSize: 77.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2189,7 +2189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00:00
+  m_text: ---------
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cb9153d87fe913489781c89dc2a73f2, type: 2}
   m_sharedMaterial: {fileID: 5984690113996858162, guid: 9cb9153d87fe913489781c89dc2a73f2,
@@ -2352,7 +2352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4671441992992220763
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2405,7 +2405,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
