@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] float timeScoreFloat;
     public TMP_Text score;
     public TMP_Text highscore;
+    [Tooltip("This variable is only linked in the main menu")]
     public TMP_Text timeScore;
 
 

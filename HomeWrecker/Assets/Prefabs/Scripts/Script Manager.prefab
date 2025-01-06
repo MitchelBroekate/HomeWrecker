@@ -54,7 +54,9 @@ MonoBehaviour:
   cam: {fileID: 0}
   weaponPrefab:
   - {fileID: 149373203855704133, guid: c64c2c12befbc294ab39f57496385328, type: 3}
+  - {fileID: 8061433912388759819, guid: da8f179d69cee07409a0edd597b5b2b8, type: 3}
   - {fileID: 149373203855704133, guid: fd826f80ce954c246a2d757ef5e710c7, type: 3}
+  - {fileID: 7635996931371749460, guid: 192a051e4090bb14cade93d944364069, type: 3}
   weaponSpawnpoint: {fileID: 0}
   currentWeapon: 
 --- !u!114 &1851612574220501604
