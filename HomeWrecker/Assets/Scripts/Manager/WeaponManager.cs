@@ -108,7 +108,7 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey4(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_SLEDGE")) return;
-        if(scoreManager.GetScore < 20000) return;
+        if(scoreManager.GetScore < 17500) return;
 
         if(cam.childCount > 1)
         {
