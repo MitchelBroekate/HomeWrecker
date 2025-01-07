@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,9 +17,9 @@ public class WeaponManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        currentWeapon = "WeaponType_BAT";
+        currentWeapon = "WeaponType_AXE";
 
-        GameObject currentWeaponObject = Instantiate(weaponPrefab[0], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
+        GameObject currentWeaponObject = Instantiate(weaponPrefab[1], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
     }
 
@@ -34,6 +30,7 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey1(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_BAT")) return;
+        if(scoreManager.GetScore < 2500) return;
 
         if(cam.childCount > 1)
         {
@@ -84,6 +81,7 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey3(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_KATANA")) return;
+        if(scoreManager.GetScore < 7500) return;
 
         if(cam.childCount > 1)
         {
@@ -110,6 +108,7 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey4(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_SLEDGE")) return;
+        if(scoreManager.GetScore < 20000) return;
 
         if(cam.childCount > 1)
         {
@@ -135,6 +134,7 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey5(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_SLINGSHOT")) return;
+        if(scoreManager.GetScore < 15000) return;
 
         if(cam.childCount > 1)
         {
