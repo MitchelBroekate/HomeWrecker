@@ -50,7 +50,7 @@ public class ScoreManager : MonoBehaviour
             case 1:
                 if(!PlayerPrefs.HasKey("TimeScoreFloatMarktMedia"))
                 {
-                    PlayerPrefs.SetFloat("TimeScoreFloatMarktMedia", 600);
+                    PlayerPrefs.SetFloat("TimeScoreFloatMarktMedia", 180);
                 }
                 else
                 {

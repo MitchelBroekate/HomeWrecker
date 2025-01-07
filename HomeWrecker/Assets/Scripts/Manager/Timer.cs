@@ -147,7 +147,7 @@ public class Timer : MonoBehaviour
             break;
 
             case 1:
-                if(scoreManager.GetScore >= 20000)
+                if(scoreManager.GetScore >= 60000)
                 {
                     StopCountdown();
 
@@ -177,7 +177,7 @@ public class Timer : MonoBehaviour
             break;
 
             case 2:
-                if(scoreManager.GetScore >= 20000)
+                if(scoreManager.GetScore >= 10)
                 {
                     StopCountdown();
 

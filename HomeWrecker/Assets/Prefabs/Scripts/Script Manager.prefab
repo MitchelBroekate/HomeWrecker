@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8178544687160904212}
   - component: {fileID: 1253277748410456514}
   - component: {fileID: 9123342121275169057}
+  - component: {fileID: 7672584441528106931}
   m_Layer: 0
   m_Name: Script Manager
   m_TagString: Untagged
@@ -54,9 +55,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   weaponPrefab:
   - {fileID: 149373203855704133, guid: c64c2c12befbc294ab39f57496385328, type: 3}
-  - {fileID: 8061433912388759819, guid: da8f179d69cee07409a0edd597b5b2b8, type: 3}
+  - {fileID: 6652568526651715990, guid: 6b70b5bfa27a8ab40a838f35ff66a2a0, type: 3}
   - {fileID: 149373203855704133, guid: fd826f80ce954c246a2d757ef5e710c7, type: 3}
-  - {fileID: 7635996931371749460, guid: 192a051e4090bb14cade93d944364069, type: 3}
+  - {fileID: 4428894466114808570, guid: f8708e77ab5f2af46a4c4a93970d9ab9, type: 3}
+  - {fileID: 7078292424440352073, guid: bbd93b91d0e10714c9ee5a4f7407e2b3, type: 3}
   weaponSpawnpoint: {fileID: 0}
   currentWeapon: 
 --- !u!114 &1851612574220501604
@@ -71,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573f8f8063247e44a8ea7e423454a0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 0
+  currentScene: 1
   _score: 0
   timeScoreFloat: 0
   score: {fileID: 0}
@@ -129,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959409cea1669814bb75336f494dee36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 600
+  countdownTime: 180
   timerText: {fileID: 0}
   scoreManager: {fileID: 1851612574220501604}
   playerController: {fileID: 0}
@@ -150,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d248ced4743c57449b5dc6aad01a34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 0
+  currentScene: 1
   scoreManager: {fileID: 1851612574220501604}
   textFields:
   - {fileID: 0}
@@ -173,8 +175,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreAdd: 5000
   scoreManager: {fileID: 1851612574220501604}
+  standSpawner: {fileID: 7672584441528106931}
   timeMin: 30
   timer: {fileID: 5043935067932832223}
+  standParent: {fileID: 0}
 --- !u!114 &9123342121275169057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +191,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a80476bba4d594cae6abf98b56c74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7672584441528106931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518540742023186723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9db19fe70a02cb4f85c293545407805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSpawnpoints90:
+  - {fileID: 0}
+  - {fileID: 0}
+  bigSpawnpoints180:
+  - {fileID: 0}
+  bigSpawnpointsNoRotate:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  smallSpawnpoints90:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  smallSpawnpointsMin90:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  smallSpawnpoints180:
+  - {fileID: 0}
+  smallSpawnpointsNoRotate:
+  - {fileID: 0}
+  bigStands:
+  - {fileID: 6262057739914960687, guid: 0e0617604d30b4b46852c515b784c683, type: 3}
+  - {fileID: 5456055547298389573, guid: feca88b801013364dbb93c11b7be675d, type: 3}
+  - {fileID: 3318002651766410754, guid: 5815a3abe24c75847bdc3638e384dc8a, type: 3}
+  - {fileID: 2971969854205401880, guid: d66aa8befef78b94e9690bdd0c25aef8, type: 3}
+  - {fileID: 4263212368317802455, guid: 3f7730eb35532e247931a6877bd306f6, type: 3}
+  - {fileID: 6459954648435636703, guid: 45e476a75f17f954694f84d5f2c21a25, type: 3}
+  smallStands:
+  - {fileID: 3764668088763874127, guid: b04c72ec21c2b8146a3897de5f4245ce, type: 3}
+  - {fileID: 5493867369863240864, guid: ea57cc7433f523143979c19035b0375a, type: 3}
+  - {fileID: 7805117230159407948, guid: ed6d1c6350d84e147a738a9400d4de73, type: 3}
+  - {fileID: 7289312278268719572, guid: df612806d9714a74895f30f259da2163, type: 3}
+  - {fileID: 938174354903465488, guid: e0d9fc3720dc7ed44a28e2a66b78551e, type: 3}
+  - {fileID: 338618479163235207, guid: f6a1368c9548be54480c248f1550d65d, type: 3}
+  - {fileID: 5262335961527883549, guid: a2e2fff5251672b4cb65e916e44f9c2d, type: 3}
+  - {fileID: 5801553689909436610, guid: 0bf2a5dc275b66c47b7f9b62e5601d38, type: 3}
+  - {fileID: 3378093216632277978, guid: 69f1f2845ccac7646939dceb9d938780, type: 3}
+  parent: {fileID: 0}
