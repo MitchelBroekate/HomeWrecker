@@ -202,6 +202,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DevRespawnStands"",
+                    ""type"": ""Button"",
+                    ""id"": ""85e81600-b2ea-4ade-b9e4-857f37afc374"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -329,7 +338,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1f943d15-decf-43fc-a7b1-3dee2299efaf"",
-                    ""path"": ""<Keyboard>/m"",
+                    ""path"": ""<Keyboard>/p"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -380,6 +389,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Key5"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6aed4d06-31ea-4e67-be7f-b01f9b935fd9"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DevRespawnStands"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -405,6 +425,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_MainGame_DevAddScore = m_MainGame.FindAction("DevAddScore", throwIfNotFound: true);
         m_MainGame_DevDecreaseTime = m_MainGame.FindAction("DevDecreaseTime", throwIfNotFound: true);
         m_MainGame_DevClearPlayerPrefs = m_MainGame.FindAction("DevClearPlayerPrefs", throwIfNotFound: true);
+        m_MainGame_DevRespawnStands = m_MainGame.FindAction("DevRespawnStands", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -540,6 +561,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MainGame_DevAddScore;
     private readonly InputAction m_MainGame_DevDecreaseTime;
     private readonly InputAction m_MainGame_DevClearPlayerPrefs;
+    private readonly InputAction m_MainGame_DevRespawnStands;
     public struct MainGameActions
     {
         private @ActionMap m_Wrapper;
@@ -556,6 +578,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @DevAddScore => m_Wrapper.m_MainGame_DevAddScore;
         public InputAction @DevDecreaseTime => m_Wrapper.m_MainGame_DevDecreaseTime;
         public InputAction @DevClearPlayerPrefs => m_Wrapper.m_MainGame_DevClearPlayerPrefs;
+        public InputAction @DevRespawnStands => m_Wrapper.m_MainGame_DevRespawnStands;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -601,6 +624,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @DevClearPlayerPrefs.started += instance.OnDevClearPlayerPrefs;
             @DevClearPlayerPrefs.performed += instance.OnDevClearPlayerPrefs;
             @DevClearPlayerPrefs.canceled += instance.OnDevClearPlayerPrefs;
+            @DevRespawnStands.started += instance.OnDevRespawnStands;
+            @DevRespawnStands.performed += instance.OnDevRespawnStands;
+            @DevRespawnStands.canceled += instance.OnDevRespawnStands;
         }
 
         private void UnregisterCallbacks(IMainGameActions instance)
@@ -641,6 +667,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @DevClearPlayerPrefs.started -= instance.OnDevClearPlayerPrefs;
             @DevClearPlayerPrefs.performed -= instance.OnDevClearPlayerPrefs;
             @DevClearPlayerPrefs.canceled -= instance.OnDevClearPlayerPrefs;
+            @DevRespawnStands.started -= instance.OnDevRespawnStands;
+            @DevRespawnStands.performed -= instance.OnDevRespawnStands;
+            @DevRespawnStands.canceled -= instance.OnDevRespawnStands;
         }
 
         public void RemoveCallbacks(IMainGameActions instance)
@@ -678,5 +707,6 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnDevAddScore(InputAction.CallbackContext context);
         void OnDevDecreaseTime(InputAction.CallbackContext context);
         void OnDevClearPlayerPrefs(InputAction.CallbackContext context);
+        void OnDevRespawnStands(InputAction.CallbackContext context);
     }
 }

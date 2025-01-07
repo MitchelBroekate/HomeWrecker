@@ -180,6 +180,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DevRespawnStands",
+                    "type": "Button",
+                    "id": "85e81600-b2ea-4ade-b9e4-857f37afc374",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -307,7 +316,7 @@
                 {
                     "name": "",
                     "id": "1f943d15-decf-43fc-a7b1-3dee2299efaf",
-                    "path": "<Keyboard>/m",
+                    "path": "<Keyboard>/p",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
@@ -356,6 +365,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Key5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6aed4d06-31ea-4e67-be7f-b01f9b935fd9",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DevRespawnStands",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

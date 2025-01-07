@@ -20,6 +20,9 @@ public class StandSpawner : MonoBehaviour
     [SerializeField] GameObject[] bigStands;
     [SerializeField] GameObject[] smallStands;
 
+    [Header("Parent")]
+    [SerializeField] Transform parent;
+
     void Start()
     {
         SpawnBigStands();
@@ -28,127 +31,229 @@ public class StandSpawner : MonoBehaviour
 
     void SpawnBigStands()
     {
+        int randomSpawnBig = Random.Range(0, bigStands.Length);
+
         foreach (var spawnpoint in bigSpawnpointsNoRotate)
         {
-            int randomSpawn = Random.Range(0, bigStands.Length);
+            GameObject stand = Instantiate(bigStands[randomSpawnBig], spawnpoint.position, Quaternion.identity);
+            stand.transform.SetParent(parent);
 
-            GameObject stand = Instantiate(bigStands[randomSpawn], spawnpoint.position, Quaternion.identity);
-
-            if(randomSpawn == 3)
+            if(randomSpawnBig == 3)
             {
                 stand.transform.rotation = Quaternion.Euler(0, -90, 0);
             }
+
+            if(randomSpawnBig == 4 ||randomSpawnBig == 5)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+
+            if(randomSpawnBig >= bigStands.Length -1)
+            {
+                randomSpawnBig = 0;
+            }
+            else
+            {
+                randomSpawnBig++;
+            }
         }
-        
+
         // For if bigSpawnpoints ever get a 90 degree angle
         // foreach (var spawnpoint in bigSpawnpointsMin90)
         // {
-        //     int randomSpawn = Random.Range(0, bigStands.Length + 1);
-
-        //     GameObject stand = Instantiate(bigStands[randomSpawn], spawnpoint.position, Quaternion.identity);
-        //     if(randomSpawn == 3)
+        //     GameObject stand = Instantiate(bigStands[randomSpawnBig], spawnpoint.position, Quaternion.identity);
+        //     stand.transform.SetParent(parent);
+        //     if(randomSpawnBig == 3)
         //     {
         //         stand.transform.rotation = Quaternion.Euler(0, 180, 0);
+        //     }
+
+        
+        //     if(randomSpawnBig == 4 ||randomSpawnBig == 5)
+        //     {
+        //         stand.transform.rotation = Quaternion.Euler(0, 0, 0);
         //     }
         //     else
         //     {
         //         stand.transform.rotation = Quaternion.Euler(0, -90, 0);              
         //     }
+
+            // if(randomSpawnBig == bigStands.Length)
+            // {
+            //     randomSpawnBig = 0;
+            // }else
+            // {
+            //     randomSpawnBig++;
+            // }
         // }
 
         foreach(var spawnpoint in bigSpawnpoints90)
         {
-            int randomSpawn = Random.Range(0, bigStands.Length);
-
-            GameObject stand = Instantiate(bigStands[randomSpawn], spawnpoint.position, Quaternion.identity);
+            GameObject stand = Instantiate(bigStands[randomSpawnBig], spawnpoint.position, Quaternion.identity);
+            stand.transform.SetParent(parent);
             
-            if(randomSpawn == 3)
+            if(randomSpawnBig == 3)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            else
-            {
-                stand.transform.rotation = Quaternion.Euler(0, 90, 0);              
-            }
-        }
-
-        foreach(var spawnpoint in bigSpawnpoints180)
-        {
-            int randomSpawn = Random.Range(0, bigStands.Length);
-
-            GameObject stand = Instantiate(bigStands[randomSpawn], spawnpoint.position, Quaternion.identity);
-            
-            if(randomSpawn == 3)
-            {
-                stand.transform.rotation = Quaternion.Euler(0, 90, 0);
-            }
-            else
-            {
-                stand.transform.rotation = Quaternion.Euler(0, 180, 0);    
-            }
-        }
-    }
-
-        void SpawnSmallStands()
-    {
-        foreach (var spawnpoint in smallSpawnpointsNoRotate)
-        {
-            int randomSpawn = Random.Range(0, smallStands.Length);
-
-            GameObject stand = Instantiate(smallStands[randomSpawn], spawnpoint.position, Quaternion.identity);
-
-            if(randomSpawn == 2)
-            {
-                stand.transform.rotation = Quaternion.Euler(0, -90, 0);
-            }
-        }
-
-        foreach (var spawnpoint in smallSpawnpointsMin90)
-        {
-            int randomSpawn = Random.Range(0, smallStands.Length);
-
-            GameObject stand = Instantiate(smallStands[randomSpawn], spawnpoint.position, Quaternion.identity);
-            
-            if(randomSpawn == 2)
+            else if(randomSpawnBig == 4 ||randomSpawnBig == 5)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else
             {
-                stand.transform.rotation = Quaternion.Euler(0, -90, 0);      
+                stand.transform.rotation = Quaternion.Euler(0, 90, 0);              
+            }
+
+            if(randomSpawnBig >= bigStands.Length -1)
+            {
+                randomSpawnBig = 0;
+            }else
+            {
+                randomSpawnBig++;
             }
         }
 
-        foreach(var spawnpoint in smallSpawnpoints90)
+        foreach(var spawnpoint in bigSpawnpoints180)
         {
-            int randomSpawn = Random.Range(0, smallStands.Length);
-
-            GameObject stand = Instantiate(smallStands[randomSpawn], spawnpoint.position, Quaternion.identity);
+            GameObject stand = Instantiate(bigStands[randomSpawnBig], spawnpoint.position, Quaternion.identity);
+            stand.transform.SetParent(parent);
             
-            if(randomSpawn == 2)
+            if(randomSpawnBig == 3)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+            else if(randomSpawnBig == 4 || randomSpawnBig == 5)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, -90, 0);
+            }
+            else
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 180, 0);    
+            }
+
+            if(randomSpawnBig >= bigStands.Length -1)
+            {
+                randomSpawnBig = 0;
+            }else
+            {
+                randomSpawnBig++;
+            }
+        }
+    }
+
+    void SpawnSmallStands()
+    {
+        int randomSpawnSmall = Random.Range(0, smallStands.Length);
+
+        foreach (var spawnpoint in smallSpawnpointsNoRotate)
+        {
+            GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
+            stand.transform.SetParent(parent);
+
+            if(randomSpawnSmall == 2)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, -90, 0);
+            }
+            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+
+            if(randomSpawnSmall >= smallStands.Length -1)
+            {
+                randomSpawnSmall = 0;
+            }else
+            {
+                randomSpawnSmall++;
+            }
+        }
+
+        foreach (var spawnpoint in smallSpawnpointsMin90)
+        {
+            GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
+            stand.transform.SetParent(parent);
+            
+            if(randomSpawnSmall == 2)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             else
             {
+                stand.transform.rotation = Quaternion.Euler(0, -90, 0);      
+            }
+
+            if(randomSpawnSmall >= smallStands.Length -1)
+            {
+                randomSpawnSmall = 0;
+            }else
+            {
+                randomSpawnSmall++;
+            }
+        }
+
+        foreach(var spawnpoint in smallSpawnpoints90)
+        {
+           GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
+           stand.transform.SetParent(parent);
+            
+            if(randomSpawnSmall == 2)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
                 stand.transform.rotation = Quaternion.Euler(0, 90, 0);                 
+            }
+
+            if(randomSpawnSmall >= smallStands.Length -1)
+            {
+                randomSpawnSmall = 0;
+            }else
+            {
+                randomSpawnSmall++;
             }
         }
 
         foreach(var spawnpoint in smallSpawnpoints180)
         {
-            int randomSpawn = Random.Range(0, smallStands.Length);
-
-            GameObject stand = Instantiate(smallStands[randomSpawn], spawnpoint.position, Quaternion.identity);
+            GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
+            stand.transform.SetParent(parent);
             
-            if(randomSpawn == 2)
+            if(randomSpawnSmall == 2)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            {
+                stand.transform.rotation = Quaternion.Euler(0, -90, 0);
             }
             else
             {
                 stand.transform.rotation = Quaternion.Euler(0, 180, 0);            
             }
+
+            if(randomSpawnSmall >= smallStands.Length -1)
+            {
+                randomSpawnSmall = 0;
+            }else
+            {
+                randomSpawnSmall++;
+            }
         }
+    }
+
+    public void SpawnStandsExternal()
+    {
+        SpawnBigStands();
+        SpawnSmallStands();
     }
 }
