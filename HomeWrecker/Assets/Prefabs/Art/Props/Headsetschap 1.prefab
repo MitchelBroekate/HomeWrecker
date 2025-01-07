@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &2303719907293817115
 Rigidbody:
@@ -292,8 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &1558878612448864968
 Rigidbody:
@@ -453,8 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &4221453637925758242
 Rigidbody:
@@ -608,8 +608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &8585247226160936558
 Rigidbody:
@@ -1975,8 +1975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &6248359722111118694
 Rigidbody:
@@ -2130,8 +2130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &461345656121789632
 Rigidbody:
@@ -2291,8 +2291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &4086103240452588640
 Rigidbody:
@@ -2452,8 +2452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &8935029219791616568
 Rigidbody:
@@ -2613,8 +2613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &6272169414086255610
 Rigidbody:
@@ -2774,8 +2774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 300
   canDestroy: 0
 --- !u!54 &1291558100801471398
 Rigidbody:
