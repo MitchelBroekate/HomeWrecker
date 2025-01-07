@@ -39,7 +39,8 @@ public class StandSpawner : MonoBehaviour
                 stand.transform.rotation = Quaternion.Euler(0, -90, 0);
             }
         }
-
+        
+        // For if bigSpawnpoints ever get a 90 degree angle
         // foreach (var spawnpoint in bigSpawnpointsMin90)
         // {
         //     int randomSpawn = Random.Range(0, bigStands.Length + 1);

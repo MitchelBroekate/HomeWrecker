@@ -7,6 +7,7 @@ public class DevTools : MonoBehaviour
 {
     [SerializeField] int scoreAdd;
     [SerializeField] ScoreManager scoreManager;
+    [Tooltip("In seconds")]
     [SerializeField] int timeMin;
     [SerializeField] Timer timer;
 
