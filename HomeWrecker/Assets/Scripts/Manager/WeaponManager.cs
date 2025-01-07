@@ -27,7 +27,7 @@ public class WeaponManager : MonoBehaviour
     /// This function checks if the player already has a weapon. If the player is holding a different weapon, the weapons will be switched when the corresponding button is pressed
     /// </summary>
     /// <param name="context"></param>
-    public void WeaponKey1(InputAction.CallbackContext context)
+    public void WeaponKey2(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_BAT")) return;
         if(scoreManager.GetScore < 2500) return;
@@ -53,7 +53,7 @@ public class WeaponManager : MonoBehaviour
     /// This function checks if the player already has a weapon. If the player is holding a different weapon, the weapons will be switched when the corresponding button is pressed
     /// </summary>
     /// <param name="context"></param>
-    public void WeaponKey2(InputAction.CallbackContext context)
+    public void WeaponKey1(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_AXE")) return;
 

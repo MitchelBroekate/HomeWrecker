@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial Level.unity
     guid: 999db86ace840774c8c600b1b5ffebe2
+  - enabled: 1
+    path: Assets/Scenes/MarktMedia.unity
+    guid: 67b2cb51fe2c614489f368d2eb59fab9
   m_configObjects: {}
