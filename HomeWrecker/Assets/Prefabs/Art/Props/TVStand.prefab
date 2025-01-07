@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 4
+  scoreValue: 300
   canDestroy: 0
 --- !u!64 &1693540289554425988
 MeshCollider:
@@ -274,8 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 4
+  scoreValue: 300
   canDestroy: 0
 --- !u!64 &6383199218290997993
 MeshCollider:
@@ -408,8 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 200
   canDestroy: 0
 --- !u!64 &8495912253576287772
 MeshCollider:
@@ -575,8 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 200
   canDestroy: 0
 --- !u!64 &7199607639261491350
 MeshCollider:

@@ -193,8 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 400
   canDestroy: 0
 --- !u!4 &1069639887093511564 stripped
 Transform:
@@ -359,8 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 400
   canDestroy: 0
 --- !u!4 &822574431985074266 stripped
 Transform:
@@ -500,8 +500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 4
+  scoreValue: 300
   canDestroy: 0
 --- !u!1001 &6344039810828745389
 PrefabInstance:
@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 2
+  scoreValue: 400
   canDestroy: 0
 --- !u!4 &6881561691534875974 stripped
 Transform:
@@ -795,8 +795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  scoreValue: 0
+  health: 4
+  scoreValue: 300
   canDestroy: 0
 --- !u!4 &8926057573263233182 stripped
 Transform:
