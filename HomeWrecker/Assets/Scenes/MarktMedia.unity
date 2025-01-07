@@ -23526,6 +23526,11 @@ PrefabInstance:
       objectReference: {fileID: 1959213263}
     - target: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 647156730}
+    - target: {fileID: 129012951325462675, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
       propertyPath: weaponSpawnpoint
       value: 
       objectReference: {fileID: 1742859960}
@@ -23919,6 +23924,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83e6a424013270f4bb46ae595e1d5cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &647156730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
+    type: 3}
+  m_PrefabInstance: {fileID: 647156712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573f8f8063247e44a8ea7e423454a0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &650130699

@@ -13,6 +13,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] GameObject[] weaponPrefab;
     [SerializeField] Transform weaponSpawnpoint;
     public string currentWeapon;
+    [SerializeField] ScoreManager scoreManager;
     #endregion
 
     /// <summary>
