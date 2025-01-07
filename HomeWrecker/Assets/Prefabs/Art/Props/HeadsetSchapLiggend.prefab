@@ -148,8 +148,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5798084387661887685}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.55749094, y: 0.7516302, z: 0.20999442, w: 0.28312224}
-  m_LocalPosition: {x: 0.44769713, y: -1.5525448, z: -9.370051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -9.370051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -165,7 +165,7 @@ Transform:
   - {fileID: 8641468266093790089}
   - {fileID: 1017468635445356536}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1395993220128901073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Koptelefoon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -432,6 +437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Koptelefoon (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -592,6 +602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Koptelefoon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -754,6 +769,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Koptelefoon (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -914,6 +934,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Koptelefoon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1076,6 +1101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Koptelefoon (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1236,6 +1266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Koptelefoon (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1398,6 +1433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Koptelefoon (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1559,6 +1599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Koptelefoon (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1719,6 +1764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Koptelefoon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aeaa5764c66bb04bb249e0ea56f4408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
