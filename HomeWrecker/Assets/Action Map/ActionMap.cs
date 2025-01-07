@@ -159,6 +159,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Key5"",
+                    ""type"": ""Button"",
+                    ""id"": ""9b16b09a-aa5a-4078-ad5a-6c65af2a326e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""PauseGame"",
                     ""type"": ""Button"",
                     ""id"": ""75d7c819-bdd3-4e3a-8ca7-406077503767"",
@@ -360,6 +369,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Key4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfa50f15-e60c-486c-9358-510aac5389e4"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Key5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -380,6 +400,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_MainGame_Key2 = m_MainGame.FindAction("Key2", throwIfNotFound: true);
         m_MainGame_Key3 = m_MainGame.FindAction("Key3", throwIfNotFound: true);
         m_MainGame_Key4 = m_MainGame.FindAction("Key4", throwIfNotFound: true);
+        m_MainGame_Key5 = m_MainGame.FindAction("Key5", throwIfNotFound: true);
         m_MainGame_PauseGame = m_MainGame.FindAction("PauseGame", throwIfNotFound: true);
         m_MainGame_DevAddScore = m_MainGame.FindAction("DevAddScore", throwIfNotFound: true);
         m_MainGame_DevDecreaseTime = m_MainGame.FindAction("DevDecreaseTime", throwIfNotFound: true);
@@ -514,6 +535,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MainGame_Key2;
     private readonly InputAction m_MainGame_Key3;
     private readonly InputAction m_MainGame_Key4;
+    private readonly InputAction m_MainGame_Key5;
     private readonly InputAction m_MainGame_PauseGame;
     private readonly InputAction m_MainGame_DevAddScore;
     private readonly InputAction m_MainGame_DevDecreaseTime;
@@ -529,6 +551,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @Key2 => m_Wrapper.m_MainGame_Key2;
         public InputAction @Key3 => m_Wrapper.m_MainGame_Key3;
         public InputAction @Key4 => m_Wrapper.m_MainGame_Key4;
+        public InputAction @Key5 => m_Wrapper.m_MainGame_Key5;
         public InputAction @PauseGame => m_Wrapper.m_MainGame_PauseGame;
         public InputAction @DevAddScore => m_Wrapper.m_MainGame_DevAddScore;
         public InputAction @DevDecreaseTime => m_Wrapper.m_MainGame_DevDecreaseTime;
@@ -563,6 +586,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Key4.started += instance.OnKey4;
             @Key4.performed += instance.OnKey4;
             @Key4.canceled += instance.OnKey4;
+            @Key5.started += instance.OnKey5;
+            @Key5.performed += instance.OnKey5;
+            @Key5.canceled += instance.OnKey5;
             @PauseGame.started += instance.OnPauseGame;
             @PauseGame.performed += instance.OnPauseGame;
             @PauseGame.canceled += instance.OnPauseGame;
@@ -600,6 +626,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Key4.started -= instance.OnKey4;
             @Key4.performed -= instance.OnKey4;
             @Key4.canceled -= instance.OnKey4;
+            @Key5.started -= instance.OnKey5;
+            @Key5.performed -= instance.OnKey5;
+            @Key5.canceled -= instance.OnKey5;
             @PauseGame.started -= instance.OnPauseGame;
             @PauseGame.performed -= instance.OnPauseGame;
             @PauseGame.canceled -= instance.OnPauseGame;
@@ -644,6 +673,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnKey2(InputAction.CallbackContext context);
         void OnKey3(InputAction.CallbackContext context);
         void OnKey4(InputAction.CallbackContext context);
+        void OnKey5(InputAction.CallbackContext context);
         void OnPauseGame(InputAction.CallbackContext context);
         void OnDevAddScore(InputAction.CallbackContext context);
         void OnDevDecreaseTime(InputAction.CallbackContext context);

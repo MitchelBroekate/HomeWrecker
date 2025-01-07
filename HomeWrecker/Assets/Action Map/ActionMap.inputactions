@@ -137,6 +137,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Key5",
+                    "type": "Button",
+                    "id": "9b16b09a-aa5a-4078-ad5a-6c65af2a326e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "PauseGame",
                     "type": "Button",
                     "id": "75d7c819-bdd3-4e3a-8ca7-406077503767",
@@ -336,6 +345,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Key4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfa50f15-e60c-486c-9358-510aac5389e4",
+                    "path": "<Keyboard>/5",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Key5",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

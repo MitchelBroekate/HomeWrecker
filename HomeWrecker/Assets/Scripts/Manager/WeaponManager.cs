@@ -76,7 +76,7 @@ public class WeaponManager : MonoBehaviour
         currentWeaponObject.transform.parent = cam;
     }
 
-        /// <summary>
+    /// <summary>
     /// This function checks if the player already has a weapon. If the player is holding a different weapon, the weapons will be switched when the corresponding button is pressed
     /// </summary>
     /// <param name="context"></param>
@@ -102,7 +102,7 @@ public class WeaponManager : MonoBehaviour
         currentWeaponObject.transform.parent = cam;
     }
 
-        /// <summary>
+    /// <summary>
     /// This function checks if the player already has a weapon. If the player is holding a different weapon, the weapons will be switched when the corresponding button is pressed
     /// </summary>
     /// <param name="context"></param>
@@ -124,6 +124,31 @@ public class WeaponManager : MonoBehaviour
         currentWeapon = "WeaponType_SLEDGE";
 
         GameObject currentWeaponObject = Instantiate(weaponPrefab[3], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
+        currentWeaponObject.transform.parent = cam;
+    }
+
+    /// <summary>
+    /// This function checks if the player already has a weapon. If the player is holding a different weapon, the weapons will be switched when the corresponding button is pressed
+    /// </summary>
+    /// <param name="context"></param>
+    public void WeaponKey5(InputAction.CallbackContext context)
+    {
+        if(!context.performed || currentWeapon.Equals("WeaponType_SLINGSHOT")) return;
+
+        if(cam.childCount > 1)
+        {
+            for (int i = 0; i < cam.childCount; i++)
+            {
+                if(i != 0)
+                {
+                    Destroy(cam.GetChild(i).gameObject);
+                }
+            }
+        }
+
+        currentWeapon = "WeaponType_SLINGSHOT";
+
+        GameObject currentWeaponObject = Instantiate(weaponPrefab[4], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
     }
 }

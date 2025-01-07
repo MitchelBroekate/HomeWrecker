@@ -88,35 +88,6 @@ public class WeaponDoDamage : MonoBehaviour
     }
 
     /// <summary>
-    /// 
-    /// </summary>
-    void FixedUpdate()
-    {
-        // if(isAttacking)
-        // {
-        //     Vector3 direction = (endSlicePos.position - startSlicePos.position).normalized;
-        //     if (Physics.Raycast(startSlicePos.position, direction, out RaycastHit hit, 0.7f, layerMaskRay))
-        //     {
-
-
-        //         GameObject target = hit.transform.gameObject;
-        //         DestructibleStats destructibleStats = target.GetComponent<DestructibleStats>();
-
-        //         if(doDamageOnce)
-        //         {
-        //             destructibleStats.DoDamage(damage);
-        //             doDamageOnce = false;
-        //         }
-
-        //         if(destructibleStats.canDestroy)
-        //         {
-        //             Slice(target);
-        //         }
-        //     }
-        // }
-    }
-
-    /// <summary>
     /// This function allows an object to be sliced by splitting the UV and calculating which direction the weapon is going
     /// </summary>
     /// <param name="target"></param>
