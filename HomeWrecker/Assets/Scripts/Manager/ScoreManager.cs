@@ -27,7 +27,6 @@ public class ScoreManager : MonoBehaviour
     {
         LoadScore();
 
-
         if(SceneManager.GetActiveScene().name == "Main Menu")
         {
             highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();

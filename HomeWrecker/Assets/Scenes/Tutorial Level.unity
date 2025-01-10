@@ -4425,10 +4425,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tv scherm (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72f70f2d525e60c4a962e1df5bf3578b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 72f70f2d525e60c4a962e1df5bf3578b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 522930523}
   m_SourcePrefab: {fileID: 100100000, guid: 72f70f2d525e60c4a962e1df5bf3578b, type: 3}
 --- !u!4 &522930521 stripped
 Transform:
@@ -4436,6 +4445,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 522930520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &522930522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72f70f2d525e60c4a962e1df5bf3578b,
+    type: 3}
+  m_PrefabInstance: {fileID: 522930520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &522930523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522930522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  scoreValue: 500
+  canDestroy: 0
 --- !u!1 &523282000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f7360c9d0a529f4799913a5abe62ceb,
@@ -16274,10 +16304,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tv scherm (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72f70f2d525e60c4a962e1df5bf3578b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 72f70f2d525e60c4a962e1df5bf3578b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1741548365}
   m_SourcePrefab: {fileID: 100100000, guid: 72f70f2d525e60c4a962e1df5bf3578b, type: 3}
 --- !u!4 &1741548363 stripped
 Transform:
@@ -16285,6 +16324,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1741548362}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1741548364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72f70f2d525e60c4a962e1df5bf3578b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1741548362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741548365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741548364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  scoreValue: 500
+  canDestroy: 0
 --- !u!1001 &1747410118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16798,6 +16858,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tv scherm
       objectReference: {fileID: 0}
+    - target: {fileID: 8358278861351079703, guid: 882b0d19a60d6ee40a5d805f008ec92c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8697931904274175405, guid: 882b0d19a60d6ee40a5d805f008ec92c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16851,7 +16916,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8358278861351079703, guid: 882b0d19a60d6ee40a5d805f008ec92c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1810413661}
   m_SourcePrefab: {fileID: 100100000, guid: 882b0d19a60d6ee40a5d805f008ec92c, type: 3}
 --- !u!4 &1810413659 stripped
 Transform:
@@ -16859,6 +16928,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1810413658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1810413660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8358278861351079703, guid: 882b0d19a60d6ee40a5d805f008ec92c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1810413658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1810413661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810413660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  scoreValue: 500
+  canDestroy: 0
 --- !u!1001 &1814873909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17124,6 +17214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tv scherm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 250377025105351194, guid: 92cc14040349daa43ad03da1beb21579,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 590627132642855072, guid: 92cc14040349daa43ad03da1beb21579,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17177,7 +17272,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250377025105351194, guid: 92cc14040349daa43ad03da1beb21579,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1837614973}
   m_SourcePrefab: {fileID: 100100000, guid: 92cc14040349daa43ad03da1beb21579, type: 3}
 --- !u!4 &1837614971 stripped
 Transform:
@@ -17185,6 +17284,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1837614970}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1837614972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250377025105351194, guid: 92cc14040349daa43ad03da1beb21579,
+    type: 3}
+  m_PrefabInstance: {fileID: 1837614970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1837614973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837614972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c59d64d9c7e043b1461891b804344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  scoreValue: 500
+  canDestroy: 0
 --- !u!1001 &1845714029
 PrefabInstance:
   m_ObjectHideFlags: 0
