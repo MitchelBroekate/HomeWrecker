@@ -134,7 +134,7 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey5(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_SLINGSHOT")) return;
-        if(scoreManager.GetScore < 15000) return;
+        if(scoreManager.GetScore < 20000) return;
 
         if(cam.childCount > 1)
         {
