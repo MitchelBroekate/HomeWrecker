@@ -1,3 +1,4 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -46,6 +47,10 @@ public class PlayerController : MonoBehaviour
             Walk();
             Sprint();
             CameraMovement();  
+        }
+        else
+        {
+            _rb.velocity = Vector3.zero;
         }
     }  
 

@@ -735,11 +735,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 830561342}
     m_Modifications:
+    - target: {fileID: 1203038038790248969, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203038038790248969, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7075890779849446222}
+    - target: {fileID: 1203038038790248969, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetResolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449675645298919858, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849282486685782070, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7075890779849446222}
+    - target: {fileID: 1849282486685782070, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 2199275603023544834, guid: afdd8484ee23e3946938ba49b20fcfdd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 527446542976966931}
+    - target: {fileID: 3151457007599049515, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352242411857522330, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480590574254954552, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7075890779849446222}
+    - target: {fileID: 3480590574254954552, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 3927201397467246275, guid: afdd8484ee23e3946938ba49b20fcfdd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -749,6 +799,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pause Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518552256752402889, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861436743132303458, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861436743132303458, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861436743132303458, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861436743132303458, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5012332044737612549, guid: afdd8484ee23e3946938ba49b20fcfdd,
         type: 3}
@@ -855,11 +930,96 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9123342120821223286}
+    - target: {fileID: 6291028543719225996, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880996573341630845, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945947612510129993, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7075890779849446222}
+    - target: {fileID: 6945947612510129993, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945947612510129993, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157014466970909984, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157014466970909984, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157014466970909984, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157014466970909984, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7566546499956417078, guid: afdd8484ee23e3946938ba49b20fcfdd,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 527446542976966931}
+    - target: {fileID: 7946621401438292252, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043634443712425355, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7075890779849446222}
+    - target: {fileID: 8043634443712425355, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296463956995139543, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936129635967112610, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936129635967112610, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936129635967112610, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936129635967112610, guid: afdd8484ee23e3946938ba49b20fcfdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
