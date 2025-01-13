@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -16,6 +17,16 @@ public class ScoreManager : MonoBehaviour
     [Tooltip("This variable is only linked in the main menu")]
     public TMP_Text timeScore;
 
+    [SerializeField] GameObject unlockPopUp;
+    [SerializeField] TMP_Text unlockPopupText;
+    bool popUp1 = true;
+    string popUp1TXT = " KEY(2)";
+    bool popUp2 = true;
+    string popUp2TXT = " KEY(3)";
+    bool popUp3 = true;
+    string popUp3TXT = " KEY(4)";
+    bool popUp4 = true;
+    string popUp4TXT = " KEY(5)";
 
     int _scoreToCreate;
     #endregion
@@ -72,6 +83,50 @@ public class ScoreManager : MonoBehaviour
             default:
                 Debug.LogWarning("Scene int out of bounds (ScoreManager/Start/Switch)");
                 break;
+        }
+    }
+
+    void Update()
+    {
+        if(_score >= 2500)
+        {
+            if(popUp1)
+            {
+                popUp1 = false;
+                StopAllCoroutines();
+                unlockPopupText.text = "You unlocked a new weapon" +  popUp1TXT;
+                StartCoroutine(PopUpUnlockWeapon());
+            }
+        }
+        if(_score >= 7500)
+        {
+            if(popUp2)
+            {
+                popUp2 = false;
+                StopAllCoroutines();
+                unlockPopupText.text = "You unlocked a new weapon" +  popUp2TXT;
+                StartCoroutine(PopUpUnlockWeapon());
+            }
+        }
+        if(_score >= 17500)
+        {
+            if(popUp3)
+            {
+                popUp3 = false;
+                StopAllCoroutines();
+                unlockPopupText.text = "You unlocked a new weapon" +  popUp3TXT;
+                StartCoroutine(PopUpUnlockWeapon());
+            }
+        }
+        if(_score >= 20000)
+        {
+            if(popUp4)
+            {
+                popUp4 = false;
+                StopAllCoroutines();
+                unlockPopupText.text = "You unlocked a new weapon" +  popUp4TXT;
+                StartCoroutine(PopUpUnlockWeapon());
+            }
         }
     }
 
@@ -284,5 +339,12 @@ public class ScoreManager : MonoBehaviour
     public int GetScore
     {
         get{ return _score; }
+    }
+
+    IEnumerator PopUpUnlockWeapon()
+    {
+        unlockPopUp.SetActive(true);
+        yield return new WaitForSeconds(3);
+        unlockPopUp.SetActive(false);
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,8 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] Transform weaponSpawnpoint;
     public string currentWeapon;
     [SerializeField] ScoreManager scoreManager;
+    [SerializeField] GameObject popUpWeapon;
+    bool canPopUp = true;
     #endregion
 
     /// <summary>
@@ -30,7 +33,14 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey2(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_BAT")) return;
-        if(scoreManager.GetScore < 2500) return;
+        if(scoreManager.GetScore < 2500)
+        {
+            if(canPopUp)
+            { 
+                StartCoroutine(PopUpWeapon());
+            }
+            return;
+        }
 
         if(cam.childCount > 1)
         {
@@ -81,7 +91,14 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey3(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_KATANA")) return;
-        if(scoreManager.GetScore < 7500) return;
+        if(scoreManager.GetScore < 7500)
+        {
+            if(canPopUp)
+            {    
+                StartCoroutine(PopUpWeapon());
+            }
+            return;
+        }
 
         if(cam.childCount > 1)
         {
@@ -108,7 +125,14 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey4(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_SLEDGE")) return;
-        if(scoreManager.GetScore < 17500) return;
+        if(scoreManager.GetScore < 17500)
+        {
+            if(canPopUp)
+            {  
+                StartCoroutine(PopUpWeapon());
+            }
+            return;
+        }
 
         if(cam.childCount > 1)
         {
@@ -134,7 +158,14 @@ public class WeaponManager : MonoBehaviour
     public void WeaponKey5(InputAction.CallbackContext context)
     {
         if(!context.performed || currentWeapon.Equals("WeaponType_SLINGSHOT")) return;
-        if(scoreManager.GetScore < 20000) return;
+        if(scoreManager.GetScore < 20000)
+        {
+            if(canPopUp)
+            {
+                StartCoroutine(PopUpWeapon());
+            }
+            return;
+        }
 
         if(cam.childCount > 1)
         {
@@ -151,5 +182,15 @@ public class WeaponManager : MonoBehaviour
 
         GameObject currentWeaponObject = Instantiate(weaponPrefab[4], weaponSpawnpoint.position, weaponSpawnpoint.rotation);
         currentWeaponObject.transform.parent = cam;
+    }
+
+
+    IEnumerator PopUpWeapon()
+    {
+        canPopUp = false;
+        popUpWeapon.SetActive(true);
+        yield return new WaitForSeconds(2);
+        popUpWeapon.SetActive(false);
+        canPopUp = true;
     }
 }
