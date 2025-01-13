@@ -135,7 +135,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4428894466114808570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d33967ce007cfbf40acfd6e7f37a6cd4, type: 2}
   m_CullingMode: 0
@@ -179,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 6600757896834216105, guid: 1cafada84d68e014c9a45e480baa06ba,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6600757896834216105, guid: 1cafada84d68e014c9a45e480baa06ba,
         type: 3}
@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 6600757896834216105, guid: 1cafada84d68e014c9a45e480baa06ba,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6600757896834216105, guid: 1cafada84d68e014c9a45e480baa06ba,
         type: 3}
@@ -204,7 +204,7 @@ PrefabInstance:
     - target: {fileID: 6600757896834216105, guid: 1cafada84d68e014c9a45e480baa06ba,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6600757896834216105, guid: 1cafada84d68e014c9a45e480baa06ba,
         type: 3}
@@ -222,7 +222,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5969303844311564842}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5823518227071248915, guid: 1cafada84d68e014c9a45e480baa06ba,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2394686367827763445}
   m_SourcePrefab: {fileID: 100100000, guid: 1cafada84d68e014c9a45e480baa06ba, type: 3}
 --- !u!4 &1620053769676871072 stripped
 Transform:
@@ -230,3 +234,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5611779823270044937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2103259080170606362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5823518227071248915, guid: 1cafada84d68e014c9a45e480baa06ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 5611779823270044937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2394686367827763445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103259080170606362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b2ac2fe6b0b5d44bfbd38a60311931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingSpeed: 500
