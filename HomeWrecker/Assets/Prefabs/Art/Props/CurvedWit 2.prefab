@@ -67,11 +67,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: d6cf72291b773b646989c8a2f92a0978, type: 2}
+      objectReference: {fileID: 2100000, guid: e0238aedf0b01d842b45e8da91efce6d, type: 2}
     - target: {fileID: 919132149155446097, guid: cc43d4b70c791af478dd9f0903fce133,
         type: 3}
       propertyPath: m_Name
-      value: CurvedMonitorWit
+      value: CurvedWit 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc43d4b70c791af478dd9f0903fce133,
         type: 3}
