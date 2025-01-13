@@ -28,6 +28,9 @@ public class DestructibleStats : MonoBehaviour
     /// <param name="damageAmount"></param>
     public void DoDamage(int damageAmount)
     {
+        float shakeDuration = 0.35f;
+        float shakeStrength = 0.025f;
+        StartCoroutine(Camera.main.GetComponent<TamaraCameraShake>().Shake(shakeDuration, shakeStrength));
         health -= damageAmount;
         if (health <= 1)
         {

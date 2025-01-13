@@ -8,9 +8,10 @@ public class TamaraTestRotateScript : MonoBehaviour
     bool inAnim = false;
     private float swingSpeed = 500; // Krijg de tering Unity - Tamara.
     public bool dikkeKlap;
+    public TamaraCameraShake camShake;
     void Start()
     {
-        
+        camShake = Camera.main.GetComponent<TamaraCameraShake>();
     }
 
     public void Update()
