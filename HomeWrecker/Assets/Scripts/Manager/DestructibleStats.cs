@@ -47,4 +47,18 @@ public class DestructibleStats : MonoBehaviour
     {
         scoreManager.AddScore(scoreValue);
     }
+
+    public void SetHealth(int healthAdd)
+    {
+        health = healthAdd;
+    }
+    public void SetScore(int scoreAdd)
+    {
+        scoreValue = scoreAdd;
+    }
+
+    public void SetDestroyable()
+    {
+        canDestroy = true;
+    }
 }

@@ -126,6 +126,12 @@ public class WeaponDoDamage : MonoBehaviour
         MeshCollider meshCollider = target.AddComponent<MeshCollider>();
         meshCollider.convex = true;
 
+        DestructibleStats destructibleStats = target.AddComponent<DestructibleStats>();
+        destructibleStats.SetHealth(0);
+        destructibleStats.SetScore(0);
+        destructibleStats.SetDestroyable();
+        target.layer = LayerMask.NameToLayer("Destructible");
+
         rb.AddExplosionForce(cutforce, target.transform.position, 3);
     }
 
