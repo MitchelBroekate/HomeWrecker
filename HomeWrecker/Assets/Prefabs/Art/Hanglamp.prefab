@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1414793995765717109}
   - component: {fileID: 1310782807140788082}
   - component: {fileID: 3183752499802335431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Directional Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2135984563879222348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0000000074505797, w: 1}
-  m_LocalPosition: {x: 0, y: -0.38, z: -0}
+  m_LocalPosition: {x: 0, y: -0.8299998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9762067, b: 0.83584905, a: 1}
+  m_Color: {r: 1, g: 0.8176408, b: 0.5803922, a: 1}
   m_Intensity: 8
   m_Range: 9
   m_SpotAngle: 30
@@ -54,7 +54,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.4
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.1
@@ -129,37 +129,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2975631
+      value: 35.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.580385
+      value: -2.076281
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.694221
+      value: 11.110195
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7316805
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.24571717
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.33128524
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5426941
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae5c975af54f3b945a02837035fc2f08,
         type: 3}
@@ -186,6 +186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hanglamp
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ae5c975af54f3b945a02837035fc2f08,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -198,6 +203,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 157467384268050592}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ae5c975af54f3b945a02837035fc2f08,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5804619514852658594}
   m_SourcePrefab: {fileID: 100100000, guid: ae5c975af54f3b945a02837035fc2f08, type: 3}
 --- !u!4 &5792824459640629065 stripped
 Transform:
@@ -226,3 +235,25 @@ MonoBehaviour:
   health: 1
   scoreValue: 50
   canDestroy: 0
+--- !u!64 &5804619514852658594
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570733762066431475}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5182559705341506522, guid: ae5c975af54f3b945a02837035fc2f08, type: 3}

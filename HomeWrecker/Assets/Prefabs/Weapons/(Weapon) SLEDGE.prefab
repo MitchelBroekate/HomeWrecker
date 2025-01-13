@@ -252,4 +252,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b2ac2fe6b0b5d44bfbd38a60311931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingSpeed: 500
+  dikkeKlap: 1

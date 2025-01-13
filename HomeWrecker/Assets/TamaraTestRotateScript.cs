@@ -7,6 +7,7 @@ public class TamaraTestRotateScript : MonoBehaviour
     // Start is called before the first frame update
     bool inAnim = false;
     private float swingSpeed = 500; // Krijg de tering Unity - Tamara.
+    public bool dikkeKlap;
     void Start()
     {
         
@@ -33,6 +34,10 @@ public class TamaraTestRotateScript : MonoBehaviour
                 rotated += toAdd;
                 yield return null;
             }
+            if (dikkeKlap)
+            {
+                DoExplosion();
+            }
             while(rotated > 0)
             {
                 float toAdd = Time.deltaTime * swingSpeed;
@@ -42,6 +47,26 @@ public class TamaraTestRotateScript : MonoBehaviour
             }
             inAnim = false;
             transform.localEulerAngles = new Vector3(0, -90, 0);
+        }
+    }
+
+    public void DoExplosion()
+    {
+        float radius = 1;
+        float power = 200;
+        Vector3 explosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+        foreach (Collider hit in colliders)
+        {
+            if(hit.gameObject.tag != "Player") // heel mooi geschreven door mij, Tamara. Dit kan zeker niet mooier of beter.
+            {
+                Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+                if (rb != null)
+                {
+                    rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
+                }
+            }
         }
     }
 }

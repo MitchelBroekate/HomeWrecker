@@ -28,16 +28,13 @@ public class DestructibleStats : MonoBehaviour
     /// <param name="damageAmount"></param>
     public void DoDamage(int damageAmount)
     {
-        if(health <= 1)
+        health -= damageAmount;
+        if (health <= 1)
         {
             canDestroy = true;
             AddScore();
+        }
 
-        }
-        else
-        {
-            health -= damageAmount;
-        }
     }
 
     /// <summary>
