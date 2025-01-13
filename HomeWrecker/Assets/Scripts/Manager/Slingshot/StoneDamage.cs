@@ -34,7 +34,22 @@ public class StoneDoDamage : MonoBehaviour
                 Slice(collision.gameObject);
             }
         }
-        
+        float radius = 1;
+        float power = 200;
+        Vector3 explosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+        foreach (Collider hit in colliders)
+        {
+            if (hit.gameObject.tag != "Player") // heel mooi geschreven door mij, Tamara. Dit kan zeker niet mooier of beter.
+            {
+                Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+                if (rb != null)
+                {
+                    rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
+                }
+            }
+        }
         Destroy(gameObject,2);
     }
 
