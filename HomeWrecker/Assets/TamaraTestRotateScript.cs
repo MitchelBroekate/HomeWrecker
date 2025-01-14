@@ -9,13 +9,16 @@ public class TamaraTestRotateScript : MonoBehaviour
     private float swingSpeed = 500; // Krijg de tering Unity - Tamara.
     public bool dikkeKlap;
     public TamaraCameraShake camShake;
+    public PlayerController playerController;
     void Start()
     {
         camShake = Camera.main.GetComponent<TamaraCameraShake>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     public void Update()
     {
+        if(playerController.PlayerLock) return;
         if (Input.GetButtonDown("Fire1"))
         {
             StartCoroutine(DoSwing());

@@ -54,11 +54,11 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: cd66eac74ec6d6d45950752dfe0b669b
+  - guid: bdb75f9f2af78454eaa2de99333ac69d
     name: MasterParameter
-  - guid: 0edf3d8a06c5808408fbd302c05b6b2e
+  - guid: 734c2f0daae555242b3f465fc4357d52
     name: MusicParameter
-  - guid: d02fcc81173cc3549844295d756581dc
+  - guid: 4d6bb6ce1e23dd34ba4793230b939005
     name: SFXParameter
   m_AudioMixerGroupViews:
   - guids:
