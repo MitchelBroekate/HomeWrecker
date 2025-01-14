@@ -12,6 +12,9 @@ public class Settings : MonoBehaviour
     [SerializeField] Slider masterSlider;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
+    [SerializeField] Slider sensSlider;
+
+    [SerializeField] PlayerController playerController;
 
     [SerializeField] TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
@@ -52,6 +55,15 @@ public class Settings : MonoBehaviour
         else
         {
             SetSFXVolume();
+        }
+
+        if (PlayerPrefs.HasKey("Sens"))
+        {
+            LoadSens();
+        }
+        else
+        {
+            SetSens();
         }
 
         resolutions = Screen.resolutions;
@@ -140,6 +152,15 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetFloat("SFXVolume", volumeSfx);
     }
 
+    public void SetSens()
+    {
+        float sens = sensSlider.value;
+
+        playerController.mouseDPI = sens;
+
+        PlayerPrefs.SetFloat("Sens", sens);
+    }
+
     /// <summary>
     /// This function gets the volume playerpref and applies it to the audio mixer and volume slider
     /// </summary>
@@ -169,4 +190,13 @@ public class Settings : MonoBehaviour
 
         SetSFXVolume();
     }
+
+    void LoadSens()
+    {
+        sensSlider.value = PlayerPrefs.GetFloat("Sens");
+
+        SetSens();
+    }
+
+
 }

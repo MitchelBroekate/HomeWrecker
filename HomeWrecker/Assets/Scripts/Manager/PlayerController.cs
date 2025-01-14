@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float sprintSpeed;
 
     [Header("Config Camera Variables")]
-    [SerializeField] float mouseDPI;
+    public float mouseDPI;
 
     [Header("Linked Camera Variables")]
     [SerializeField] Transform cam;
