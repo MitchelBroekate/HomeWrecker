@@ -20523,7 +20523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959409cea1669814bb75336f494dee36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 600
+  countdownTime: 300
   timerText: {fileID: 1720727373}
   scoreManager: {fileID: 1851612574036014131}
   playerController: {fileID: 1241550084}
