@@ -156,7 +156,10 @@ public class Settings : MonoBehaviour
     {
         float sens = sensSlider.value;
 
-        playerController.mouseDPI = sens;
+        if(playerController != null)
+        {
+            playerController.mouseDPI = sens;
+        }
 
         PlayerPrefs.SetFloat("Sens", sens);
     }

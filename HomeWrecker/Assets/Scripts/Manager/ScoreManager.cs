@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     
     [Header("Linked Variables")]
     [SerializeField] int _score = 0;
-    [SerializeField] float timeScoreFloat;
+    [SerializeField] float timeScoreCompare;
     public TMP_Text score;
     public TMP_Text highscore;
     [Tooltip("This variable is only linked in the main menu")]
@@ -38,11 +38,7 @@ public class ScoreManager : MonoBehaviour
     {
         LoadScore();
 
-        if(SceneManager.GetActiveScene().name == "Main Menu")
-        {
-            highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
-            timeScore.text = PlayerPrefs.GetString("TimeScoreTutorial");
-        }
+
 
         switch(currentScene)
         {
@@ -53,7 +49,7 @@ public class ScoreManager : MonoBehaviour
                 }
                 else
                 {
-                    timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatTutorial");
+                    timeScoreCompare = PlayerPrefs.GetFloat("TimeScoreFloatTutorial");
                 }
                 break;
 
@@ -64,7 +60,7 @@ public class ScoreManager : MonoBehaviour
                 }
                 else
                 {
-                    timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatMarktMedia");
+                    timeScoreCompare = PlayerPrefs.GetFloat("TimeScoreFloatMarktMedia");
                 }
                 break;
 
@@ -75,7 +71,7 @@ public class ScoreManager : MonoBehaviour
                 // }
                 // else
                 // {
-                //     timeScoreFloat = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
+                //     timeScoreCompare = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
                 // }
                 Debug.Log("Level W.I.P");
                 break;
@@ -83,6 +79,12 @@ public class ScoreManager : MonoBehaviour
             default:
                 Debug.LogWarning("Scene int out of bounds (ScoreManager/Start/Switch)");
                 break;
+        }
+
+        if(SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            highscore.text = PlayerPrefs.GetInt("HighscoreTutorial").ToString();
+            timeScore.text = PlayerPrefs.GetString("TimeScoreTutorial");
         }
     }
 
@@ -152,7 +154,7 @@ public class ScoreManager : MonoBehaviour
             CreateStartScore();
         }
 
-        if(PlayerPrefs.HasKey("HighscoreMarktMedia"))
+        if(!PlayerPrefs.HasKey("HighscoreMarktMedia"))
         {
             _scoreToCreate = 1;
             CreateStartScore();
@@ -200,6 +202,7 @@ public class ScoreManager : MonoBehaviour
     /// <param name="highscoreValue"></param>
     public void SetHighscoreText(int highscoreValue)
     {
+        print(highscoreValue);
         switch(highscoreValue)
         {
             case 0:
@@ -207,6 +210,7 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 1:
+            print(PlayerPrefs.GetInt("HighscoreMarktMedia").ToString());
                 highscore.text = PlayerPrefs.GetInt("HighscoreMarktMedia").ToString();
                 break;
 
@@ -265,12 +269,12 @@ public class ScoreManager : MonoBehaviour
     public void UpdateHighscoreTimer(float highscoreTime)
     {
 
-        if(highscoreTime < timeScoreFloat)
+        if(highscoreTime < timeScoreCompare)
         {
             switch(currentScene)
             {
                 case 0:
-                    highscoreTime = 600 - highscoreTime;
+                    highscoreTime = 300 - highscoreTime;
 
                     int minutesTut = Mathf.FloorToInt(highscoreTime / 60f);
                     int secondsTut = Mathf.FloorToInt(highscoreTime % 60f);
@@ -312,6 +316,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SetHighscoreTimeText(int timeScoreValue)
     {
+        print(timeScoreValue);
         switch(timeScoreValue)
         {
             case 0:
@@ -319,6 +324,7 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 1:
+            print(PlayerPrefs.GetString("TimeScoreMarktMedia"));
                 timeScore.text = PlayerPrefs.GetString("TimeScoreMarktMedia");
                 break;
 
