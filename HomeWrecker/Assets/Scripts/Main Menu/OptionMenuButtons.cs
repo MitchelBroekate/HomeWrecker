@@ -105,4 +105,34 @@ public class OptionMenuButtons : MonoBehaviour
             uiInterfaces[0].SetActive(true);
         }
     }
+
+    /// <summary>
+    /// This function toggles the UI to the option screen when the back button is pressed
+    /// </summary>
+    /// <param name="context"></param>
+    public void BackButton()
+    {
+            if (cameras[0].name == "Main Menu Camera")
+            {
+                if (!cameras[0].activeInHierarchy)
+                {
+                    cameras[0].SetActive(true);
+                    cameras[1].SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Camera array has incorrect index positions");
+            }
+
+            foreach (GameObject uiElement in uiInterfaces)
+            {
+                if (uiElement.activeInHierarchy)
+                {
+                    uiElement.SetActive(false);
+                }
+            }
+
+            uiInterfaces[0].SetActive(true);
+    }
 }
