@@ -27635,9 +27635,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573f8f8063247e44a8ea7e423454a0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 1
+  currentScene: 0
   _score: 0
-  timeScoreFloat: 0
+  timeScoreCompare: 0
   score: {fileID: 191211997}
   highscore: {fileID: 1422451957}
   timeScore: {fileID: 1720727373}
@@ -27859,7 +27859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d248ced4743c57449b5dc6aad01a34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 1
+  currentScene: 0
   scoreManager: {fileID: 1851612574036014131}
   textFields:
   - {fileID: 562313502}

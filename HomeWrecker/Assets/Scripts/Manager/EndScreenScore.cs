@@ -29,7 +29,7 @@ public class EndScreenScore : MonoBehaviour
 
             case 1:
                 lastHighscore = PlayerPrefs.GetInt("HighscoreMarktMedia");
-                lastTimeScore = PlayerPrefs.GetString("HighscoreMarktMedia");
+                lastTimeScore = PlayerPrefs.GetString("TimeScoreMarktMedia");
                 break;
 
             case 2:
@@ -63,7 +63,7 @@ public class EndScreenScore : MonoBehaviour
                 if(currentScore > PlayerPrefs.GetInt("HighscoreTutorial"))
                 {
                     textFields[4].text = currentScore.ToString();
-                    //Canvas.ForceUpdateCanvases();
+                    PlayerPrefs.SetInt("HighscoreTutorial", currentScore);
                 }
                 break;
 
@@ -71,6 +71,7 @@ public class EndScreenScore : MonoBehaviour
                 if(currentScore > PlayerPrefs.GetInt("HighscoreMarktMedia"))
                 {
                     textFields[4].text = currentScore.ToString();
+                    PlayerPrefs.SetInt("HighscoreMarktMedia", currentScore);
                 }
                 break;
 
@@ -78,6 +79,7 @@ public class EndScreenScore : MonoBehaviour
                 if(currentScore > PlayerPrefs.GetInt("HighscoreFutureGame"))
                 {
                     textFields[4].text = currentScore.ToString();
+                    PlayerPrefs.SetInt("HighscoreFutureGame", currentScore);
                 }
                 break;
 
@@ -92,7 +94,7 @@ public class EndScreenScore : MonoBehaviour
         switch(currentScene)
         {
             case 0:
-                time = 600 - time;
+                time = 300 - time;
                 if(time < PlayerPrefs.GetFloat("TimeScoreFloatTutorial"))
                 {
                     int minutesTut = Mathf.FloorToInt(time / 60f);
@@ -114,7 +116,7 @@ public class EndScreenScore : MonoBehaviour
                 break;
 
             case 1:
-                time = 600 - time;
+                time = 180 - time;
                 if(time < PlayerPrefs.GetFloat("TimeScoreFloatMarktMedia"))
                 {
                     int minutesMM = Mathf.FloorToInt(time / 60f);
