@@ -15,13 +15,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.92628855, z: 0.90683424, w: -0.19707344}
+    m_Value: {x: 0.8169877, y: 0.83173764, z: 1, w: 0.07121907}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.12682928}
+    m_Value: {x: 0.92481166, y: 0.93342066, z: 1, w: -0.06829293}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.7188885, z: 0.50586414, w: 0.26439}
+    m_Value: {x: 1, y: 0.90203536, z: 0.7535262, w: 0.3863412}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0.01
@@ -120,6 +120,53 @@ MonoBehaviour:
   bladeRotation:
     m_OverrideState: 0
     m_Value: -67
+--- !u!114 &-3683866186545727610
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  skipIterations:
+    m_OverrideState: 1
+    m_Value: 1
+  threshold:
+    m_OverrideState: 1
+    m_Value: 0.9
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1.34
+  scatter:
+    m_OverrideState: 1
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 1
+    m_Value: 65472
+  tint:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 1
+    m_Value: 0
+  downscale:
+    m_OverrideState: 0
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
+  dirtTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +185,7 @@ MonoBehaviour:
   - {fileID: -8756030413080196489}
   - {fileID: 9166331383815185759}
   - {fileID: -5573519514643646720}
+  - {fileID: -3683866186545727610}
 --- !u!114 &1647052119210785354
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -187,7 +235,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.224
+    m_Value: 0.14
   smoothness:
     m_OverrideState: 1
     m_Value: 0.582
