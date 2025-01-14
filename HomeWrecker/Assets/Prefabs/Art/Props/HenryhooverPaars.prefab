@@ -86,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b1e6ee681a0444e4aa79ba1ba443cb97,
         type: 3}
       propertyPath: m_Name
-      value: HenryhooverPink
+      value: HenryhooverPaars
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1e6ee681a0444e4aa79ba1ba443cb97,
         type: 3}
