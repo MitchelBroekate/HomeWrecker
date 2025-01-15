@@ -338,9 +338,10 @@ public class ScoreManager : MonoBehaviour
 
             case 1:
                 highscoreTime = 180 - highscoreTime;
-
+                print(highscoreTime);
                 if(highscoreTime < timeScoreCompare)
                 {
+                    Debug.Log("override time score");
                     int minutesMM = Mathf.FloorToInt(highscoreTime / 60f);
                     int secondsMM = Mathf.FloorToInt(highscoreTime % 60f);
                     int millisecondsMM = Mathf.FloorToInt(highscoreTime % 1 * 100);
