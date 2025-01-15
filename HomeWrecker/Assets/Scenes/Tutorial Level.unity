@@ -28135,6 +28135,7 @@ MonoBehaviour:
   timeScore: {fileID: 1720727373}
   unlockPopUp: {fileID: 257743679}
   unlockPopupText: {fileID: 257743681}
+  addScoreTXT: {fileID: 3582921200245575987}
 --- !u!1001 &3582921200245575985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28264,6 +28265,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3582921200245575985}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3582921200245575987 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4470472640965706447, guid: cd08f45a675ac6342bf733b8660b8876,
+    type: 3}
+  m_PrefabInstance: {fileID: 3582921200245575985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4698654899225665656
 Transform:
   m_ObjectHideFlags: 0
