@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6021050387971909197}
   - component: {fileID: 458186797103626184}
   - component: {fileID: 5264099491511826618}
+  - component: {fileID: 877390984182352286}
   m_Layer: 7
   m_Name: MonitorGrijs 2
   m_TagString: Untagged
@@ -123,6 +124,33 @@ MonoBehaviour:
   health: 2
   scoreValue: 300
   canDestroy: 0
+--- !u!54 &877390984182352286
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113483130266623325}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &400878703010860675
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +164,7 @@ GameObject:
   - component: {fileID: 6728421998327849696}
   - component: {fileID: 4204908738969196386}
   - component: {fileID: 8019952457515049263}
+  - component: {fileID: 3082792107698122109}
   m_Layer: 7
   m_Name: MonitorWit
   m_TagString: Untagged
@@ -246,6 +275,33 @@ MonoBehaviour:
   health: 2
   scoreValue: 300
   canDestroy: 0
+--- !u!54 &3082792107698122109
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400878703010860675}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2526802121385051172
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +476,7 @@ GameObject:
   - component: {fileID: 7673393092961128034}
   - component: {fileID: 8235258728021582648}
   - component: {fileID: 5559231391196155367}
+  - component: {fileID: 5441228505977523624}
   m_Layer: 7
   m_Name: MonitorZwart
   m_TagString: Untagged
@@ -530,6 +587,33 @@ MonoBehaviour:
   health: 2
   scoreValue: 300
   canDestroy: 0
+--- !u!54 &5441228505977523624
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3257021958801595444}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3352790359776452033
 GameObject:
   m_ObjectHideFlags: 0
