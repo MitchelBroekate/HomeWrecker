@@ -69,14 +69,14 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 2: 
-                // if(!PlayerPrefs.HasKey("TimeScoreFloatFutureGame"))
-                // {
-                //     PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", 600);
-                // }
-                // else
-                // {
-                //     timeScoreCompare = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
-                // }
+                 if(!PlayerPrefs.HasKey("TimeScoreFloatFutureGame"))
+                 {
+                     PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", 600);
+                 }
+                 else
+                 {
+                     timeScoreCompare = PlayerPrefs.GetFloat("TimeScoreFloatFutureGame");
+                 }
                 Debug.Log("Level W.I.P");
                 break;
 
@@ -214,7 +214,7 @@ public class ScoreManager : MonoBehaviour
             CreateStartScore();
         }
 
-         if(PlayerPrefs.HasKey("HighscoreFutureGame"))
+         if(!PlayerPrefs.HasKey("HighscoreFutureGame"))
          {
              _scoreToCreate = 2;
              CreateStartScore();
@@ -351,17 +351,17 @@ public class ScoreManager : MonoBehaviour
                 break;
         
             case 2:
-                // highscoreTime = 180 - highscoreTime;
+                highscoreTime = 180 - highscoreTime;
 
-                //if(highscoreTime < timeScoreCompare)
-                //{
-                // int minutesFG = Mathf.FloorToInt(highscoreTime / 60f);
-                // int secondsFG = Mathf.FloorToInt(highscoreTime % 60f);
-                // int millisecondsFG = Mathf.FloorToInt(highscoreTime % 1 * 100);
+                if(highscoreTime < timeScoreCompare)
+                {
+                    int minutesFG = Mathf.FloorToInt(highscoreTime / 60f);
+                    int secondsFG = Mathf.FloorToInt(highscoreTime % 60f);
+                    int millisecondsFG = Mathf.FloorToInt(highscoreTime % 1 * 100);
 
-                // PlayerPrefs.SetString("TimeScoreFutureGame", $"{minutesFG:00}:{secondsFG:00}:{millisecondsFG:00}");
-                // PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", highscoreTime);
-                //}
+                    PlayerPrefs.SetString("TimeScoreFutureGame", $"{minutesFG:00}:{secondsFG:00}:{millisecondsFG:00}");
+                    PlayerPrefs.SetFloat("TimeScoreFloatFutureGame", highscoreTime);
+                }
                 Debug.Log("How did you manage to do this?!?");
                 break;
             
