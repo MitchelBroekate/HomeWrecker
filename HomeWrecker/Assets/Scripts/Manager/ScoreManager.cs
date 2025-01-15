@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -215,11 +214,11 @@ public class ScoreManager : MonoBehaviour
             CreateStartScore();
         }
 
-        // if(PlayerPrefs.HasKey("HighscoreFutureGame"))
-        // {
-        //     _scoreToCreate = 2;
-        //     CreateStartScore();
-        // }
+         if(PlayerPrefs.HasKey("HighscoreFutureGame"))
+         {
+             _scoreToCreate = 2;
+             CreateStartScore();
+         }
     }
 
     /// <summary>
@@ -240,8 +239,8 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 2:
-                //PlayerPrefs.SetInt("HighscoreFutureGame", 0);
-                //PlayerPrefs.SetString("TimeScoreFutureGame", "00:00:00");
+                PlayerPrefs.SetInt("HighscoreFutureGame", 0);
+                PlayerPrefs.SetString("TimeScoreFutureGame", "00:00:00");
                 Debug.Log("Level W.I.P");
                 break;
 
@@ -268,7 +267,7 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 2:
-                //highscore.text = PlayerPrefs.GetInt("HighscoreFutureGame").ToString();
+                highscore.text = PlayerPrefs.GetInt("HighscoreFutureGame").ToString();
                 Debug.Log("Level W.I.P");
                 break;
 
@@ -304,7 +303,7 @@ public class ScoreManager : MonoBehaviour
             case 2:
                 if(_score > PlayerPrefs.GetInt("HighscoreFutureGame"))
                 {    
-                    //PlayerPrefs.SetInt("HighscoreFutureGame", _score);
+                    PlayerPrefs.SetInt("HighscoreFutureGame", _score);
                 }
                 Debug.Log("How did you manage to do this?!?");
                 break;
@@ -385,7 +384,7 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case 2:
-                //timeScore.text = PlayerPrefs.GetString("TimeScoreFutureGame");
+                timeScore.text = PlayerPrefs.GetString("TimeScoreFutureGame");
                 Debug.Log("Level W.I.P");
                 break;
 

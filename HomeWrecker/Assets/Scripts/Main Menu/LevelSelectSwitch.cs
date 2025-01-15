@@ -65,7 +65,7 @@ public class LevelSelectSwitch : MonoBehaviour
     /// </summary>
     public void ButtonNext()
     {
-        if (currentSelectedLevel != 2)
+        if (currentSelectedLevel < 2)
         {
             currentSelectedLevel++;
         }
