@@ -96,7 +96,7 @@ public class StandSpawner : MonoBehaviour
             {
                 stand.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            else if(randomSpawnBig == 4 ||randomSpawnBig == 5)
+            else if(randomSpawnBig == 4 || randomSpawnBig == 5)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
@@ -123,7 +123,7 @@ public class StandSpawner : MonoBehaviour
             {
                 stand.transform.rotation = Quaternion.Euler(0, 90, 0);
             }
-            else if(randomSpawnBig == 4 || randomSpawnBig == 5)
+            else if(randomSpawnBig == 4 || randomSpawnBig == 5 || randomSpawnBig == 11)
             {
                 stand.transform.rotation = Quaternion.Euler(0, -90, 0);
             }
@@ -151,11 +151,11 @@ public class StandSpawner : MonoBehaviour
             GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
             stand.transform.SetParent(parent);
 
-            if(randomSpawnSmall == 2)
+            if(randomSpawnSmall == 2 || randomSpawnSmall == 12)
             {
                 stand.transform.rotation = Quaternion.Euler(0, -90, 0);
             }
-            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            else if(randomSpawnSmall == 3 || randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8 || randomSpawnSmall == 9 || randomSpawnSmall == 10 || randomSpawnSmall == 11)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 90, 0);
             }
@@ -174,11 +174,11 @@ public class StandSpawner : MonoBehaviour
             GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
             stand.transform.SetParent(parent);
             
-            if(randomSpawnSmall == 2)
+            if(randomSpawnSmall == 2 || randomSpawnSmall == 12)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            else if(randomSpawnSmall == 3 || randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8 || randomSpawnSmall == 9 || randomSpawnSmall == 10 || randomSpawnSmall == 11)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
@@ -201,11 +201,11 @@ public class StandSpawner : MonoBehaviour
            GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
            stand.transform.SetParent(parent);
             
-            if(randomSpawnSmall == 2)
+            if(randomSpawnSmall == 2 || randomSpawnSmall == 12)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            else if(randomSpawnSmall == 3 || randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8 || randomSpawnSmall == 9 || randomSpawnSmall == 10 || randomSpawnSmall == 11)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
@@ -228,11 +228,11 @@ public class StandSpawner : MonoBehaviour
             GameObject stand = Instantiate(smallStands[randomSpawnSmall], spawnpoint.position, Quaternion.identity);
             stand.transform.SetParent(parent);
             
-            if(randomSpawnSmall == 2)
+            if(randomSpawnSmall == 2 || randomSpawnSmall == 12)
             {
                 stand.transform.rotation = Quaternion.Euler(0, 90, 0);
             }
-            else if(randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8)
+            else if(randomSpawnSmall == 3 || randomSpawnSmall == 4 || randomSpawnSmall == 5 || randomSpawnSmall == 6 || randomSpawnSmall == 7 || randomSpawnSmall == 8 || randomSpawnSmall == 9 || randomSpawnSmall == 10 || randomSpawnSmall == 11)
             {
                 stand.transform.rotation = Quaternion.Euler(0, -90, 0);
             }
