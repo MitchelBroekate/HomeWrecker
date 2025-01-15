@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 7950788625987857362}
   - component: {fileID: 6523471250380706712}
   - component: {fileID: 5504787414203103961}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Schap 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 7155868357475159905}
   - component: {fileID: 4370674991145455569}
   - component: {fileID: 8552854593053501087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Schap 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 361053669022259347}
   - component: {fileID: 5616398120920787064}
   - component: {fileID: 1330516559052540895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tv scherm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 5304755414457864929}
   - component: {fileID: 6654015110698904164}
   - component: {fileID: 2330698786133868674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tv scherm (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

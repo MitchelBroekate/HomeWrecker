@@ -157,6 +157,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2982499489398828848}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4db3071fa5b8b2744ac80ba17ddfb0e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5800157225063643255}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4db3071fa5b8b2744ac80ba17ddfb0e9,
         type: 3}
@@ -346,3 +350,77 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &7898129843326177950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3627542503610508865}
+    m_Modifications:
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940222237499867438, guid: dd6e037fd59791a40ae32224ef24dc97,
+        type: 3}
+      propertyPath: m_Name
+      value: Sparks.Stone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd6e037fd59791a40ae32224ef24dc97, type: 3}
+--- !u!4 &5800157225063643255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4460119968667347689, guid: dd6e037fd59791a40ae32224ef24dc97,
+    type: 3}
+  m_PrefabInstance: {fileID: 7898129843326177950}
+  m_PrefabAsset: {fileID: 0}

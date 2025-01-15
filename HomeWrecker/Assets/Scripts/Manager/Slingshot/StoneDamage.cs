@@ -9,6 +9,7 @@ public class StoneDoDamage : MonoBehaviour
     Transform startSlicePos;
     Transform endSlicePos;
     AudioSource audioSource;
+    ParticleSystem _particleSystem;
     int damage;
 
     /// <summary>
@@ -16,6 +17,7 @@ public class StoneDoDamage : MonoBehaviour
     /// </summary>
     void Start()
     {
+        _particleSystem = transform.GetChild(2).GetComponent<ParticleSystem>();
         audioSource = GetComponent<AudioSource>();
         startSlicePos = transform.GetChild(0).transform;
         endSlicePos = transform.GetChild(1).transform;
@@ -28,6 +30,7 @@ public class StoneDoDamage : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Destructible"))
         {
             audioSource.Play();
+            _particleSystem.Play();
             
             DestructibleStats destructibleStats = collision.gameObject.GetComponent<DestructibleStats>();
  

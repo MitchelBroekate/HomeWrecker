@@ -22,6 +22,7 @@ public class WeaponDoDamage : MonoBehaviour
     bool doDamageOnce = true;
     Animator weaponAnimator;
     AudioSource audioSource;
+    ParticleSystem _particleSystem;
     #endregion
     
     /// <summary>
@@ -29,6 +30,7 @@ public class WeaponDoDamage : MonoBehaviour
     /// </summary>
     void Start()
     {
+        _particleSystem = transform.GetChild(1).GetComponent<ParticleSystem>();
         audioSource = transform.GetChild(0).GetComponent<AudioSource>();
 
         startSlicePos = transform.GetChild(0).transform.GetChild(0).transform;
@@ -77,6 +79,7 @@ public class WeaponDoDamage : MonoBehaviour
                     if(doDamageOnce)
                     {
                         audioSource.Play();
+                        _particleSystem.Play();
                         destructibleStats.DoDamage(damage);
                         doDamageOnce = false;
                     }
