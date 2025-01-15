@@ -14603,6 +14603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
         type: 3}
+      propertyPath: addScoreTXT
+      value: 
+      objectReference: {fileID: 1664271464}
+    - target: {fileID: 1851612574220501604, guid: f55ab807144e136469af8cb03d30d76b,
+        type: 3}
       propertyPath: unlockPopUp
       value: 
       objectReference: {fileID: 1038673917}
@@ -23861,6 +23866,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 430184873918506477, guid: cd08f45a675ac6342bf733b8660b8876,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.40441895
+      objectReference: {fileID: 0}
     - target: {fileID: 3576272230567388345, guid: cd08f45a675ac6342bf733b8660b8876,
         type: 3}
       propertyPath: m_Pivot.x
@@ -40922,6 +40932,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1659378020}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664271464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4470472640965706447, guid: cd08f45a675ac6342bf733b8660b8876,
+    type: 3}
+  m_PrefabInstance: {fileID: 1038673911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1664754484
 PrefabInstance:
   m_ObjectHideFlags: 0

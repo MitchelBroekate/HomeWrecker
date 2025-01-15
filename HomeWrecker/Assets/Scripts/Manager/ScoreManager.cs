@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -28,7 +29,11 @@ public class ScoreManager : MonoBehaviour
     bool popUp4 = true;
     string popUp4TXT = " KEY(5)";
 
+    [SerializeField] TMP_Text addScoreTXT;
     int _scoreToCreate;
+    int addScore;
+    bool activeScoreAdd;
+    float addScoreWaitTime;
     #endregion
 
     /// <summary>
@@ -145,6 +150,25 @@ public class ScoreManager : MonoBehaviour
                 _score = 60000;
             }
         }
+
+        if(addScoreWaitTime > 0)
+        {
+            addScoreWaitTime -= Time.deltaTime;
+            activeScoreAdd = true;
+
+            addScoreTXT.text = "+" + addScore.ToString();
+        }
+        else
+        {
+            activeScoreAdd = false;
+            addScoreTXT.text = "";
+        }
+        
+        if(addScoreWaitTime > 2)
+        {
+            addScoreWaitTime = 2;
+        }
+
     }
 
     /// <summary>
@@ -155,6 +179,18 @@ public class ScoreManager : MonoBehaviour
     {
         _score += scoreValue;
 
+        if(activeScoreAdd)
+        {
+            addScore += scoreValue;
+            addScoreWaitTime += 1;
+        }
+        else
+        {
+            addScore = scoreValue;
+            addScoreWaitTime += 1;
+        }
+
+        
         score.text = _score.ToString();
     }
 
