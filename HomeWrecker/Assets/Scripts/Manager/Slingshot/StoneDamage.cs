@@ -8,6 +8,7 @@ public class StoneDoDamage : MonoBehaviour
     VelocityEstimator velocityEstimator;
     Transform startSlicePos;
     Transform endSlicePos;
+    AudioSource audioSource;
     int damage;
 
     /// <summary>
@@ -15,6 +16,7 @@ public class StoneDoDamage : MonoBehaviour
     /// </summary>
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         startSlicePos = transform.GetChild(0).transform;
         endSlicePos = transform.GetChild(1).transform;
         velocityEstimator = endSlicePos.GetComponent<VelocityEstimator>();
@@ -25,6 +27,8 @@ public class StoneDoDamage : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Destructible"))
         {
+            audioSource.Play();
+            
             DestructibleStats destructibleStats = collision.gameObject.GetComponent<DestructibleStats>();
  
             destructibleStats.DoDamage(damage);

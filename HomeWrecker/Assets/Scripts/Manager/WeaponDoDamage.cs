@@ -21,6 +21,7 @@ public class WeaponDoDamage : MonoBehaviour
     bool isAttacking = false;
     bool doDamageOnce = true;
     Animator weaponAnimator;
+    AudioSource audioSource;
     #endregion
     
     /// <summary>
@@ -28,6 +29,8 @@ public class WeaponDoDamage : MonoBehaviour
     /// </summary>
     void Start()
     {
+        audioSource = transform.GetChild(0).GetComponent<AudioSource>();
+
         startSlicePos = transform.GetChild(0).transform.GetChild(0).transform;
         endSlicePos = transform.GetChild(0).transform.GetChild(1).transform;
 
@@ -73,12 +76,14 @@ public class WeaponDoDamage : MonoBehaviour
 
                     if(doDamageOnce)
                     {
+                        audioSource.Play();
                         destructibleStats.DoDamage(damage);
                         doDamageOnce = false;
                     }
 
                     if(destructibleStats.canDestroy)
                     {
+                        audioSource.Play();
                         Slice(target);
                     }
                 }
