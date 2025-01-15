@@ -182,12 +182,12 @@ public class ScoreManager : MonoBehaviour
     {
         _score += scoreValue;
 
-        if(activeScoreAdd)
+        if(activeScoreAdd && scoreValue > 0)
         {
             addScore += scoreValue;
             addScoreWaitTime += 1;
         }
-        else
+        else if(!activeScoreAdd && scoreValue > 0)
         {
             addScore = scoreValue;
             addScoreWaitTime += 1;
@@ -315,7 +315,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Tis function formats the timer score for the UI
+    /// This function formats the timer score for the UI
     /// </summary>
     /// <param name="highscoreTime"></param>
     public void UpdateHighscoreTimer(float highscoreTime)
@@ -351,7 +351,7 @@ public class ScoreManager : MonoBehaviour
                 break;
         
             case 2:
-                highscoreTime = 180 - highscoreTime;
+                highscoreTime = 0 - highscoreTime;
 
                 if(highscoreTime < timeScoreCompare)
                 {

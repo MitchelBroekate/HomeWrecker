@@ -85,7 +85,7 @@ public class LevelSelectSwitch : MonoBehaviour
     {
         if(context.performed && levelSelectObject.activeInHierarchy)
         {    
-            if (currentSelectedLevel != 2)
+            if (currentSelectedLevel < 2)
             {
                 currentSelectedLevel++;
             }
@@ -104,7 +104,7 @@ public class LevelSelectSwitch : MonoBehaviour
     /// </summary>
     public void ButtonPrevious()
     {
-        if (currentSelectedLevel != 0)
+        if (currentSelectedLevel > 0)
         {
             currentSelectedLevel--;
         }
@@ -124,7 +124,7 @@ public class LevelSelectSwitch : MonoBehaviour
     {
         if(context.performed && levelSelectObject.activeInHierarchy)
         {    
-            if (currentSelectedLevel != 0)
+            if (currentSelectedLevel > 0)
             {
                 currentSelectedLevel--;
             }
