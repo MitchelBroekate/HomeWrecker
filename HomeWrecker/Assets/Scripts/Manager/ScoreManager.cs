@@ -151,18 +151,22 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        if(addScoreWaitTime > 0)
+        if(addScoreTXT != null)
         {
-            addScoreWaitTime -= Time.deltaTime;
-            activeScoreAdd = true;
+            if(addScoreWaitTime > 0)
+            {
+                addScoreWaitTime -= Time.deltaTime;
+                activeScoreAdd = true;
 
-            addScoreTXT.text = "+" + addScore.ToString();
+                addScoreTXT.text = "+" + addScore.ToString();
+            }
+            else
+            {
+                activeScoreAdd = false;
+                addScoreTXT.text = "";
+            }
         }
-        else
-        {
-            activeScoreAdd = false;
-            addScoreTXT.text = "";
-        }
+
         
         if(addScoreWaitTime > 2)
         {
