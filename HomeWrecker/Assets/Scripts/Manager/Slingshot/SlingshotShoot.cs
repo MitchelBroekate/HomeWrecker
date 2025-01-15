@@ -10,9 +10,13 @@ public class SlingshotShoot : MonoBehaviour
     PlayerController playerController;
     Transform projectileSpawn;
     bool cooldown;
+    Animator animator;
+    AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
         projectileSpawn = transform.GetChild(1);
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
@@ -24,6 +28,10 @@ public class SlingshotShoot : MonoBehaviour
             if(Input.GetButtonDown("Fire1"))
             {
                 if(cooldown) return;
+
+                animator.SetBool("IsAttacking", true);
+
+                audioSource.Play();
 
                 StartCoroutine(ShootTime());
             }
@@ -40,6 +48,8 @@ public class SlingshotShoot : MonoBehaviour
         bullet.GetComponent<StoneDoDamage>().SetDamage(damage);
 
         yield return new WaitForSeconds(cooldownTime);
+
+        animator.SetBool("IsAttacking", false);
 
         cooldown = false;
     }
